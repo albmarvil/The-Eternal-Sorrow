@@ -1,0 +1,59 @@
+<PhysX30Collection version="3.2.0" >
+	<UpVector >0 0 0</UpVector>
+	<Scale >
+		<Length >0</Length>
+		<Mass >0</Mass>
+		<Speed >10</Speed>
+	</Scale>
+	<PxConvexMesh >
+		<Id >1676899136</Id>
+		<points > 10.0029 30.0088 20.0037 -10.0029 -30.0088 10.0007&#x0A;&#x09;&#x09;&#x09;10.0029 -30.0088 20.0037 10.0029 -30.0088 -0.00220585&#x0A;&#x09;&#x09;&#x09;10.0029 30.0088 -0.00220585 -10.0029 30.0088 -0.00220585&#x0A;&#x09;&#x09;&#x09;-10.0029 -30.0088 -0.00220585 -10.0029 30.0088 10.0007</points>
+	</PxConvexMesh>
+	<PxMaterial >
+		<Id >1825432800</Id>
+		<DynamicFriction >0.5</DynamicFriction>
+		<StaticFriction >0.5</StaticFriction>
+		<Restitution >1</Restitution>
+		<FrictionCombineMode >eMIN</FrictionCombineMode>
+		<RestitutionCombineMode >eMIN</RestitutionCombineMode>
+	</PxMaterial>
+	<PxMaterial >
+		<Id >1825432880</Id>
+		<DynamicFriction >0.3</DynamicFriction>
+		<StaticFriction >0.3</StaticFriction>
+		<Restitution >0.5</Restitution>
+		<FrictionCombineMode >eAVERAGE</FrictionCombineMode>
+		<RestitutionCombineMode >eAVERAGE</RestitutionCombineMode>
+	</PxMaterial>
+	<PxRigidStatic >
+		<Id >1825419872</Id>
+		<Name >TileSemiSlide02</Name>
+		<ActorFlags >eVISUALIZATION|eDISABLE_GRAVITY</ActorFlags>
+		<DominanceGroup >0</DominanceGroup>
+		<OwnerClient >0</OwnerClient>
+		<GlobalPose >0 0 0 1 0 0 10</GlobalPose>
+		<Shapes >
+			<PxShape >
+				<Geometry >
+					<PxConvexMeshGeometry >
+						<Scale >
+							<Scale >1 1 1</Scale>
+							<Rotation >0 0 0 1</Rotation>
+						</Scale>
+						<ConvexMesh >1676899136</ConvexMesh>
+					</PxConvexMeshGeometry>
+				</Geometry>
+				<LocalPose >0.707107 0 0 0.707107 1.42109e-014 10 0</LocalPose>
+				<SimulationFilterData >65537 1 0 0</SimulationFilterData>
+				<QueryFilterData >0 0 0 0</QueryFilterData>
+				<Materials >
+					<PxMaterialRef >1825432880</PxMaterialRef>
+				</Materials>
+				<ContactOffset >0.2</ContactOffset>
+				<RestOffset >0.1</RestOffset>
+				<Flags >eSIMULATION_SHAPE|eSCENE_QUERY_SHAPE|eVISUALIZATION</Flags>
+				<Name >TileSemiSlide02</Name>
+			</PxShape>
+		</Shapes>
+	</PxRigidStatic>
+</PhysX30Collection>

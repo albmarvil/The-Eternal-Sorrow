@@ -1,0 +1,122 @@
+system ChispaSpiderKami
+{
+	scale 										0.2 0.2 0.2
+    technique 
+    {
+        visual_particle_quota                   100
+        emitted_emitter_quota                   100
+        material                                mp_explosion_04
+        renderer                                Billboard
+        {
+            texture_coords_rows                 2
+            texture_coords_columns              2
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       100
+            angle                               360
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             50
+                max                             100
+            }
+            duration                            55
+            particle_width                      dyn_random
+            {
+                min                             10
+                max                             30
+            }
+            particle_height                     dyn_random
+            {
+                min                             1
+                max                             10
+            }
+            texture_coords                      2
+            colour                              0.670588 0.815686 0.996078 1
+        }
+        affector                                Scale 
+        {
+            y_scale                             dyn_random
+            {
+                min                             100
+                max                             300
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 0.980392 0.133333 1
+            time_colour                         0.6  1 0 0 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   100
+        emitted_emitter_quota                   100
+        material                                mp_explosion_04
+        renderer                                Billboard
+        {
+            texture_coords_rows                 2
+            texture_coords_columns              2
+            billboard_type                      oriented_self
+            billboard_origin                    bottom_center
+            billboard_rotation_type             vertex
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       100
+            angle                               360
+            time_to_live                        dyn_random
+            {
+                min                             0.2
+                max                             0.6
+            }
+            velocity                            dyn_random
+            {
+                min                             50
+                max                             100
+            }
+            duration                            55
+            particle_width                      dyn_random
+            {
+                min                             10
+                max                             30
+            }
+            particle_height                     dyn_random
+            {
+                min                             1
+                max                             10
+            }
+            texture_coords                      3
+            colour                              0.984314 0.992157 0.67451 1
+        }
+        affector                                Scale 
+        {
+            x_scale                             dyn_random
+            {
+                min                             60
+                max                             90
+            }
+            y_scale                             dyn_random
+            {
+                min                             200
+                max                             300
+            }
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    1 1 0 1
+            time_colour                         0.495652  1 0 0 1
+            time_colour                         1    0 0 0 1
+            colour_operation                    multiply
+        }
+    }
+}

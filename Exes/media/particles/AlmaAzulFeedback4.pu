@@ -1,0 +1,30 @@
+system AlmaAzulFeedback4
+{
+    scale                                       0.6 0.6 0.6
+    category                                    MisParticulas
+    technique 
+    {
+        visual_particle_quota                   500
+        material                                PUMediaPack/Flare_01
+        default_particle_width                  10
+        default_particle_height                 10
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       200
+            time_to_live                        1
+            velocity                            5
+            box_width                           10
+            box_height                          10
+            box_depth                           0.1
+        }
+        affector                                Colour Affector122
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.130435  0 0 0.25098 1
+            time_colour                         0.265217  0 0 0.627451 1
+        }
+    }
+}

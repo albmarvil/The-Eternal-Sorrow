@@ -1,0 +1,31 @@
+system Trampilla
+{
+    scale                                       2 2 1
+    category                                    MisParticulas
+    technique 
+    {
+        emitted_emitter_quota                   70
+        material                                PUMediaPack/Flare_06
+        default_particle_width                  2.01379
+        default_particle_height                 2.01379
+        default_particle_depth                  1.01379
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       70
+            time_to_live                        0.1
+            velocity                            20.0276
+            box_width                           10
+            box_height                          1
+            box_depth                           60
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    0.501961 0.501961 1 1
+            time_colour                         0.497826  1 0 0 1
+            time_colour                         1    0.321569 0 0 1
+        }
+    }
+}

@@ -1,0 +1,75 @@
+system LaserBeamParticle
+{
+    fast_forward                                1 0.1
+    scale                                       0.3 0.3 0.3
+    category                                    MisParticulas
+    technique Technique131
+    {
+        visual_particle_quota                   90
+        material                                mp_flare_04
+        default_particle_width                  30
+        default_particle_height                 30
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter140
+        {
+            emission_rate                       3
+            angle                               dyn_random
+            {
+                min                             20
+                max                             160
+            }
+            time_to_live                        1.5
+            velocity                            15
+            duration                            1
+            direction                           -1 1 0
+            orientation                         1 -1 -1 0
+            box_width                           2
+            box_height                          2
+            box_depth                           0.1
+        }
+        affector                                Colour Affector193
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.4  0.721569 1 1 1
+            time_colour                         0.73913  0 0.87451 0.87451 1
+            time_colour                         1    0 0 0 0
+        }
+    }
+    technique 
+    {
+        visual_particle_quota                   90
+        material                                mp_flare_04
+        default_particle_width                  30
+        default_particle_height                 30
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter140
+        {
+            emission_rate                       3
+            angle                               dyn_random
+            {
+                min                             20
+                max                             160
+            }
+            time_to_live                        1.5
+            velocity                            15
+            duration                            1
+            direction                           -1 1 0
+            orientation                         1 -1 -1 0
+            box_width                           2
+            box_height                          2
+            box_depth                           0.1
+        }
+         affector                                Colour Affector193
+        {
+            time_colour                         0    1 1 1 1
+            time_colour                         0.4  0.721569 1 1 1
+            time_colour                         0.73913  0 0.87451 0.87451 1
+            time_colour                         1    0 0 0 0
+        }
+
+    }
+}

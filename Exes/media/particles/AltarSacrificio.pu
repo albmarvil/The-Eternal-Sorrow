@@ -1,0 +1,322 @@
+system AltarSacrificio
+{
+    technique 
+    {
+        position                                -18.8 8.5 11
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Fire
+        default_particle_width                  1.8
+        default_particle_height                 1.8
+        renderer                                Billboard
+        {
+            render_queue_group                  80
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       50
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      5
+            particle_height                     5
+            particle_depth                      5
+        }
+        affector                                Scale 
+        {
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 1 0 1
+            time_colour                         1    0 0 0 1
+        }
+        extern                                  SceneDecorator 
+        {
+            mesh_name                           altarSacrificio.mesh
+            material                            ParticleUniverse/Stone
+        }
+    }
+    technique 
+    {
+        position                                -18.8 8.5 11
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Smoke
+        default_particle_width                  1.2
+        default_particle_height                 1.2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       20
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      3
+            particle_height                     3
+            particle_depth                      3
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           0.3
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.501961 1 0.501961 1
+            time_colour                         1    1 1 1 1
+        }
+    }
+    technique 
+    {
+        position                                -26.5 4 16
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Fire
+        default_particle_width                  1.8
+        default_particle_height                 1.8
+        renderer                                Billboard
+        {
+            render_queue_group                  80
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       50
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      5
+            particle_height                     5
+            particle_depth                      5
+        }
+        affector                                Scale 
+        {
+            x_scale                             5
+            y_scale                             5
+            z_scale                             5
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 1 0 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+    technique 
+    {
+        position                                -26.5 4 16
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Smoke
+        default_particle_width                  1.2
+        default_particle_height                 1.2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       20
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      3
+            particle_height                     3
+            particle_depth                      3
+        }
+        affector                                Scale 
+        {
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.501961 1 0.501961 1
+            time_colour                         1    1 1 1 1
+        }
+    }
+    technique 
+    {
+        position                                18.8 8.5 11
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Fire
+        default_particle_width                  1.8
+        default_particle_height                 1.8
+        renderer                                Billboard
+        {
+            render_queue_group                  80
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       50
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      5
+            particle_height                     5
+            particle_depth                      5
+        }
+        affector                                Scale 
+        {
+            x_scale                             5
+            y_scale                             5
+            z_scale                             5
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 1 0 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+    technique 
+    {
+        position                                18.8 8.5 11
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Smoke
+        default_particle_width                  1.2
+        default_particle_height                 1.2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       20
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      3
+            particle_height                     3
+            particle_depth                      3
+        }
+        affector                                Scale 
+        {
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.501961 1 0.501961 1
+            time_colour                         1    1 1 1 1
+        }
+    }
+    technique 
+    {
+        position                                27.5 4 16
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Fire
+        default_particle_width                  1.8
+        default_particle_height                 1.8
+        renderer                                Billboard
+        {
+            render_queue_group                  80
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       50
+            angle                               30
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      5
+            particle_height                     5
+            particle_depth                      5
+        }
+        affector                                Scale 
+        {
+            x_scale                             5
+            y_scale                             5
+            z_scale                             5
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0 1 0 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+    technique 
+    {
+        position                                27.5 4 16
+        visual_particle_quota                   50
+        emitted_emitter_quota                   10
+        material                                ParticleUniverse/Smoke
+        default_particle_width                  1.2
+        default_particle_height                 1.2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       20
+            time_to_live                        dyn_random
+            {
+                min                             1
+                max                             2
+            }
+            velocity                            dyn_random
+            {
+                min                             1.8
+                max                             2.4
+            }
+            particle_width                      3
+            particle_height                     3
+            particle_depth                      3
+        }
+        affector                                Scale 
+        {
+        }
+        affector                                Colour 
+        {
+            time_colour                         0    0.501961 1 0.501961 1
+            time_colour                         1    1 1 1 1
+        }
+    }
+}

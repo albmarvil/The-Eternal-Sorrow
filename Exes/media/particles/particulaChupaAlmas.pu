@@ -1,0 +1,31 @@
+system particulaChupaAlmas
+{
+    scale                                       0.4 0.4 0.4
+    category                                    MisParticulas
+    technique Technique131
+    {
+        visual_particle_quota                   100
+        material                                PUMediaPack/Flare_01
+        default_particle_width                  25
+        default_particle_height                 25
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter140
+        {
+            emission_rate                       30
+            time_to_live                        1
+            velocity                            8
+            box_width                           1
+            box_height                          1
+            box_depth                           0.01
+        }
+        affector                                Colour Affector193
+        {
+            time_colour                         0    0.501961 0.25098 0 1
+            time_colour                         0.208696  1 0.201961 0 1
+            time_colour                         1    1 0 0 1
+        }
+    }
+}

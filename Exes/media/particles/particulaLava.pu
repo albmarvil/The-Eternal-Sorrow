@@ -1,0 +1,40 @@
+system particulaLava
+{
+    scale                                       1 1 1
+    fast_forward                                20 0.1
+    technique 
+    {
+        visual_particle_quota                   800
+        material                                partLava02
+        renderer                                Billboard
+        {
+            billboard_origin                    top_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       80
+            time_to_live                        10
+            velocity                            dyn_random
+            {
+                min                             40
+                max                             55
+            }
+            all_particle_dimensions             dyn_random
+            {
+                min                             1
+                max                             2.2
+            }
+            position                            50 0 0
+            direction                           0 -1 0
+            box_width                           500
+            box_height                          0.03
+            box_depth                           0.01
+        }
+        affector                                LinearForce WindLeft
+        {
+            force_vector                        -19 0 0
+        }
+
+    }
+    
+}

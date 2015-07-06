@@ -1,0 +1,35 @@
+{79e64e2e-0cef-46cf-b1a5-fef41b497a18} event:/Armas/Escudo/Escudo Especial
+{8785de76-d7d2-45b5-9a64-bb752e5dc4d7} event:/Armas/Escudo/Escudo Normal
+{98715ead-5d77-4ed3-84fd-2a5fb909e486} event:/Armas/Escudo/ReboteEscudo
+{270c1de5-9d49-40d1-875f-5c6eb6a5944d} event:/Armas/Espada/Espada Especial
+{927b1c8a-af13-400c-ba5d-0091f0ed7481} event:/Armas/Espada/Espada Normal
+{97df24d1-32c3-46ca-883d-060ad5a75099} event:/Armas/Lanza Dardos/Lanza Dardos Especial
+{bcb198bf-4102-4977-80c9-10f9fd45af0b} event:/Armas/Lanza Dardos/Lanza Dardos Normal
+{9f46e06d-deb1-413a-b746-c7c7b83333d1} event:/Armas/Laser/Laser Especial
+{807590bc-d972-4750-afe8-79fb3e5ea777} event:/Armas/Laser/Laser Normal
+{dee34c23-bcaa-4ba0-9eb3-08310be4e0ea} event:/Armas/Latigo/EspecialLatigo
+{6672a1de-31e2-4b65-a8a2-109324b3fb0f} event:/Armas/Latigo/Latigo Normal
+{84a6e784-98c2-441e-9885-794a59c073d3} event:/Escenario/Explosiones 3 - 1_bip
+{4f2c5aef-8137-4545-9819-4ad58fb48dce} event:/Escenario/Explosiones 3 -2_bip
+{876d2a4b-79ed-4eef-932f-e420ed7c80ff} event:/Escenario/Explosión 2. _bip
+{b389667d-4183-4346-a024-a443512b4015} event:/Escenario/Recoger Alma_bip
+{51362c95-9cd9-4a03-8e56-6463f41f8cba} event:/Escenario/RecogerAlma_soloPrimero
+{c0ba0a70-ae4b-4a5e-a9d1-8cd0437053a3} event:/Escenario/RecogerMoneda
+{a7138885-d73a-46be-a35a-d4cd93da1083} event:/Escenario/RecogerObjeto1
+{446bcea8-efec-4bbd-b85c-540909707acc} event:/Musica/MenuTheme
+{b2ca64e2-083a-42ce-92f1-78e3997103a0} event:/Musica/Main Theme
+{f757c5ee-cfa6-4272-93cb-be8af4425717} event:/Musica/Main Theme 2
+{bc4216fa-218e-4d4d-b034-618db8e931ca} event:/Musica/MainTheme3
+{e212a20a-7667-4f50-b3f1-52c757e87e87} event:/Player/Efecto Muerte 1_bip
+{a61ea30d-c1d1-42f0-ab11-68c87e652c28} event:/Player/Efecto Muerte 2_bip
+{1a89389f-9f05-4fae-8724-2ef59ec3cff6} event:/Player/Muerte 2._bip
+{295b4a61-55d2-4459-851d-5bdedd88e40b} event:/Varios/IniciarPartida
+{33c3ceb3-389f-44e3-b8fa-8c4f318601dd} event:/Varios/Percusion
+{9bc9fa72-bce1-4e74-b5d3-01d3e2fbd8a3} bus:/
+{39cb1bd8-4d53-4e4d-ab84-4183674b43c7} bus:/Reverb
+{97debe60-d883-4274-a022-97805355b1ce} bank:/Armas
+{fbef0076-0860-4980-bfa4-b9724e21ecb3} bank:/Master Bank
+{03d1af88-f3b9-4d26-9a03-be8fb21c1d6b} bank:/Varios
+{64d173cc-18c6-476f-8a45-0902c46b65f0} bank:/Escenario
+{e74dddb4-b748-4ca5-aba1-192d1cc282ab} bank:/Player
+{6ea3c96a-5557-4f08-87a9-e0c8ff80a468} bank:/Musica

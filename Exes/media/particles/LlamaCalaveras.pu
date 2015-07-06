@@ -1,0 +1,840 @@
+system LlamaCalaveras
+{
+    scale                                       0.35 0.2 0.2
+    category                                    MisParticulas
+    technique Technique196
+    {
+        material                                PUMediaPack/Flare_03
+        default_particle_width                  10
+        default_particle_height                 20
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter205
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -25 117 1
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter206
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -24 123 -16
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter207
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -12 123 -30
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter208
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -8 124 -41
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter209
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -12 130 -80
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter210
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -15 128 -92
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter211
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -27 117 -110
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter212
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -26 110 -128
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter213
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -15 96 -145
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter214
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -10 95 -160
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter215
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -14 25 -143
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter216
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -8 32 -146
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter217
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -24 -81 -136
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter218
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -22 -83 -152
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter219
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -18 -78 -114
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter220
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -16 -69 -102
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter221
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            15 -66 -153
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter222
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -23 -139 -69
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter223
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -22 -128 -53
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter224
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            20 -107 -102
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter225
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            12 52 -88
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter226
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            7 58 -92
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter227
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -16 -124 28
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter228
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -18 -121 37
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter229
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            3 -75 78
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter230
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -1 -79 81
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter231
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -17 56 78
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter232
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -24 56 89
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter233
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -18 83 141
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter234
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -26 75 144
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter235
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -12 -9 142
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter236
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -10 -26 139
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter237
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -20 -130 128
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter238
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -13 -134 143
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter239
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            -7 -130 157
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter240
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            1 -131 164
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        emitter                                 Box Emitter241
+        {
+            emission_rate                       50
+            angle                               15
+            time_to_live                        dyn_random
+            {
+                min                             0.1
+                max                             0.4
+            }
+            velocity                            dyn_random
+            {
+                min                             10
+                max                             20
+            }
+            position                            18 -130 150
+            keep_local                          true
+            start_colour_range                  0 0.501961 0 1
+            end_colour_range                    0.501961 1 0 1
+            box_width                           2
+            box_height                          2
+            box_depth                           0.01
+        }
+        affector                                Colour Affector548
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.156522  0 0.25098 0 1
+            time_colour                         0.286957  0 0.501961 0 1
+            time_colour                         0.404348  0 1 0 1
+            time_colour                         0.519565  0.501961 1 0 1
+            time_colour                         0.641304  0 1 0 1
+            time_colour                         0.769565  0 0.501961 0 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}

@@ -1,0 +1,63 @@
+system AlmaAzul
+{
+    scale                                       0.3 0.3 0.3
+    category                                    MisParticulas
+    technique Technique131
+    {
+        visual_particle_quota                   20
+        material                                PUMediaPack/Flare_03
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter140
+        {
+            angle                               40
+            time_to_live                        1.8
+            velocity                            10
+        }
+        affector                                Colour Affector193
+        {
+            time_colour                         0    0 0.25098 0.501961 1
+            time_colour                         0.208696  0 0.501961 1 1
+            time_colour                         0.384783  0 0 1 1
+            time_colour                         0.513043  0 0 0.627451 1
+            time_colour                         0.773913  0 0 0.25098 1
+            time_colour                         1    0 0 0 1
+        }
+        affector                                LinearForce Affector217
+        {
+            enabled                             false
+            force_vector                        -10 0 0
+        }
+        affector                                LinearForce AffectorAlma3
+        {
+            enabled                             false
+            force_vector                        10 0 0
+        }
+        observer                                OnRandom observerAlma1
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent handlerAlma1
+            {
+                enable_component                affector_component Affector217 true
+            }
+            handler                             DoEnableComponent handlerAlma2
+            {
+                enable_component                affector_component AffectorAlma3 false
+            }
+        }
+        observer                                OnRandom observerAlma2
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent handlerAlma3
+            {
+                enable_component                affector_component Affector217 false
+            }
+            handler                             DoEnableComponent handlerAlma4
+            {
+                enable_component                affector_component AffectorAlma3 true
+            }
+            random_threshold                    0.6
+        }
+    }
+}

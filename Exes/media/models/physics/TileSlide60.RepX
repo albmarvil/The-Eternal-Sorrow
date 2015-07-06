@@ -1,0 +1,59 @@
+<PhysX30Collection version="3.2.0" >
+	<UpVector >0 0 0</UpVector>
+	<Scale >
+		<Length >0</Length>
+		<Mass >0</Mass>
+		<Speed >10</Speed>
+	</Scale>
+	<PxConvexMesh >
+		<Id >1808354816</Id>
+		<points > -10.002 -30.009 20.004 -10.002 -30.009 -0.00198984&#x0A;&#x09;&#x09;&#x09;10.004 -30.009 -0.00198984 -10.002 30.009 -0.00198984&#x0A;&#x09;&#x09;&#x09;-10.002 30.009 20.004 10.004 30.009 -0.00198984</points>
+	</PxConvexMesh>
+	<PxMaterial >
+		<Id >1678258896</Id>
+		<DynamicFriction >0.5</DynamicFriction>
+		<StaticFriction >0.5</StaticFriction>
+		<Restitution >1</Restitution>
+		<FrictionCombineMode >eMIN</FrictionCombineMode>
+		<RestitutionCombineMode >eMIN</RestitutionCombineMode>
+	</PxMaterial>
+	<PxMaterial >
+		<Id >1678258976</Id>
+		<DynamicFriction >0.3</DynamicFriction>
+		<StaticFriction >0.3</StaticFriction>
+		<Restitution >0.5</Restitution>
+		<FrictionCombineMode >eAVERAGE</FrictionCombineMode>
+		<RestitutionCombineMode >eAVERAGE</RestitutionCombineMode>
+	</PxMaterial>
+	<PxRigidStatic >
+		<Id >1678245968</Id>
+		<Name >TileSlide02</Name>
+		<ActorFlags >eVISUALIZATION|eDISABLE_GRAVITY</ActorFlags>
+		<DominanceGroup >0</DominanceGroup>
+		<OwnerClient >0</OwnerClient>
+		<GlobalPose >0 -8.74228e-008 0 1 2.86102e-006 0 -1.90735e-006</GlobalPose>
+		<Shapes >
+			<PxShape >
+				<Geometry >
+					<PxConvexMeshGeometry >
+						<Scale >
+							<Scale >1 1 1</Scale>
+							<Rotation >0 0 0 1</Rotation>
+						</Scale>
+						<ConvexMesh >1808354816</ConvexMesh>
+					</PxConvexMeshGeometry>
+				</Geometry>
+				<LocalPose >-0.707107 -2.45859e-007 -2.45859e-007 0.707107 8.94089e-006 -10 9.53673e-007</LocalPose>
+				<SimulationFilterData >65537 1 0 0</SimulationFilterData>
+				<QueryFilterData >0 0 0 0</QueryFilterData>
+				<Materials >
+					<PxMaterialRef >1678258976</PxMaterialRef>
+				</Materials>
+				<ContactOffset >0.2</ContactOffset>
+				<RestOffset >0.1</RestOffset>
+				<Flags >eSIMULATION_SHAPE|eSCENE_QUERY_SHAPE|eVISUALIZATION</Flags>
+				<Name >TileSlide02</Name>
+			</PxShape>
+		</Shapes>
+	</PxRigidStatic>
+</PhysX30Collection>

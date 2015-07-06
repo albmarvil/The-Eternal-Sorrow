@@ -1,0 +1,51 @@
+system CofreGra
+{
+    scale                                       0.13 0.13 0.13
+    category                                    MisParticulas
+    technique 
+    {
+        position                                0 -10 0
+        visual_particle_quota                   100
+        emitted_technique_quota                 5
+        emitted_affector_quota                  5
+        emitted_system_quota                    5
+        material                                PUMediaPack/Flare_02
+        default_particle_width                  0
+        default_particle_height                 0
+        default_particle_depth                  0
+        spatial_hashing_cell_dimension          1
+        spatial_hashing_cell_overlap            4
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       70
+            time_to_live                        0.1
+            velocity                            10
+            particle_width                      dyn_random
+            {
+                min                             10
+                max                             40
+            }
+            particle_height                     dyn_random
+            {
+                min                             10
+                max                             40
+            }
+            particle_depth                      dyn_random
+            {
+                min                             10
+                max                             40
+            }
+            direction                           0 0 0
+            mesh_name                           cofreGra.mesh
+            mesh_surface_distribution           heterogeneous_1
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    0.976471 0.992157 0.615686 1
+            time_colour                         1    0 0.0784314 0.176471 1
+        }
+    }
+}

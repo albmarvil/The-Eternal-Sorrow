@@ -1,0 +1,101 @@
+system Antorcha
+{
+    scale                                       0.7 0.7 0.2
+    category                                    MisParticulas
+    technique Technique196
+    {
+        material                                PUMediaPack/Fire_01
+        default_particle_width                  60
+        default_particle_height                 20
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter205
+        {
+            time_to_live                        1
+            velocity                            15
+            box_width                           2.5
+            box_height                          0.12
+            box_depth                           0.1
+        }
+        affector                                LinearForce AffectorAntorcha1
+        {
+            enabled                             false
+            force_vector                        -10 0 0
+        }
+        affector                                LinearForce AffectorAntorcha2
+        {
+            enabled                             false
+            force_vector                        10 0 0
+        }
+        affector                                Colour Affector548
+        {
+            time_colour                         0    0 0 0 1
+            time_colour                         0.156522  0.501961 0 0 1
+            time_colour                         0.28913  1 0 0 1
+            time_colour                         0.404348  1 1 0 1
+            time_colour                         0.521739  1 1 0 1
+            time_colour                         0.643478  1 1 0 1
+            time_colour                         0.771739  1 0 0 1
+            time_colour                         1    0 0 0 1
+        }
+        observer                                OnRandom observerAntorcha1
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent handlerAlma1
+            {
+                enable_component                affector_component AffectorAntorcha1 true
+            }
+            handler                             DoEnableComponent handlerAlma2
+            {
+                enable_component                affector_component AffectorAntorcha2 false
+            }
+        }
+        observer                                OnRandom observerAntorcha2
+        {
+            observe_interval                    1
+            handler                             DoEnableComponent handlerAlma3
+            {
+                enable_component                affector_component AffectorAntorcha1 false
+            }
+            handler                             DoEnableComponent handlerAlma4
+            {
+                enable_component                affector_component AffectorAntorcha2 true
+            }
+            random_threshold                    0.6
+        }
+    }
+    technique Technique244
+    {
+        material                                PUMediaPack/Fire_01
+        default_particle_height                 20
+        default_particle_depth                  5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Line Emitter249
+        {
+            time_to_live                        1
+            velocity                            15
+        }
+    }
+    technique Technique253
+    {
+        material                                ParticleUniverse/Smoke
+        default_particle_width                  20
+        default_particle_height                 20
+        default_particle_depth                  1
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter267
+        {
+            time_to_live                        1.5
+            velocity                            20
+        }
+        affector                                Align Affector577
+        {
+        }
+    }
+}

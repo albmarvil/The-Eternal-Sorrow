@@ -1,0 +1,26 @@
+particle_system Rain
+{
+    material        Rain
+  	particle_width	3.5
+	particle_height	3.5
+	cull_each	true
+	renderer	billboard
+	sorted	true
+	local_space	false
+    billboard_type	point
+
+    emitter Box
+    {
+        angle           0
+        emission_rate   500
+        time_to_live    2
+        direction       0 -1 0
+        velocity    	300
+        colour_range_start  0.1 1 0.1
+        colour_range_end    0.4 1 0.4
+        width           1180
+        height          150
+        depth           1
+    }
+
+}

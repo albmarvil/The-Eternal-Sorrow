@@ -1,0 +1,33 @@
+system particulaPuertaCerradaAbajo
+{
+    scale                                       0.5 0.35 0.5
+    technique 
+    {
+        material                                ParticleUniverse/Lightning
+        default_particle_width                  0.8
+        default_particle_height                 0
+        renderer                                Billboard
+        {
+            billboard_type                      oriented_shape
+            billboard_origin                    bottom_center
+        }
+        emitter                                 Box 
+        {
+            emission_rate                       20
+            time_to_live                        20
+            direction                           0 0 0
+            velocity                            50
+        }
+        affector                                Line 
+        {
+            max_deviation                       4.2
+            time_step                           0.01
+            end                                 45 9 0
+            drift                               0.1
+        }
+        affector                                Align 
+        {
+            resize                              true
+        }
+    }
+}

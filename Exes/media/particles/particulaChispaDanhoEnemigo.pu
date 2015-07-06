@@ -1,0 +1,29 @@
+system particulaChispaDanhoEnemigo
+{
+    category                                    MisParticulas
+    scale                                       1 1 1
+    technique 
+    {
+        material                                PUMediaPack/Flare_01
+        default_particle_width                  2.5
+        default_particle_height                 2.5
+        default_particle_depth                  2.5
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point 
+        {
+            emission_rate                       9
+            angle                               180
+            time_to_live                        0.2
+            velocity                            20
+            direction                           1 0 0
+            force_emission                      true
+        }
+        affector                                Colour Affector209
+        {
+            time_colour                         0    1 0.15 0.15 1
+            time_colour                         1    0.8 0 0 1
+        }
+    }
+}

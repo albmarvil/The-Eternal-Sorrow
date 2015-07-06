@@ -1,0 +1,30 @@
+system PotenciadorAmarillo
+{
+    scale                                       2 2 1
+    category                                    MisParticulas
+    technique 
+    {
+        emitted_emitter_quota                   70
+        material                                PUMediaPack/Star_05
+        default_particle_width                  2.01379
+        default_particle_height                 2.01379
+        default_particle_depth                  1.01379
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       70
+            time_to_live                        0.5
+            velocity                            20.0276
+            mesh_name                           Runa.mesh
+            mesh_surface_scale                  1.5 1.2 0.1
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    1 1 0.501961 1
+            time_colour                         0.543478  1 1 0 1
+            time_colour                         1    0.8 0.8 0 1
+        }
+    }
+}

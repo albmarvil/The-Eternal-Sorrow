@@ -1,0 +1,70 @@
+system slash2
+{
+    scale                                       1.05 1.05 1.05
+    //scale                                       3.5 3.5 3.5
+    technique 
+    {
+        emitted_emitter_quota                   100
+        emitted_technique_quota                 100
+        emitted_affector_quota                  100
+        emitted_system_quota                    100
+        material                                mp_flare_04
+        default_particle_width                  2
+        default_particle_height                 2
+        default_particle_depth                  2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       100
+            angle                               0
+            time_to_live                        2
+            velocity                            0
+            particle_width                      10
+            particle_height                     10
+            particle_depth                      10
+            keep_local                          true
+            mesh_name                           slash.mesh
+            mesh_surface_distribution           heterogeneous_2
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    0.501961 1 0 1
+            time_colour                         0.53913  0 0.501961 0 1
+            time_colour                         1    0 0.25098 0 1
+        }
+    }
+    technique Technique33
+    {
+        emitted_emitter_quota                   100
+        emitted_technique_quota                 100
+        emitted_affector_quota                  100
+        emitted_system_quota                    100
+        material                                mp_flare_04
+        default_particle_width                  2
+        default_particle_height                 2
+        default_particle_depth                  2
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       50
+            angle                               0
+            time_to_live                        1.5
+            velocity                            0
+            particle_width                      10
+            particle_height                     10
+            particle_depth                      10
+            mesh_name                           slash.mesh
+            mesh_surface_distribution           edge
+        }
+        affector                                Colour Affector4
+        {
+            time_colour                         0    0.752941 0.752941 0.752941 1
+            time_colour                         0.321739  0.752941 0.752941 0.752941 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}

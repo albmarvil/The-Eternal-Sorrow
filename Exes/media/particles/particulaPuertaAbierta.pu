@@ -1,0 +1,36 @@
+system ParticulaPuertaAbierta
+{
+    category                                    MisParticulas
+    technique Technique131
+    {
+        visual_particle_quota                   90
+        material                                PUMediaPack/Flare_01
+        default_particle_width                  10
+        default_particle_height                 10
+        default_particle_depth                  10
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Box Emitter140
+        {
+            emission_rate                       50
+            angle                               360
+            time_to_live                        3
+            velocity                            5
+            direction                           -1 1 0
+            orientation                         1 -1 -1 0
+            box_width                           0.3
+            box_height                          35
+            box_depth                           15.1
+        }
+        affector                                Colour Affector193
+        {
+            time_colour                         0    0 0.25098 0 1
+            time_colour                         0.208696  0 0.501961 0 1
+            time_colour                         0.384783  0 0.501961 0.25098 1
+            time_colour                         0.51087  0 1 0 1
+            time_colour                         0.773913  0 0.501961 0 1
+            time_colour                         1    0 0.25098 0 1
+        }
+    }
+}

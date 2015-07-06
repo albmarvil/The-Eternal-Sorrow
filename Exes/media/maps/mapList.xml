@@ -1,0 +1,24 @@
+<maplist>
+	<!-- <map name="Slopes" weight="0" archetype="random"/> -->
+	<!-- <map name="Jump" weight="0" archetype="random"/> -->
+	<!-- <map name="Demo" weight="0" archetype="random"/> -->
+	<!-- <map name="Arena" weight="0" archetype="random"/> -->
+	<!-- <map name="Hito2" weight="0" archetype="random"/> -->
+	<!-- <map name="Hito3" weight="0" archetype="random"/> -->
+	<!-- <map name="Cavern" weight="0" archetype="random"/> -->
+	 <map name="Cavern2" weight="1000" archetype="random"/>
+	<!-- <map name="CavernG" weight="0" archetype="random"/> -->
+	<!-- <map name="Cavern2G" weight="0" archetype="random"/> -->
+	<!-- <map name="PruebaIA" weight="0" archetype="random"/> -->
+	<!-- <map name="Ciclo" weight="1000" archetype="random"/> -->
+	<!-- <map name="HITO4" weight="0" archetype="random"/> -->
+	<!-- <map name="TilesEspeciales" weight="10" archetype="random"/> -->
+	<!-- <map name="TilesAtravesables" weight="10" archetype="random"/> -->
+
+	<!-- < MAPAS FINALES > 
+	<map name="Prueba1" weight="1000" archetype="random"/>
+	<map name="GL001" weight="1000" archetype="random"/>
+	<map name="GL002" weight="1000" archetype="random"/>
+	<map name="Prueba2" weight="1000" archetype="random"/>
+	<map name="Prueba3" weight="1000" archetype="random"/> -->
+</maplist>

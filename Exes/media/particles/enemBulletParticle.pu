@@ -1,0 +1,29 @@
+system EnemBulletParticle
+{
+    scale                                       0.3 0.3 0.3
+    category                                    MisParticulas
+    technique Technique131
+    {
+        visual_particle_quota                   70
+        material                                PUMediaPack/Flare_03_balaEnemy
+        renderer                                Billboard
+        {
+        }
+        emitter                                 Point Emitter140
+        {
+            emission_rate                       50
+            angle                               40
+            time_to_live                        0.5
+            velocity                            10
+        }
+        affector                                Colour Affector193
+        {
+            time_colour                         0    0 0.501961 0.0117647 1
+            time_colour                         0.208696  0.027451 0.996078 0.00392157 1
+            time_colour                         0.384783  0.0352941 0.666667 0 1
+            time_colour                         0.51087  0.0745098 0.501961 0 1
+            time_colour                         0.773913  0 0.215686 0.0352941 1
+            time_colour                         1    0 0 0 1
+        }
+    }
+}
