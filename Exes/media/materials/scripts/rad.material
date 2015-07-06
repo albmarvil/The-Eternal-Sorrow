@@ -1,0 +1,16 @@
+
+material rad
+{
+
+    technique
+    {
+        pass
+        {
+            receive_shadows off
+            texture_unit 
+            {
+                texture rad.png
+            }
+        }
+    }
+}

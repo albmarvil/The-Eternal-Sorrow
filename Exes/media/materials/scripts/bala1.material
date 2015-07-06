@@ -1,0 +1,18 @@
+material Material#26
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.317647 1 0.431373 1
+			diffuse 0.317647 1 0.431373 1
+			specular 1 1 1 1.17 26
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,120 @@
+
+
+
+
+////// VertexShader
+// Calcula la posicion en el mundo del vertice y a partir de la posicion de una luz la dirección del vector de iluminación sobre dicho vertice
+// el resultado queda mapeado en coordenadas UV
+
+
+void  snm_vs(float4 position : POSITION,
+
+   float2 texCoord : TEXCOORD0,
+
+   out float4 oPosition      : POSITION,
+
+   out float2 oTexCoord      : TEXCOORD0,
+
+  out float3 olightDirection : TEXCOORD1,
+
+  out float3 wPosition : TEXCOORD2,
+
+  uniform float4 lightPosition, // Object space
+
+  uniform float4 lightDirection,
+
+  uniform float4x4   ViewProjectionMatrix,
+
+  uniform float4x4   WorldMatrix)
+{
+
+  wPosition = mul(WorldMatrix, position);
+
+  oPosition = mul(ViewProjectionMatrix, position);  ///calculo de la posicion del vertice en el mundo
+
+  oTexCoord = texCoord;  //devolvemos las UV como estaban
+
+  //Calculo de la direcciond e la luz
+  ///Si la posicion de la luz en "objec-space" tiene una cuarta componente a 0 entonces es una luz direccional, la cual necesita
+  // un tratamiento especial, ya que no tiene posicion pero sí dirección. En cualquier otro caso la luz si tiene posicion y se calcula su dirección de incidencia
+  // a partir de la posicion.
+
+  if(lightPosition.w == 0)
+  {
+    olightDirection = mul(WorldMatrix, -lightDirection); ///magicamente se usa un -lightDirection pk si no se ilumina aparentemente al reves
+  }
+  else
+  {
+    olightDirection = lightPosition - position.xyz;
+  }
+}
+
+
+
+
+
+
+/// Funcion que expande los vectores de iluminacion y normales de superficie de rango [0,1]  a rango [-1, 1]
+//// El porque de esta funcion se puede encontrar en el capitulo 8 del manual de Cg de Nvidia
+float3  expand(float3 v)
+{
+
+  return (v - 0.5) * 2; // Expand a range-compressed vector
+}
+
+
+/////PIXEL SHADER
+
+//// Este pixel shader recibe los datos de la etapa anterior, asi como las texturas de normales y difuso. También recibe como entrada el color de la luz difusa con la que
+// se esta pintando ahora mismo. Este shader hace lo siguiente
+
+//  1 - Normaliza el vector de iluminacion de la etapa anterior y lo expande
+//  2 - Obtiene el vector normal de superficie del mapa de normales y lo expande
+//  3 - El color final se calcula mezclando 3 cosas:
+///      - El productor escalar entre luz normalizada y vector normal de superficie:  un nº entre  [0,1] que sirve para dar sombra
+////     - el color del texel indicado de la textura difusa
+///      - el color de la luz incidente en este momento
+void snm_ps(
+
+    float2 normalMapTexCoord : TEXCOORD0,  ///mapa de normales
+
+    float3 lightDir          : TEXCOORD1,  ///vectores de iluminacion calculados por el VS
+
+    float3 wPosition         : TEXCOORD2, 
+
+    uniform float4 lightPos0 : COLOR,  
+
+    uniform float4 lightAtt0 : COLOR,
+
+    out float4 color : COLOR,              ////color final
+
+    uniform float4 lightDiffuseColor : COLOR,     ///color de la luz que ilumina
+
+    uniform sampler2D normalMap : register(s1),           //// normal map(textura)
+
+    uniform sampler2D diffuseTex : register(s0)       //// textura difusa
+    )    
+
+{
+
+  //calculo de la distancia de la luz
+  half lightDist = length(lightPos0.xyz - wPosition.xyz) / lightAtt0.r;
+
+  //formula cuadratica a*x*x* + b*x + c
+  half attenuation = lightAtt0.w * lightDist * lightDist + lightDist * lightAtt0.b;
+  half luminosity = max(0, 1 - attenuation); 
+
+  float3 lightTex = normalize(lightDir);
+
+  float3 light = expand(lightTex); ////expansion de la luz
+
+  // Sample and expand the normal map texture
+
+  float3 normalTex = tex2D(normalMap, normalMapTexCoord).xyz;
+
+  float3 normal = expand(normalTex);
+
+  // color = dot(normal, light) * lightDiffuseColor * tex2D(diffuseTex, normalMapTexCoord);
+
+  color = dot(normal, light) * lightDiffuseColor * luminosity * tex2D(diffuseTex, normalMapTexCoord);
+}

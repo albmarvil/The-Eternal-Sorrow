@@ -1,0 +1,41 @@
+material arma/Shield
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 1 1 1 1 1
+
+			texture_unit
+			{
+				texture shieldTex.png
+			}	
+		}
+
+	}
+
+}
+
+
+
+material arma/ShieldSangre
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 1 1 1 1 1
+
+			texture_unit
+			{
+				texture shieldTexBlood.png
+			}	
+		}
+
+	}
+
+}

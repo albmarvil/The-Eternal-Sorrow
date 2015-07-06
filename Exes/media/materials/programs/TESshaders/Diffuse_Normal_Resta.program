@@ -1,0 +1,28 @@
+vertex_program Diffuse_Normal_Resta_VS cg
+{
+    source Diffuse_Normal_Resta.cg
+    entry_point Diffuse_Normal_Resta_VS
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program Diffuse_Normal_Resta_PS cg
+{
+    source Diffuse_Normal_Resta.cg
+    entry_point Diffuse_Normal_Resta_PS
+    profiles ps_2_x arbfp1
+}
+
+fragment_program Diffuse_Normal_RestaEmissive_PS cg
+{
+    source Diffuse_Normal_Resta.cg
+    entry_point Diffuse_Normal_RestaEmissive_PS
+    profiles ps_2_x arbfp1
+}
+
+fragment_program Diffuse_Normal_RestaLava_PS cg
+{
+    source Diffuse_Normal_Resta.cg
+    entry_point Diffuse_Normal_RestaLava_PS
+    profiles ps_2_x arbfp1
+}

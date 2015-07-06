@@ -1,0 +1,17 @@
+material Props/AltarSacrificio
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture altarSacrificio.jpg
+				tex_coord_set 0
+			}
+		}
+
+	}
+
+}

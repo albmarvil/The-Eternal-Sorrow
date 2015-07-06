@@ -1,0 +1,1942 @@
+
+material Enemigos/Basico
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigo_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_tx.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/BasicoCanibal
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_tx.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Canibal.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Enemigos/BasicoVeneno
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_tx.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Veneno.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Enemigos/BasicoCongelacion
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_tx.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Congelacion.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Enemigos/Volador
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigo_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparencia.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/VoladorCanibal
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparencia.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Canibal.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+material Enemigos/VoladorVeneno
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparencia.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Veneno.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/VoladorCongelacion
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparencia.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Congelacion.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+material Enemigos/Spider
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTex.png
+            }
+        }
+
+    }
+}
+
+material Enemigos/SpiderCanibal
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+    }
+}
+
+
+material Enemigos/SpiderVeneno
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+    }
+}
+
+material Enemigos/SpiderCongelacion
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+    }
+}
+
+material Enemigos/SpiderBomb
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBomb.png
+            }
+        }
+
+    }
+}
+
+
+
+material Enemigos/SpiderBombCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBomb.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+}
+
+
+material Enemigos/SpiderBombVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBomb.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+}
+
+material Enemigos/SpiderBombCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBomb.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+}
+
+
+material Enemigos/Fantasma
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTex.png
+            }
+        }
+
+    }
+
+}
+
+
+
+material Enemigos/FantasmaCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+
+}
+
+
+material Enemigos/FantasmaVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/FantasmaCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTex.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/Chulu
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_mini.png
+            }
+        }
+
+    }
+
+}
+
+
+
+material Enemigos/ChuluCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_mini.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+
+}
+
+
+material Enemigos/ChuluVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_mini.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/ChuluCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_mini.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+
+}
+
+
+
+
+material Enemigos/BasicoElite
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigo_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_txElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/BasicoEliteCanibal
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_txElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Canibal.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Enemigos/BasicoEliteVeneno
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_txElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Veneno.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Enemigos/BasicoEliteCongelacion
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.5
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_basico_txElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_basico_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Congelacion.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Enemigos/VoladorElite
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigo_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparenciaElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/VoladorEliteCanibal
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparenciaElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Canibal.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+material Enemigos/VoladorEliteVeneno
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparenciaElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Veneno.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+
+material Enemigos/VoladorEliteCongelacion
+{
+    technique
+    {
+        pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+
+        pass 1
+        {
+            ambient 0 0 0
+            specular 1 1 1 20
+
+            iteration once_per_light directional
+
+            vertex_program_ref shaderEnemigo_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+            }
+
+            fragment_program_ref shaderEnemigoCanibal_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 0
+                param_named originalColor float 0.25
+                param_named canibalParam float 1.0
+            }
+
+            //Textura del tile
+            texture_unit
+            {
+                texture enemigo_volador_tx_sin_transparenciaElite.png //luz difusa
+                tex_coord_set 0
+            }
+
+            //Textura del bump map
+            texture_unit
+            {
+                texture enemigo_volador_normal.png //Normal map a la que aplicar la luz difusa
+                tex_coord_set 1
+            }
+
+            texture_unit
+            {
+                texture Congelacion.png
+                tex_coord_set 2
+            }
+        }
+    }
+
+}
+
+material Enemigos/SpiderElite
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexElite.png
+            }
+        }
+
+    }
+}
+
+material Enemigos/SpiderCanibalElite
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+    }
+}
+
+
+material Enemigos/SpiderVenenoElite
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+    }
+}
+
+material Enemigos/SpiderEliteCongelacion
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            spcular 1 1 1 1 
+
+            texture_unit
+            {
+                texture spiderTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+    }
+}
+
+material Enemigos/SpiderBombElite
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBombElite.png
+            }
+        }
+
+    }
+}
+
+
+
+material Enemigos/SpiderBombEliteCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBombElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+}
+
+
+material Enemigos/SpiderBombEliteVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBombElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+}
+
+material Enemigos/SpiderBombEliteCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture spiderTexBombElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+}
+
+
+material Enemigos/FantasmaElite
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTexElite.png
+            }
+        }
+
+    }
+
+}
+
+
+
+material Enemigos/FantasmaEliteCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+
+}
+
+
+material Enemigos/FantasmaEliteVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/FantasmaEliteCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture fantasmaTexElite.png
+            }
+
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/ChuluElite
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_miniElite.png
+            }
+        }
+
+    }
+
+}
+
+
+
+material Enemigos/ChuluEliteCanibal
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_miniElite.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Canibal.png
+            }
+        }
+
+    }
+
+}
+
+
+material Enemigos/ChuluEliteVeneno
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_miniElite.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Veneno.png
+            }
+        }
+
+    }
+
+}
+
+material Enemigos/ChuluEliteCongelacion
+{
+    technique
+    {
+        pass
+        {
+        
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 1 1 1 1
+
+            texture_unit
+            {
+                texture Cthulhu_miniElite.png
+            }
+            
+            texture_unit
+            {
+                colour_op add
+                texture Congelacion.png
+            }
+        }
+
+    }
+
+}
+
+
+

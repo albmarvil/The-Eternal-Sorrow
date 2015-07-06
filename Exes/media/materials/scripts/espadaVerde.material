@@ -1,0 +1,280 @@
+material arma/EspadaVerde
+{
+	technique
+	{
+		pass
+		{
+			diffuse 1 1 1 1
+			ambient 1 1 1 1
+			specular 1 1 1 1
+
+			texture_unit
+			{
+				colour_op replace
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+}
+
+
+material arma/EspadaVerdeEspecial1
+{
+
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 1 1 1 
+            specular 1 1 1 1 
+
+			fragment_program_ref GreenSword_PS
+			{
+                // param_named_auto tiempo sintime_0_2pi 20
+                param_named tiempo 1.0
+                param_named colorOriginal float 0.25
+                param_named brillo float 0.0
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerde_Normal.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+
+
+
+material arma/EspadaVerdeEspecial2
+{
+
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 1 1 1 
+            specular 1 1 1 1 
+
+			fragment_program_ref GreenSword_PS
+			{
+                param_named_auto tiempo sintime_0_2pi 6
+                // param_named tiempo 1.0
+                param_named colorOriginal float 0.25
+                param_named brillo float 0.45
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerde_Normal.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+
+material arma/EspadaVerdeEspecial3
+{
+
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 1 1 1 
+            specular 1 1 1 1 
+
+			fragment_program_ref GreenSword_PS
+			{
+                param_named_auto tiempo sintime_0_2pi 5
+                // param_named tiempo 1.0
+                param_named colorOriginal float 0.25
+                param_named brillo float 0.75
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerde_Normal.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+material arma/EspadaVerdeEspecial4
+{
+
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 1 1 1 
+            specular 1 1 1 1 
+
+			fragment_program_ref GreenSword_PS
+			{
+                param_named_auto tiempo sintime_0_2pi 5
+                // param_named tiempo 1.0
+                param_named colorOriginal float 0.25
+                param_named brillo float 1.15
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerde_Normal.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+material arma/EspadaVerdeEspecial5
+{
+
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 1 1 1 
+            specular 1 1 1 1 
+
+			fragment_program_ref GreenSword_PS
+			{
+                param_named_auto tiempo sintime_0_2pi 2
+                // param_named tiempo 1.0
+                param_named colorOriginal float 0.25
+                param_named brillo float 1.5
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerde_Normal.png
+			}
+
+			texture_unit
+			{
+				texture espadaVerdeTex.png
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}

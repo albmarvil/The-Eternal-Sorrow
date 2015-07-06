@@ -1,0 +1,72 @@
+material Compositors/FadeIn
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+
+			fragment_program_ref FadeIn
+			{
+			}
+		}
+		
+	}
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+			texture_unit
+			{
+				texture textError.jpg
+				colour_op add
+			}
+		}
+	}
+}
+
+
+material Compositors/FadeOut
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+
+			fragment_program_ref FadeOut
+			{
+			}
+		}
+		
+	}
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+			texture_unit
+			{
+				texture textError.jpg
+				colour_op add
+			}
+		}
+	}
+}

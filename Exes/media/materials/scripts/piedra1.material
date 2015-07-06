@@ -1,0 +1,19 @@
+material props/Piedra1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.8 0.8 0.8 1
+			specular 1 1 1 0.25 32.3447
+
+			texture_unit
+			{
+				texture Puerta_TX.png
+			}
+		}
+
+	}
+
+}

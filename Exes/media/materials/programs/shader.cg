@@ -1,0 +1,43 @@
+struct VsInput
+{
+	float4 position : POSITION;
+	float3 normal : NORMAL;
+	float2 uv0 : TEXCOORD0;
+};
+
+struct VsOutput
+{
+	float2 uv0 : TEXCOORD0;
+	float4 color : COLOR;
+	float4 position : POSITION;
+};
+
+VsOutput vsMain(in VsInput vsIn,
+	uniform float4x4 ViewProjectionMatrix,
+	uniform float4 LightAmbient,
+	uniform float4 MatAmbient) {
+
+	VsOutput vsOut;
+	vsOut.position = mul(ViewProjectionMatrix, vsIn.position);
+	vsOut.uv0 = vsIn.uv0;
+	vsOut.color = LightAmbient*MatAmbient;
+	return vsOut;
+}
+
+
+
+struct PsInput
+{
+	float3 uv0 : TEXCOORD0;
+	float4 color : COLOR;
+    uniform sampler DiffMap0 : register(s0);
+};
+
+float4 main(in PsInput psIn,
+			in uniform float separacion,
+			in uniform float tiempo) : COLOR {
+
+	float4 texel = tex2D(psIn.DiffMap0, psIn.uv0);
+	float4 baseColor = psIn.color * texel;
+	return baseColor;
+}

@@ -1,0 +1,15 @@
+vertex_program SimpleNormalMapping_VS cg
+{
+	source SimpleNormalMapping.cg
+	entry_point snm_vs
+	profiles vs_2_x arbvp1
+}
+
+
+fragment_program SimpleNormalMapping_PS cg
+{
+	source SimpleNormalMapping.cg
+	entry_point snm_ps
+	profiles ps_2_x arbfp1
+}
+

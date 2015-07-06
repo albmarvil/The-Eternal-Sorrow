@@ -1,0 +1,51 @@
+material Compositors/OldTVpropio
+{
+	technique
+	{
+
+		pass
+		{
+			depth_check off
+            polygon_mode_overrideable false
+
+			fragment_program_ref OldTVpropio
+			{
+                param_named distortionFreq float 0.01
+                param_named interference float 0.7
+				
+                param_named_auto time_0_X time_0_x 120
+                param_named_auto sin_time_0_X sintime_0_x 120				
+			}
+
+			texture_unit 0
+			{
+                tex_coord_set 0
+				tex_address_mode clamp
+				filtering linear linear linear
+			}
+
+			texture_unit 1
+			{
+				texture Random3D.dds 3d
+                tex_coord_set 1
+				filtering linear linear linear
+			}
+
+			texture_unit 2
+			{
+				texture NoiseVolume.dds 3d
+                tex_coord_set 2
+				filtering linear linear linear
+			}
+		}
+	}
+
+	technique
+	{
+		texture_unit
+		{
+			texture textError.jpg
+			colour_op add
+		}
+	}
+}

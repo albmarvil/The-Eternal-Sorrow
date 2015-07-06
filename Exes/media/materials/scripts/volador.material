@@ -1,0 +1,23 @@
+material lambert1
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0 1
+			diffuse 0.8 0.8 0.8 1
+			specular 0 0 0 0 1
+
+			texture_unit
+			{
+				texture "enemigo volador txl.psd"
+			}
+
+			texture_unit
+			{
+			}
+		}
+
+	}
+
+}

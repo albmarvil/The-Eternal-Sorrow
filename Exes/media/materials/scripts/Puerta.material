@@ -1,0 +1,46 @@
+material props/puerta
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			specular 0.9 0.9 0.9 10
+
+            iteration once_per_light directional
+
+            vertex_program_ref diffuseSpecularNormalMap_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+                param_named_auto eyePosition camera_position_object_space
+            }
+
+            fragment_program_ref diffuseSpecularNormalMap_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour  
+                param_named_auto Ks surface_specular_colour
+                param_named shininess float 5
+            }
+
+			texture_unit
+			{
+				texture Puerta_TX.png
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Puerta_Normal.tga
+				tex_coord_set 1
+			}
+		}
+
+	}
+
+}

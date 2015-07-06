@@ -1,0 +1,16 @@
+
+material nieve
+{
+
+    technique
+    {
+        pass
+        {
+            receive_shadows off
+            texture_unit 
+            {
+                texture nieve.png
+            }
+        }
+    }
+}

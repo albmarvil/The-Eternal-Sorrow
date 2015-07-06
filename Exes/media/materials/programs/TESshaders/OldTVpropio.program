@@ -1,0 +1,6 @@
+fragment_program OldTVpropio cg
+{
+	source OldTVpropio.cg
+	entry_point OldTV_ps
+	profiles ps_4_0 ps_2_0 arbfp1
+}

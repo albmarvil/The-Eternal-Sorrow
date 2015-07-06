@@ -1,0 +1,14 @@
+vertex_program runaShader_VS cg
+{
+    source runas.cg
+    entry_point shaderRuna_vs
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program runaShader_PS cg
+{
+    source runas.cg
+    entry_point shaderRuna_ps
+    profiles ps_2_x arbfp1
+}

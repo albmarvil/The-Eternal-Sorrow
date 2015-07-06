@@ -1,0 +1,21 @@
+
+
+///////////////////PIXEL SHADER
+struct PsInput
+{
+	float3 uv0 : TEXCOORD0;
+	uniform sampler DiffMap0 : register(s0);
+};
+
+float4 fadeInOut_ps (in PsInput psIn, in uniform float tiempo) : COLOR 
+{
+	/////////fade in 
+	float4 imageColor = tex2D(psIn.DiffMap0, psIn.uv0 );
+	float4 texelNegro = 0;
+
+	float4 texel = tex2D(psIn.DiffMap0, psIn.uv0);
+
+	imageColor = lerp(texelNegro, texel, tiempo);
+
+	return imageColor;
+}

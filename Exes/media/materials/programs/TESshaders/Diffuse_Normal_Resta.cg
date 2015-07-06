@@ -1,0 +1,220 @@
+
+
+
+void Diffuse_Normal_Resta_VS(	float4 position : POSITION, 
+				float2 uv0 : TEXCOORD0, 
+
+				uniform float4 lightPosition,  
+				uniform float4x4 WorldMatrix, 
+				uniform float4x4 ViewProjectionMatrix,
+				uniform float4 ambient,
+
+				uniform float4 Ka,
+
+				out float4 oposition : POSITION, 
+				out float2 ouv0 : TEXCOORD0, 
+				out float3 olightDirection : TEXCOORD1,
+				out float4 wposition : TEXCOORD2,
+				out float4 ambientColour : COLOR
+				)
+	{
+		oposition = mul(ViewProjectionMatrix, position); //Transformamos la posicion de object space a world space
+		wposition = mul(WorldMatrix, position);
+
+		ouv0 = uv0; //Devolemos las coordenada uv como estaban
+
+		//Me creo una nueva coordenada uv corresponiente a la luz y pasarsela al pixel shader
+		olightDirection = mul(WorldMatrix, lightPosition).xyz - mul(WorldMatrix, position).xyz * lightPosition.w;
+
+		ambientColour = ambient * Ka;
+	}
+
+//Pasa de rango [0,1] a [-1,1]
+float3 expand(float3 v)
+{
+	return 2*(v-0.5);
+}
+
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void Diffuse_Normal_Resta_PS(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float4 wposition : TEXCOORD2,
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour : COLOR, 
+			uniform float4 Kd : COLOR,
+			uniform float4 lightPos0 : COLOR,
+			uniform float4 lightAtt0 : COLOR,
+			in uniform float resta,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1),
+			uniform sampler2D restaTex : register(s2),
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+
+				float attenuation = 1;
+				if(lightPos0.w != 0) //Solo para las luces puntuales
+				{
+					float dist = (pow(lightPos0.x - wposition.x, 2) + pow(lightPos0.y - wposition.y,2) + pow(lightPos0.z - wposition.z,2)) /  pow(lightAtt0.r, 2);
+					float attenDiv = lightAtt0.b*sqrt(dist) + lightAtt0.w * dist;
+					attenuation = max(0, 1 - attenDiv);
+				}
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+
+				float4 colorResta = tex2D(restaTex, normalMapCoord) * resta;
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord) * Kd * lightColour * attenuation * lightIntensity;
+
+
+				olightColor = diffColor + ambientColour - colorResta;
+
+
+
+			}
+
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void Diffuse_Normal_RestaEmissive_PS(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float4 wposition : TEXCOORD2,
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour : COLOR, 
+			uniform float4 Kd : COLOR,
+			uniform float4 lightPos0 : COLOR,
+			uniform float4 lightAtt0 : COLOR,
+			in uniform float brillo,
+			in uniform float resta,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1),
+			uniform sampler2D emisiveTex : register(s2), 
+			uniform sampler2D restaTex : register(s3),
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+
+				float attenuation = 1;
+				if(lightPos0.w != 0) //Solo para las luces puntuales
+				{
+					float dist = (pow(lightPos0.x - wposition.x, 2) + pow(lightPos0.y - wposition.y,2) + pow(lightPos0.z - wposition.z,2)) /  pow(lightAtt0.r, 2);
+					float attenDiv = lightAtt0.b*sqrt(dist) + lightAtt0.w * dist;
+					attenuation = max(0, 1 - attenDiv);
+				}
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				float4 colorEmisivo = tex2D(emisiveTex, normalMapCoord) * Kd * max(attenuation, 0.1) * lightColour * brillo;
+
+				float4 colorResta = tex2D(restaTex, normalMapCoord) * resta;
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord) * Kd * lightColour * attenuation * lightIntensity;
+
+
+				olightColor = diffColor + ambientColour + colorEmisivo - colorResta;
+
+
+
+			}
+ 
+//Ks y Kd son los colores diffuso y specular absorbidos por el material
+//lightColor es el color difuso de la luz
+//lightIntensity es la intensidad con la que incide la luz difusa
+//specular indica la intensidad con la cual la luz es vista desde el observador. Si es un angulo obtuso no se apreciará esta luz
+//tex2D(speuclarTex, normaMapCoord) indica a fuerza del brillo en ese punto comparado con el resto
+//attenuation es la atenuacion de la luz
+//tex2D(diffuseText, normalMapCoord) es el color del pixel en la textura (texel)
+
+
+
+
+
+void Diffuse_Normal_RestaLava_PS(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float4 wposition : TEXCOORD2,
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour : COLOR, 
+			uniform float4 Kd : COLOR,
+			uniform float4 lightPos0 : COLOR,
+			uniform float4 lightAtt0 : COLOR,
+			in uniform float tiempo,
+			in uniform float brillo,
+			in uniform float resta,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1),
+			uniform sampler2D emisiveTex : register(s2), 
+			uniform sampler2D restaTex : register(s3),
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+
+				float attenuation = 1;
+				if(lightPos0.w != 0) //Solo para las luces puntuales
+				{
+					float dist = (pow(lightPos0.x - wposition.x, 2) + pow(lightPos0.y - wposition.y,2) + pow(lightPos0.z - wposition.z,2)) /  pow(lightAtt0.r, 2);
+					float attenDiv = lightAtt0.b*sqrt(dist) + lightAtt0.w * dist;
+					attenuation = max(0, 1 - attenDiv);
+				}
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				float4 colorEmisivo = tex2D(emisiveTex, normalMapCoord) * Kd * max(attenuation, 0.1) * lightColour * abs(tiempo) * brillo;
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord) * Kd * lightColour * attenuation * lightIntensity;
+
+				float colorResta = tex2D(restaTex, normalMapCoord) * resta;
+
+
+				olightColor = diffColor + ambientColour + colorEmisivo - colorResta;
+
+
+
+			}

@@ -1,0 +1,36 @@
+material Compositors/Cordura1
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+
+			fragment_program_ref FalsoColor&Laplace
+			{
+
+			}
+		}
+		
+	}
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RT
+				colour_op replace
+			}
+			texture_unit
+			{
+				texture textError.jpg
+				colour_op add
+			}
+		}
+	}
+}

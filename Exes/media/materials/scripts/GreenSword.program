@@ -1,0 +1,6 @@
+fragment_program GreenSword_PS cg
+{
+    source GreenSword.cg
+    entry_point GreenSword_PS
+    profiles ps_2_x arbfp1
+}

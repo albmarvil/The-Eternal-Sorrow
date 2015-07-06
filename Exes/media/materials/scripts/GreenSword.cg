@@ -1,0 +1,33 @@
+//Pasa de rango [0,1] a [-1,1]
+float3 expand(float3 v)
+{
+	return 2*(v-0.5);
+}
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void GreenSword_PS(float2 UV : TEXCOORD0, 
+			in uniform float tiempo,
+			in uniform float colorOriginal,
+			in uniform float brillo,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1),
+			uniform sampler2D emisiveTex : register(s2), 
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+
+				float4 colorEmisivo = tex2D(emisiveTex, UV) * brillo * abs(tiempo);
+
+				float4 diffColor = tex2D(diffuseTex, UV) * colorOriginal;
+
+
+				olightColor = diffColor + colorEmisivo;
+
+
+
+			}

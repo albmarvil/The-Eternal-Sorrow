@@ -1,0 +1,6 @@
+fragment_program FalsoColor&Laplace cg
+{
+	source FalsoColor&Laplace.cg
+	entry_point main
+	profiles ps_2_x arbfp1
+}

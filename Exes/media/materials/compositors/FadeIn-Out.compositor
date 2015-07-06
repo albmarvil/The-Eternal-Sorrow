@@ -1,0 +1,59 @@
+compositor FadeIn
+{
+    technique
+    {
+        texture scene target_width target_height PF_A8R8G8B8 ////declaramos una textura con el nombre de scene, con el tamaño del target y el formato diabolico del pixel
+
+        // Pintado sobre textura (RT) scene
+        target scene
+        {
+            // Valor inicial de la textura destino:
+            // render output del compositor anterior
+            // (o del dibujado de la escena, de ahí el nombre)
+            input previous
+
+            // No hay pasadas: no se renderiza quad,
+            // ni escena, etc.
+        }
+
+        target_output
+        {
+            pass render_quad
+            {
+                material Compositors/FadeIn
+                // Primer texture_unit del material: el RT scene
+                input 0 scene
+            }
+        }
+    }
+}
+
+compositor FadeOut
+{
+    technique
+    {
+        texture scene target_width target_height PF_A8R8G8B8 ////declaramos una textura con el nombre de scene, con el tamaño del target y el formato diabolico del pixel
+
+        // Pintado sobre textura (RT) scene
+        target scene
+        {
+            // Valor inicial de la textura destino:
+            // render output del compositor anterior
+            // (o del dibujado de la escena, de ahí el nombre)
+            input previous
+
+            // No hay pasadas: no se renderiza quad,
+            // ni escena, etc.
+        }
+
+        target_output
+        {
+            pass render_quad
+            {
+                material Compositors/FadeOut
+                // Primer texture_unit del material: el RT scene
+                input 0 scene
+            }
+        }
+    }
+}

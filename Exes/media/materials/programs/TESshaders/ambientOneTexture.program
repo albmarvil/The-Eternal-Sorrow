@@ -1,0 +1,60 @@
+
+
+
+vertex_program AmbientOneTexture cg
+{
+    source ambientOneTexture.cg
+    entry_point ambientOneTexture_vp
+    profiles vs_1_1 arbvp1
+
+    default_params
+    {
+        param_named_auto worldViewProj worldviewproj_matrix
+        // param_named_auto ambient ambient_light_colour
+    }
+
+}
+
+fragment_program PassthroughFp cg
+{
+    entry_point mainCg
+    source ambientOneTexture.cg
+    profiles ps_2_0 arbfp1
+}
+
+//////////////////////////////////////
+vertex_program BumpMapVP cg
+{
+	source BumpMapping.cg
+	entry_point main_vp
+	profiles vs_4_0 vs_1_1 arbvp1
+}
+
+
+
+// Bump map fragment program, support for this is optional
+fragment_program BumpMapFP cg
+{
+	source BumpMapping.cg
+	entry_point main_fp
+	profiles ps_4_0 ps_2_0 arbfp1 fp20
+}
+
+////////////////shadow receiver
+
+// Bump map vertex program shadow receiver
+vertex_program BumpMapVPShadowRcv cg
+{
+	source BumpMapping.cg
+	entry_point main_shadowreceiver_vp
+	profiles vs_1_1 arbvp1
+}
+
+
+vertex_program BumpMapVPShadowRcvcg
+{
+	source BumpMapping.cg
+	entry_point main_shadowreceiver_vp
+	profiles vs_1_1 arbvp1
+}
+

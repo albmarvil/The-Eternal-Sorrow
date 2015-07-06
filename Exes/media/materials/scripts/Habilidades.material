@@ -1,0 +1,188 @@
+material Habilidades/UpSalto
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture UpSalto.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/BarraVidaEnemigo
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture BarraVidaEnemigo.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/RegeneracionVida
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture RegeneracionVida.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/AumentoVidaMaxima
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture AumentoVidaMaxima.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/AumentoPorcentajeAlmas
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture AumentoPorcentajeAlmas.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/DamageEnemigoMelee
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture DamageEnemigoMelee.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/ArrowEnemy
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture ArrowEnemy.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/ReduceTimeChest
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture ReduceTimeChest.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}
+
+material Habilidades/AumentarTiempoReto
+{
+    technique
+    {
+        pass
+        {
+            ambient 1 1 1 1
+            diffuse 1 1 1 1
+            specular 0 0 0 0
+            depth_write off
+            scene_blend alpha_blend
+
+            texture_unit 
+            {
+                texture AumentarTiempoReto.png
+                colour_op alpha_blend
+            }
+        }
+    }
+}

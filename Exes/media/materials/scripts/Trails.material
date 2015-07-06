@@ -1,0 +1,98 @@
+material Trails/Jump
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+
+            texture_unit
+            {
+                texture TrailTest.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+material Trails/Laser
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+
+            texture_unit
+            {
+                texture pu_beam_02.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+
+material Trails/GreenDart
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+
+            texture_unit
+            {
+                texture DartTrail.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+
+material Trails/CanibalDart
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+
+            texture_unit
+            {
+                texture CanibalDartTrail.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+
+
+material Trails/Shield
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+
+            texture_unit
+            {
+                texture ShieldTrail.png
+                tex_address_mode clamp
+            }
+        }
+    }
+}

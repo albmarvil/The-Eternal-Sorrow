@@ -1,0 +1,39 @@
+
+
+
+
+
+///////////////////PIXEL SHADER
+static const float3x3 filter =
+{	
+	0, -1, 0,
+	-1, 4, -1,
+	0, -1, 0
+};
+
+struct PsInput
+{
+	float3 uv0 : TEXCOORD0;
+	uniform sampler DiffMap0 : register(s0);
+};
+
+float4 main (in PsInput psIn, in uniform float tiempo) : COLOR 
+{
+	//falso color  + laplaciano
+	float4 imageColor = 0;
+
+		for (int i = -1; i<= 1 ; ++i)
+		{
+			for(int j = -1; j<= 1; ++j)
+			{
+				imageColor += tex2D(psIn.DiffMap0, psIn.uv0 + 0.01 * float2(i,j)) * filter[j+1][i+1];
+			}
+		}
+		float4 aux = imageColor;
+
+		float4 res = float4(aux.g, aux.b, aux.r, aux.w);
+
+
+	return res;
+
+}

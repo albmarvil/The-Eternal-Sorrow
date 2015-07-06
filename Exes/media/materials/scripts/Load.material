@@ -1,0 +1,52 @@
+fragment_program Ogre/Compositor/MiShader hsls
+{
+	source shader.cg
+	entry_point main
+	profiles ps_2_x arbfp1
+}
+
+vertex_program Ogre/Compositor/MiVShader hsls
+{
+	source shader.cg
+	entry_point vsMain
+	profiles vs_2_x arbvp1
+}
+
+fragment_program Ogre/Compositor/MiShaderFP unified
+{
+	delegate Ogre/Compositor/MiShader
+	delegate Ogre/Compositor/MiVShader
+}
+
+material Ogre/Compositor/Load
+{
+	technique
+	{
+		pass
+		{
+			texture_unit RT
+			{
+                texture Load2.png
+			}
+			
+			texture_unit noise2
+			{
+				texture Load.png
+				colour_op replace
+			}
+
+			vertex_program_ref MiVShader
+			{
+				param_named_auto ViewProjectionMatrix worldviewproj_matrix
+				param_named_auto LightAmbient ambient_light_colour
+				param_named_auto MatAmbient surface_ambient_colour
+			}
+
+			fragment_program_ref MiShader
+			{
+				param_named separacion float 0.02
+				param_named_auto tiempo sintime_0_2pi 2
+			}
+		}
+	}
+}

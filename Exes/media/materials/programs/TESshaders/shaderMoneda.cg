@@ -1,0 +1,89 @@
+//author: Cesar Manuel Paz Guzman
+
+
+void shaderMoneda_vs(	float4 position : POSITION, 
+				float2 uv0 : TEXCOORD0, 
+
+				uniform float4 lightPosition,  
+				uniform float4x4 WorldMatrix, 
+				uniform float4x4 ViewProjectionMatrix,
+				uniform float3 eyePosition,
+				uniform float4 ambientLight,
+				uniform float4 Ka,
+
+				out float4 oposition : POSITION, 
+				out float2 ouv0 : TEXCOORD0, 
+				out float3 olightDirection : TEXCOORD1,
+				out float3 eyeDirection : TEXCOORD2,
+				out float4 ambientColour : COLOR
+				)
+	{
+		oposition = mul(ViewProjectionMatrix, position); //Transformamos la posicion de object space a world space
+
+		ouv0 = uv0; //Devolemos las coordenada uv como estaban
+
+		//Me creo una nueva coordenada uv corresponiente a la luz y pasarsela al pixel shader
+		olightDirection = mul(WorldMatrix, lightPosition).xyz - mul(WorldMatrix, position).xyz * lightPosition.w;
+
+		//Calculamos la direccion que hay desde la camara a la posicion del vertice, y calculamos cual es la direccion que hay en el angulo medio H
+
+		eyePosition.z = 100; //Efecto 3 con V expandida
+		eyeDirection = eyePosition - position.xyz;
+
+		ambientColour = ambientLight * Ka;
+
+	}
+
+//Pasa de rango [0,1] a [-1,1]
+float3 expand(float3 v)
+{
+	return 2*(v-0.5);
+}
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void shaderMoneda_ps(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 	
+			float3 eyeDirection : TEXCOORD2, 
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour, 
+			uniform float4 Kd,
+			uniform float4 Ks,
+			uniform float shininess,
+			uniform float factorDifuso,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1), 
+			uniform sampler2D specularTex: register(s2), 
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				float3 V = normalize(eyeDirection);
+				V = expand(V);
+				float3 H = normalize(normlightTex + V);
+				H = expand(H); 
+
+				float specular = lightIntensity > 0 && normlightDir.z > 0 ? saturate(dot(H, normal)) : 0;
+
+				float4 diffuseColor = tex2D(diffuseTex, normalMapCoord) * lightColour * factorDifuso;
+
+				olightColor = (Kd * lightIntensity + Ks * pow(specular, shininess) + ambientColour) 
+				* diffuseColor;
+			}
+
+

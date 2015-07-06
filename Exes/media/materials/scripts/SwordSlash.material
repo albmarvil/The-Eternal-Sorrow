@@ -1,0 +1,31 @@
+material SwordSlash
+{
+	technique
+	{
+		pass
+		{
+			diffuse 1 1 1 1
+			ambient 1 1 1 1 
+			specular 0 0 0 0
+
+			depth_write off
+
+			scene_blend alpha_blend
+
+			fragment_program_ref SwordSlash_PS
+			{
+				param_named_auto tiempo sintime_0_2pi 1
+			}
+
+			texture_unit
+			{
+				texture SwordSlash2_2.png
+			}
+
+			texture_unit
+			{
+				texture SwordSlash2_3.png
+			}
+		}
+	}
+}

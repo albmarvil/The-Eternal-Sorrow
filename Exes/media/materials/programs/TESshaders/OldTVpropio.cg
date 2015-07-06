@@ -1,0 +1,35 @@
+sampler2D Image: register(s0);
+sampler3D Rand: register(s1);
+sampler3D Noise: register(s2);
+
+float4 OldTV_ps(float4 posIn: POSITION, float2 img: TEXCOORD0,
+    uniform float distortionFreq: register(c1),
+    uniform float interference: register(c2),
+
+    uniform float time_0_X: register(c3),
+    uniform float sin_time_0_X: register(c4)
+
+) : COLOR {
+   // Define a frame shape
+   float2 pos = abs((img - 0.5) * 2.0);
+
+   // Interference ... just a texture filled with rand()
+   float4 rand = tex3D(Rand, float3(1.5 * pos, time_0_X));
+   rand -= float4(0.2,0.2,0.2,0.2);
+
+   // Some signed noise for the distortion effect
+   float4 noisy = tex3D(Noise, float3(0, 0.5 * pos.y, 0.1 * time_0_X));
+   noisy -= float4(0.5,0.5,0.5,0.5);
+
+   // Repeat a 1 - x^2 (0 < x < 1) curve and roll it with sinus.
+   float dst = frac(pos.y * distortionFreq +  sin_time_0_X);
+   dst *= (1 - dst);
+   
+
+   // ... and finally distort
+   float4 image = tex2D(Image, img);
+
+   // Combine frame, distorted image and interference
+   return (interference * rand.x + image);
+}
+

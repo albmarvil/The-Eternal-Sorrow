@@ -1,0 +1,133 @@
+material coin
+{
+	technique 0
+    {
+        pass 0
+        {
+            specular 1 1 1 1
+            ambient 1 1 1 1
+
+            iteration once_per_light directional
+
+            vertex_program_ref MonedaShader_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambientLight light_ambient_colour
+                param_named_auto Ka surface_ambient_colour 
+                param_named_auto lightPosition light_position_object_space 0         
+                param_named_auto eyePosition camera_position_object_space
+            }
+
+            fragment_program_ref MonedaShader_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 
+                param_named_auto Ks surface_specular_colour 
+                param_named shininess float 1
+                param_named factorDifuso float 2
+            }
+
+            texture_unit diffuseMap
+            {
+                texture moneda1_tx.png
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture moneda1_2_normal.png
+                tex_coord_set 1
+            }  
+        }
+    }
+}
+
+
+material coin2
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 1 1 1 1
+            ambient 1 1 1 1
+
+            iteration once_per_light directional
+
+            vertex_program_ref MonedaShader_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambientLight light_ambient_colour
+                param_named_auto Ka surface_ambient_colour 
+                param_named_auto lightPosition light_position_object_space 0         
+                param_named_auto eyePosition camera_position_object_space
+            }
+
+            fragment_program_ref MonedaShader_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 
+                param_named_auto Ks surface_specular_colour 
+                param_named shininess float 1
+                param_named factorDifuso float 2
+            }
+
+            texture_unit diffuseMap
+            {
+                texture moneda2_tx.png
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture moneda1_2_normal.png
+                tex_coord_set 1
+            }  
+        }
+    }
+}
+
+
+material coin3
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 1 1 1 1
+            ambient 1 1 1 1
+
+            iteration once_per_light directional
+
+            vertex_program_ref MonedaShader_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambientLight light_ambient_colour
+                param_named_auto Ka surface_ambient_colour 
+                param_named_auto lightPosition light_position_object_space 0         
+                param_named_auto eyePosition camera_position_object_space
+            }
+
+            fragment_program_ref MonedaShader_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour 
+                param_named_auto Ks surface_specular_colour 
+                param_named shininess float 1
+                param_named factorDifuso float 1
+            }
+
+            texture_unit diffuseMap
+            {
+                texture moneda3_tx.png
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture moneda1_2_normal.png
+                tex_coord_set 1
+            }  
+        }
+    }
+}

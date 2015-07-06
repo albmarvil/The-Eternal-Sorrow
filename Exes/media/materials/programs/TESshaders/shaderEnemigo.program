@@ -1,0 +1,37 @@
+vertex_program shaderEnemigo_VS cg
+{
+    source shaderEnemigo.cg
+    entry_point shaderEnemigo_vs
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program shaderEnemigo_PS cg
+{
+    source shaderEnemigo.cg
+    entry_point shaderEnemigo_ps
+    profiles ps_2_x arbfp1
+}
+
+fragment_program shaderEnemigoCanibal_PS cg
+{
+    source shaderEnemigo.cg
+    entry_point shaderEnemigoCanibal_ps
+    profiles ps_2_x arbfp1
+}
+
+
+vertex_program shaderEnemigoSpec_VS cg
+{
+    source shaderEnemigo.cg
+    entry_point shaderEnemigoSpec_vs
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program shaderEnemigoSpec_PS cg
+{
+    source shaderEnemigo.cg
+    entry_point shaderEnemigoSpec_ps
+    profiles ps_2_x arbfp1
+}

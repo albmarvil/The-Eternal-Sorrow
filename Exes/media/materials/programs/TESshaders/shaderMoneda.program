@@ -1,0 +1,14 @@
+vertex_program MonedaShader_VS cg
+{
+    source shaderMoneda.cg
+    entry_point shaderMoneda_vs
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program MonedaShader_PS cg
+{
+    source shaderMoneda.cg
+    entry_point shaderMoneda_ps
+    profiles ps_2_x arbfp1
+}

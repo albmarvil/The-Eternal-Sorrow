@@ -1,0 +1,14 @@
+vertex_program Diffuse_Normal_OrigColor_VS cg
+{
+    source Diffuse_Normal_OrigColor.cg
+    entry_point Diffuse_Normal_OrigColor_VS
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program Diffuse_Normal_OrigColor_PS cg
+{
+    source Diffuse_Normal_OrigColor.cg
+    entry_point Diffuse_Normal_OrigColor_PS
+    profiles ps_2_x arbfp1
+}

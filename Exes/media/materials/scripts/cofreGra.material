@@ -1,0 +1,68 @@
+material Props/CofreGra
+{
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_OrigColor_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_OrigColor_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named originalColor float 0.75
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture cofreGra.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture cofreGra_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+
+}

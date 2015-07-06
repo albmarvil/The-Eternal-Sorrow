@@ -1,0 +1,6 @@
+fragment_program SwordSlash_PS cg
+{
+    source SwordSlash.cg
+    entry_point SwordSlash_PS
+    profiles ps_2_x arbfp1
+}

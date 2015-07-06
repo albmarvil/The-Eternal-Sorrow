@@ -1,0 +1,709 @@
+//Author: César Manuel Paz Guzman
+
+/*
+Runa1 -> Azul
+Runa2 -> Amarillo
+Runa3 -> Verde
+Runa4 -> Rojo
+*/
+
+material RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            ambient 0 0 0 0
+
+            iteration once_per_light directional
+
+            vertex_program_ref runaShader_VS
+            {
+                param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour
+                param_named_auto lightPosition light_position_object_space 0         
+                param_named_auto eyePosition camera_position_object_space
+            }
+
+            fragment_program_ref runaShader_PS
+            {
+                param_named_auto lightColour light_diffuse_colour 0
+                param_named_auto Kd surface_diffuse_colour  
+                param_named_auto Ks surface_specular_colour
+                param_named shininess float 5
+            }
+        }
+    }
+}
+
+material Runa1 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+            
+            texture_unit diffuseMap
+            {
+                texture runa_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal1.tga
+                tex_coord_set 1
+            }  
+            texture_unit emisiva
+            {
+                texture runa1tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa2 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal1.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa1tx2Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Runa3 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal1.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa1tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+
+material Runa4 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal1.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa1tx4Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+
+material Runa5 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+
+            texture_unit diffuseMap
+            {
+                texture runa2_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal2.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa2tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Runa6 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa2_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal2.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa2tx2Emisivo.png
+                tex_coord_set 2
+            } 
+        }
+    }
+}
+
+
+material Runa7 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa2_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal2.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa2tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+
+material Runa8 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa2_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal2.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa2tx4Emisivo.png
+                tex_coord_set 2
+            } 
+        }
+    }
+}
+
+
+material Runa9 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+
+            texture_unit diffuseMap
+            {
+                texture runa3_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal3.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa3tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa10 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa3_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal3.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa3tx2Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+
+material Runa11 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa3_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal3.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa3tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa12 : RunaPadreTodaPoderosa
+{ 
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa3_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal3.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa3tx4Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa13 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+
+            texture_unit diffuseMap
+            {
+                texture runa4_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal4.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa4tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Runa14 : RunaPadreTodaPoderosa
+{ 
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa4_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal4.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa4tx2Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa15 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa4_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal4.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa4tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa16 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa4_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal4.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa4tx4Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa17 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+
+            texture_unit diffuseMap
+            {
+                texture runa5_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal5.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa5tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Runa18 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa5_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal5.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa5tx2Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa19 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa5_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal5.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa5tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa20 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa5_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal5.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa5tx4Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa21 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.3 0.7 20
+
+            texture_unit diffuseMap
+            {
+                texture runa6_tx1.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal6.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa6tx1Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+material Runa22 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa6_tx2.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal6.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa6tx2Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa23 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.3 0.7 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa6_tx3.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal6.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa6tx3Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}
+
+
+material Runa24 : RunaPadreTodaPoderosa
+{
+    technique 0
+    {
+        pass 0
+        {
+            specular 0.7 0.3 0.3 20
+
+            texture_unit diffuseMap
+            {
+                texture runa6_tx4.tga
+                tex_coord_set 0
+            }        
+            texture_unit normalMap
+            {
+                texture runa_normal6.tga
+                tex_coord_set 1
+            }   
+            texture_unit emisiva
+            {
+                texture runa6tx4Emisivo.png
+                tex_coord_set 2
+            }
+        }
+    }
+}

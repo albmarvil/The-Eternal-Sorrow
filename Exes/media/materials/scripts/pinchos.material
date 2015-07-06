@@ -1,0 +1,18 @@
+material trampa/Pinchos
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture PinchosTex.jpg
+			}
+
+			
+		}
+
+	}
+
+}

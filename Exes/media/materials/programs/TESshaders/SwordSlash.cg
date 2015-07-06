@@ -1,0 +1,17 @@
+void SwordSlash_PS(float2 UV : TEXCOORD0, 
+
+			in uniform float tiempo,
+
+			uniform sampler2D sprite1 : register(s0),
+			uniform sampler2D sprite2 : register(s1), 
+
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+				float4 color1 = tex2D(sprite1, UV);
+				float4 color2 = tex2D(sprite2, UV);
+
+				olightColor = lerp(color1, color2, tiempo);
+			}

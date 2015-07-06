@@ -1,0 +1,33 @@
+material debug_draw
+{
+    technique
+    {
+        pass
+        {
+            depth_write off
+            scene_blend alpha_blend
+            texture_unit
+            {
+               colour_op_ex source1 src_manual src_current 1 0 0
+               alpha_op_ex source1 src_manual src_current 0.6
+            }
+        }
+    }
+}
+
+material debug2_draw
+{
+    technique
+    {
+        pass
+        {
+            depth_write off
+            scene_blend alpha_blend
+            texture_unit
+            {
+               colour_op_ex source1 src_manual src_current 0 0 1
+               alpha_op_ex source1 src_manual src_current 0.6
+            }
+        }
+    }
+}

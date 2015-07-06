@@ -1,0 +1,15 @@
+material bala/LaserBall
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture -NOHAY-.png
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,49 @@
+vertex_program diffuseSpecularNormalMap_VS cg
+{
+	source shaderLightingDiffuseSpecular.cg
+	entry_point snm_vs
+	profiles vs_2_x arbvp1
+}
+
+
+fragment_program diffuseSpecularNormalMap_PS cg
+{
+	source shaderLightingDiffuseSpecular.cg
+	entry_point snm_ps
+	profiles ps_2_x arbfp1
+}
+
+vertex_program AmbientOneTexture cg
+{
+    source ambientOneTexture.cg
+    entry_point ambientOneTexture_vp
+    profiles vs_1_1 arbvp1
+
+    default_params
+    {
+        param_named_auto worldViewProj worldviewproj_matrix
+    }
+
+}
+
+fragment_program PassthroughFp cg
+{
+    entry_point mainCg
+    source ambientOneTexture.cg
+    profiles ps_2_0 arbfp1
+}
+
+vertex_program diffuseNormalMap_VS cg
+{
+    source shaderLightingDiffuse.cg
+    entry_point snm_vs
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program diffuseNormalMap_PS cg
+{
+    source shaderLightingDiffuse.cg
+    entry_point snm_ps
+    profiles ps_2_x arbfp1
+}

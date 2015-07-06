@@ -1,0 +1,21 @@
+vertex_program Diffuse_Normal_Emissive_VS cg
+{
+    source Diffuse_Normal_Emissive.cg
+    entry_point Diffuse_Normal_Emissive_VS
+    profiles vs_2_x arbvp1
+}
+
+
+fragment_program Diffuse_Normal_Emissive_PS cg
+{
+    source Diffuse_Normal_Emissive.cg
+    entry_point Diffuse_Normal_Emissive_PS
+    profiles ps_2_x arbfp1
+}
+
+fragment_program Diffuse_Normal_EmissiveLava_PS cg
+{
+    source Diffuse_Normal_Emissive.cg
+    entry_point Diffuse_Normal_EmissiveLava_PS
+    profiles ps_2_x arbfp1
+}

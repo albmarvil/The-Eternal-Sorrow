@@ -1,0 +1,26 @@
+material Material#27
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 0.517647 0 1
+			diffuse 1 0.517647 0 1
+			specular 0.419608 0.337255 0 1.32 1
+			scene_blend alpha_blend
+
+			texture_unit
+			{
+			}
+
+			texture_unit
+			{
+				colour_op_ex source1 src_current src_manual 1 1 1
+				colour_op_multipass_fallback src_alpha one_minus_src_alpha
+				alpha_op_ex blend_manual src_diffuse src_manual 0.5
+			}
+		}
+
+	}
+
+}

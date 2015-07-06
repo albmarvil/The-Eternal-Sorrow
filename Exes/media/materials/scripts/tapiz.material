@@ -1,0 +1,40 @@
+material Props/Estandarte
+{
+	technique 0
+	{
+        pass 0
+        {
+        	lightning off
+			depth_write off
+
+            scene_blend alpha_blend
+            //scene_blend add
+            alpha_rejection greater_equal 220
+
+			texture_unit
+			{
+				texture Tapiz_TX.png
+				colour_op alpha_blend
+			}
+
+		}
+	}
+
+}
+
+material Props/trampilla
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture Trampilla.png
+			}
+		}
+
+	}
+
+}

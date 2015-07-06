@@ -1,0 +1,51 @@
+material objetosRompibles/Barril
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture barrel_closed.png
+			}
+		}
+
+	}
+
+}
+
+material objetosRompibles/Caja
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			texture_unit
+			{
+				texture Crate.jpg
+			}
+		}
+
+	}
+}
+
+
+material objetosRompibles/Calavera
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			
+			texture_unit
+			{
+				texture Calavera.jpg
+			}
+		}
+	}
+}

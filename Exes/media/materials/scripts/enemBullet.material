@@ -1,0 +1,40 @@
+material bala/EnemBalaVerde
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 1 1 1 1 1
+
+			depth_check off
+			texture_unit
+			{
+				texture enemBulletGreenTex.png
+			}
+		}
+
+	}
+}
+
+material bala/EnemBalaRoja
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 1 1 1 1 1
+
+			depth_check off
+			
+			texture_unit
+			{
+				texture enemBulletRedTex.png
+			}
+		}
+
+	}
+}

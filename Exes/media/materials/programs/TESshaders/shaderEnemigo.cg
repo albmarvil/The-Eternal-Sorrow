@@ -1,0 +1,199 @@
+//author: Cesar Manuel Paz Guzman
+
+
+void shaderEnemigo_vs(	float4 position : POSITION, 
+				float2 uv0 : TEXCOORD0, 
+
+				uniform float4 lightPosition,  
+				uniform float4x4 WorldMatrix, 
+				uniform float4x4 ViewProjectionMatrix,
+				uniform float4 ambient,
+				uniform float4 Ka,
+
+				out float4 oposition : POSITION, 
+				out float2 ouv0 : TEXCOORD0, 
+				out float3 olightDirection : TEXCOORD1,
+				out float4 ambientColour : COLOR
+				)
+	{
+		oposition = mul(ViewProjectionMatrix, position); //Transformamos la posicion de object space a world space
+
+		ouv0 = uv0; //Devolemos las coordenada uv como estaban
+
+		//Me creo una nueva coordenada uv corresponiente a la luz y pasarsela al pixel shader
+		olightDirection = mul(WorldMatrix, lightPosition).xyz - mul(WorldMatrix, position).xyz * lightPosition.w;
+
+		ambientColour = ambient * Ka;
+	}
+
+//Pasa de rango [0,1] a [-1,1]
+float3 expand(float3 v)
+{
+	return 2*(v-0.5);
+}
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void shaderEnemigo_ps(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour, 
+			uniform float4 Kd,
+			uniform float originalColor,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1), 
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//LUZ SPECULAR
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				//Si es menor o igual a cero, significara que la luz golpea en un angulo obtuso, y por tanto no sera visible
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord);
+
+				olightColor = Kd * lightIntensity * diffColor * lightColour + ambientColour + diffColor * originalColor;
+			}
+
+void shaderEnemigoCanibal_ps(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour, 
+			uniform float4 Kd,
+			uniform float originalColor,
+			uniform float canibalParam,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1),
+			uniform sampler2D canibalTex : register(s2), 
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//LUZ SPECULAR
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				//Si es menor o igual a cero, significara que la luz golpea en un angulo obtuso, y por tanto no sera visible
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord);
+
+				float4 canibalColor = tex2D(canibalTex, normalMapCoord) * canibalParam;
+
+				olightColor = Kd * lightIntensity * diffColor * lightColour + ambientColour + diffColor * originalColor + canibalColor;
+			}
+
+
+			//author: Cesar Manuel Paz Guzman
+
+
+void shaderEnemigoSpec_vs(	float4 position : POSITION, 
+				float2 uv0 : TEXCOORD0, 
+
+				uniform float4 lightPosition,  
+				uniform float4x4 WorldMatrix, 
+				uniform float4x4 ViewProjectionMatrix,
+				uniform float3 eyePosition,
+				uniform float4 ambient,
+				uniform float4 Ka,
+
+				out float4 oposition : POSITION, 
+				out float2 ouv0 : TEXCOORD0, 
+				out float3 olightDirection : TEXCOORD1,
+				out float3 eyeDirection : TEXCOORD2,
+				out float4 ambientColour : COLOR
+				)
+	{
+		oposition = mul(ViewProjectionMatrix, position); //Transformamos la posicion de object space a world space
+
+		ouv0 = uv0; //Devolemos las coordenada uv como estaban
+
+		//Me creo una nueva coordenada uv corresponiente a la luz y pasarsela al pixel shader
+		olightDirection = mul(WorldMatrix, lightPosition).xyz - mul(WorldMatrix, position).xyz * lightPosition.w;
+
+		//Calculamos la direccion que hay desde la camara a la posicion del vertice, y calculamos cual es la direccion que hay en el angulo medio H
+		eyePosition.z = 50;
+		eyeDirection = eyePosition - position.xyz;
+
+		ambientColour = ambient * Ka;
+	}
+
+
+//La luz specular se asocia a una luz difusa. Por cada luz difusa, la luz specular tendrá un efecto determinado.
+void shaderEnemigoSpec_ps(float2 normalMapCoord : TEXCOORD0, 
+			float3 lightDirection : TEXCOORD1, 
+			float3 eyeDirection : TEXCOORD2, 
+			float4 ambientColour : COLOR,
+
+			uniform float4 lightColour, 
+			uniform float4 Ks,
+			uniform float4 Kd,
+			uniform float shininess,
+			uniform float originalColor,
+
+			uniform sampler2D diffuseTex : register(s0),
+			uniform sampler2D normalMap : register(s1), 
+			
+			out float4 olightColor : COLOR
+	  	)
+
+
+			{
+				
+				//Normalizamos la direccion de la luz: LUZ DIFUSA
+				float3 normlightTex = normalize(lightDirection);
+				float3 normlightDir = expand(normlightTex);
+
+				//Obtenems el color del texel en el bump map, para traducirlo a normalMap
+				float3 normalTex = tex2D(normalMap, normalMapCoord).xyz;
+				float3 normal = expand(normalTex);
+
+				//LUZ SPECULAR
+				float3 V = normalize(eyeDirection); //Normalizamos la direccion desde la que mira el visor
+				V = expand(V);
+				float3 H = normalize(normlightTex + V); //Obtenemos el vector central H resultante de sumar ambos vectores normalizados
+				H = expand(H); //Lo expandimos, para que tenga signo 
+
+				//Con esto obtengo cuanto incide la luz sobre un objeto. El angulo que tiene que formar la normal con la direccion de la luz tiene que ir
+				//entre >0 y 90, dado que el cos90 = 0 y el cos 0 = 1 (La luz difusa tiene una direccion opuesta a la normal, maxima incidencia)
+				float lightIntensity = saturate(dot(normlightDir, normal));
+
+				//Si es menor o igual a cero, significara que la luz golpea en un angulo obtuso, y por tanto no sera visible
+				float specular = lightIntensity > 0 && normlightDir.z > 0 ? saturate(dot(H, normal)) : 0;
+
+				float4 diffColor = tex2D(diffuseTex, normalMapCoord);
+
+				olightColor = (Kd * lightIntensity + Ks * pow(specular, shininess) )
+				* diffColor * lightColour + ambientColour + diffColor * originalColor;
+			}

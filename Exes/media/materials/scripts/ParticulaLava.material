@@ -1,0 +1,35 @@
+material partLava01
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_write off
+            scene_blend add
+
+            texture_unit
+            {
+                texture partlava5.png
+            }
+        }
+    }
+}
+
+material partLava02
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_write off
+            scene_blend add
+
+            texture_unit
+            {
+                texture partlava6.png
+            }
+        }
+    }
+}

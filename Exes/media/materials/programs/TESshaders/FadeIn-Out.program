@@ -1,0 +1,23 @@
+fragment_program FadeIn cg
+{
+	source FadeInOut.cg
+	entry_point fadeInOut_ps
+	profiles ps_2_x arbfp1
+
+	default_params
+	{
+		param_named_auto tiempo costime_0_X 1.570796327
+	}
+}
+
+fragment_program FadeOut cg
+{
+	source FadeInOut.cg
+	entry_point fadeInOut_ps
+	profiles ps_2_x arbfp1
+
+	default_params
+	{
+		param_named_auto tiempo sintime_0_X 1.570796327
+	}
+}

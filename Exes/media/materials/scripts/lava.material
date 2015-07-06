@@ -1,0 +1,15 @@
+
+material lava
+{
+    technique
+    {
+        pass
+        {
+            receive_shadows off
+            texture_unit 
+            {
+                texture lava.png
+            }
+        }
+    }
+}

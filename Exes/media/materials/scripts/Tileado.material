@@ -1,0 +1,2504 @@
+material TilesPadre
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref diffuseNormalMap_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref diffuseNormalMap_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+			}
+		}
+	}
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+material TilesPadreLava
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Emissive_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_EmissiveLava_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named_auto tiempo sintime_0_2pi 20
+                param_named brillo float 1.5
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+material TilesPadreNieve
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Emissive_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_Emissive_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named brillo float 0.5
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+material TilesPadreCastillo
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Emissive_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_Emissive_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named brillo float 0.2
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+
+
+
+material TilesPadreFragilCastillo
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Resta_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_RestaEmissive_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named brillo float 0.2
+                param_named resta float 0.5
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+material TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Resta_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_Resta_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named resta float 1.5
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+
+material TilesPadreFragilNieve
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Resta_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_RestaEmissive_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named brillo float 0.5
+                param_named resta float 0.5
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+
+
+
+material TilesPadreFragilLava
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 0
+        {
+            //Esta es la pasada de luz ambiental, en esta pasada iluminamos todas las caras del modelo por igual
+            ambient 1 1 1
+            diffuse 0 0 0 
+            specular 0 0 0 0 
+
+
+            ///Estos dos shaders hacen un override de los parametros de luz ambiental
+            ///como se puede ver le pasamos al VS que la luz ambiental es nula, de forma que hacemos una pasada de "NO" iluminaicon ambiental
+            vertex_program_ref AmbientOneTexture
+            {
+                param_named ambient float4 0 0 0 0
+            }
+            // este PS no hace nada, tal como viene el color lo devuelve
+            fragment_program_ref PassthroughFP
+            {
+            }
+        }
+		//Pasada para las luces difusas
+		pass 1
+		{
+			// receive_shadows off
+			ambient 0 0 0
+
+			scene_blend add
+
+			iteration once_per_light 
+
+			vertex_program_ref Diffuse_Normal_Resta_VS
+			{
+				param_named_auto WorldMatrix world_matrix
+                param_named_auto ViewProjectionMatrix worldviewproj_matrix
+                param_named_auto lightPosition light_position_object_space 0      
+                param_named_auto ambient ambient_light_colour
+                param_named_auto Ka surface_ambient_colour   
+			}
+
+			fragment_program_ref Diffuse_Normal_RestaLava_PS
+			{
+				param_named_auto lightColour light_diffuse_colour 0
+				param_named_auto Kd surface_diffuse_colour
+				param_named_auto lightPos0 light_position 0
+                param_named_auto lightAtt0 light_attenuation 0
+                param_named_auto tiempo sintime_0_2pi 20
+                param_named brillo float 1.5
+                param_named resta float 2.0
+			}
+		}
+	}
+
+	technique 1
+	{
+		pass 1
+		{
+			texture_unit
+			{
+				texture textError.jpg
+			}
+		}
+	}
+}
+
+////////////////// AMBIENTACIÓN: CASTILLO
+
+material Tiles/Castillo/Frontal : TilesPadreCastillo
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+material Tiles/Castillo/Fondo1 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Fondo_01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Fondo_01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Castillo/Fondo2 : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+			texture_unit
+			{
+				texture Castillo_Fondo_02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Fondo_02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+
+		}
+	}
+}
+
+material Tiles/Castillo/Fondo3 : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Fondo_03_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Fondo_03_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Castillo/Fondo4 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Fondo_04_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Fondo_04_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+
+material Tiles/Castillo/Hielo : TilesPadreCastillo
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Hielo_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Hielo_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+// material Tiles/Castillo/Hielo
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Castillo_Hielo_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Castillo/Pegajoso : TilesPadreCastillo
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Pegajoso_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Pegajoso_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+// material Tiles/Castillo/Pegajoso
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Castillo_Pegajoso_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+material Tiles/Castillo/Plataforma
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture tilePlatTex.png 
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+material Tiles/Castillo/Piedras
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture TilePiedra_TX.png //luz difusa
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+
+material Tiles/Castillo/FragilRotura1 : TilesPadreFragilCastillo
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Castillo/FragilRotura2 : TilesPadreFragilCastillo
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Castillo/FragilRotura3 : TilesPadreFragilCastillo
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Castillo_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Castillo_Frontal_TX.png //sumar color
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+
+////////////////// AMBIENTACIÓN: MAZMORRA
+
+material Tiles/Mazmorra/Frontal : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/Fondo1 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Fondo_01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Fondo_01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/Fondo2 : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+			texture_unit
+			{
+				texture Mazmorra_Fondo_02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Fondo_02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/Fondo3 : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Fondo_03_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Fondo_03_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/Fondo4 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Fondo_04_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Fondo_04_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/Hielo : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Hielo_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+// material Tiles/Mazmorra/Hielo
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Mazmorra_Hielo_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Mazmorra/Pegajoso : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Pegajoso_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+// material Tiles/Mazmorra/Pegajoso
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Mazmorra_Pegajoso_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Mazmorra/FragilRotura1 : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/FragilRotura2 : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/FragilRotura3 : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/FragilRotura1Borde : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/FragilRotura2Borde : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/FragilRotura3Borde : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/FrontalBorde : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_FrontalBorde_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/OblicuoBorde01 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/OblicuoBorde02 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+
+material Tiles/Mazmorra/OblicuoBordeA01 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_A01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_A01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/OblicuoBordeA02 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_A02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_A02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/OblicuoBordeB01 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_B01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_B01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+material Tiles/Mazmorra/OblicuoBordeB02 : TilesPadre
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_B02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Mazmorra_OblicuoBorde_B02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+		}
+	}
+}
+
+
+
+
+
+
+////////////////////////////AMBIENTACION: NIEVE
+
+material Tiles/Nieve/Frontal : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+material Tiles/Nieve/FrontalBorde : TilesPadreNieve
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Normal.png //luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Emissive.png //luz difusa
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+material Tiles/Nieve/Fondo1
+{
+	receive_shadows off
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Fondo_01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+material Tiles/Nieve/Fondo2
+{
+	receive_shadows off
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Fondo_02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+material Tiles/Nieve/Fondo3
+{
+	receive_shadows off
+	technique 0
+	{
+
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Fondo_03_TX.png //luz difusa
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+material Tiles/Nieve/Fondo4
+{
+	receive_shadows off
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Fondo_04_TX.png //luz difusa
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+
+material Tiles/Nieve/Hielo : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Hielo_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+
+// material Tiles/Nieve/Hielo
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Nieve_Hielo_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Nieve/Pegajoso : TilesPadre
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Pegajoso_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+		}
+	}
+}
+
+
+// material Tiles/Nieve/Pegajoso
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Nieve_Pegajoso_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Nieve/FragilRotura1 : TilesPadreFragilMazmorra ///es el mismo asi que reutilizamos
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+material Tiles/Nieve/FragilRotura2 : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Nieve/FragilRotura3 : TilesPadreFragilMazmorra
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Nieve_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+
+material Tiles/Nieve/FragilRotura1Borde : TilesPadreFragilNieve
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Normal.png //luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Emissive.png //luz difusa
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+material Tiles/Nieve/FragilRotura2Borde : TilesPadreFragilNieve
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Normal.png //luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Emissive.png //luz difusa
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Nieve/FragilRotura3Borde : TilesPadreFragilNieve
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Normal.png //luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Nieve_FrontalBorde_Emissive.png //luz difusa
+				tex_coord_set 2
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+////////////////////////////AMBIENTACION: LAVA
+
+
+material Tiles/Lava/Frontal : TilesPadreLava
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+material Tiles/Lava/Fondo1 : TilesPadreLava
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Fondo_01_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Fondo_01_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+
+			texture_unit
+			{
+				texture Lava_Fondo_01_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+
+material Tiles/Lava/Fondo2 : TilesPadreLava
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Fondo_02_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Fondo_02_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+
+			texture_unit
+			{
+				texture Lava_Fondo_02_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+
+
+material Tiles/Lava/Fondo3 : TilesPadreLava
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Fondo_03_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Fondo_03_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+
+			texture_unit
+			{
+				texture Lava_Fondo_03_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+
+material Tiles/Lava/Fondo4 : TilesPadreLava
+{
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Fondo_04_TX.png //luz difusa
+				tex_coord_set 0
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Fondo_04_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+			}
+
+			texture_unit
+			{
+				texture Lava_Fondo_04_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+
+
+material Tiles/Lava/Hielo : TilesPadreLava
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Hielo_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+// material Tiles/Lava/Hielo
+// {	
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Lava_Hielo_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Lava/Pegajoso : TilesPadreLava
+{
+	technique 0
+	{
+		//Pasada para las luces difusas
+		pass 1
+		{
+
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Pegajoso_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+		}
+	}
+}
+
+// material Tiles/Lava/Pegajoso
+// {
+// 	receive_shadows off
+// 	technique 0
+// 	{
+// 		pass 1
+// 		{
+// 			//Textura del tile
+// 			texture_unit
+// 			{
+// 				texture Lava_Pegajoso_TX.png //luz difusa
+// 				tex_coord_set 0
+// 			}
+// 		}
+// 	}
+// }
+
+
+material Tiles/Lava/FragilRotura1 : TilesPadreFragilLava
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+
+			texture_unit
+			{
+				texture break1.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Lava/FragilRotura2 : TilesPadreFragilLava
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+
+			texture_unit
+			{
+				texture break2.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+material Tiles/Lava/FragilRotura3 : TilesPadreFragilLava
+{
+	receive_shadows off
+	technique 0
+	{
+		pass 1
+		{
+			//Textura del tile
+			texture_unit
+			{
+				texture Lava_Frontal_TX.png //luz difusa
+				tex_coord_set 0
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			//Textura del bump map
+			texture_unit
+			{
+				texture Lava_Frontal_Normal.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 1
+
+				filtering anisotropic
+				max_anisotropy 16
+			}
+
+			texture_unit
+			{
+				texture Lava_Frontal_Emissive.png //Normal map a la que aplicar la luz difusa
+				tex_coord_set 2
+			}
+
+			texture_unit
+			{
+				texture break3.png //restar color
+				tex_coord_set 3
+			}
+		}
+	}
+}
+
+
+
+
+
