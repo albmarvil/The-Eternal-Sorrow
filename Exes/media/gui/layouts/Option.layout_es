@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Option" >
+        <Property name="Area" value="{{0.3,0},{0.05,0},{0.7,0},{0.95,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Window type="GlossySerpent/SerpentPanel" name="BackGround" >
+            <Property name="Area" value="{{0,0},{0,2},{1,0},{1,2}}" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Window type="GlossySerpent/StaticText" name="Root/" >
+                <Property name="Area" value="{{0.25,-68},{0.053,-15},{0.77,61},{0.15,-31}}" />
+                <Property name="Text" value="OPCIONES" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="true" />
+                <Property name="FrameEnabled" value="true" />
+                <Property name="BackgroundEnabled" value="true" />
+                
+            </Window>
+        </Window>
+        
+        <!-- Area del panel de pestañas-->
+        <Window name="TabControlOpc" type="GlossySerpent/TabControl" >
+            <Property name="TabHeight" value="{0,-1}" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="TabPanePosition" value="Top" />
+            <Property name="Area" value="{{0.03,0},{0.14,0},{0.97,0},{0.85,0}}" />
+
+            <!-- Area de la Pestaña de Video -->
+            <Window name="TabVideo" type="GlossySerpent/TabButtonPane">
+                <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                <Property name="Text" value="Video" />
+                <!-- Resolucion -->
+                <Window type="GlossySerpent/StaticText" name="resolution/resol" >
+                    <Property name="Area" value="{{0.05,0},{0.04,0},{0.25,0},{0.11,0}}" />
+                    <Property name="Text" value="Resolución" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Combobox" name="ResListbox" >
+                    <Property name="Area" value="{{0.25,0},{0.04,0},{0.65,0},{0.41,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window>
+                <!-- FullScreen -->
+                <Window type="GlossySerpent/StaticText" name="fullScreen" >
+                    <Property name="Area" value="{{0.05,0},{0.25,0},{0.55,0},{0.32,0}}" />
+                    <Property name="Text" value="Pantalla Completa" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Checkbox" name="checkbox" >
+                    <Property name="Area" value="{{0.45,0},{0.25,0},{0.55,0},{0.35,0}}" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window>
+                <!-- VSYNC -->
+                <Window type="GlossySerpent/StaticText" name="vsync" >
+                    <Property name="Area" value="{{0.05,0},{0.39,0},{0.49,0},{0.53,0}}" />
+                    <Property name="Text" value="*VSYNC" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Checkbox" name="checkbox2" >
+                    <Property name="Area" value="{{0.3,0},{0.41,0},{0.4,0},{0.51,0}}" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window>
+                <!-- Antialiasing -->
+                <Window type="GlossySerpent/StaticText" name="FSAA" >
+                    <Property name="Area" value="{{0.05,0},{0.50,0},{0.55,0},{0.76,0}}" />
+                    <Property name="Text" value="*Nivel FSAA" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Combobox" name="comboboxFSAA" >
+                    <Property name="Area" value="{{0.35,0},{0.62,0},{0.65,0},{1,0}}" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window>
+                <!-- Aviso -->
+                <Window type="GlossySerpent/StaticText" name="aviso" >
+                    <Property name="Area" value="{{0.05,0},{0.87,0},{0.55,0},{0.96,0}}" />
+                    <Property name="Text" value="[colour=&apos;FFFF0000&apos;](*) Requiere reiniciar el juego" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+            </Window>
+
+            <!-- Area de la Pestaña de Audio -->
+            <Window name="TabAudio" type="GlossySerpent/TabButtonPane">
+                <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                <Property name="Text" value="Audio" />
+                <!-- Volumen Música -->
+                <Window type="GlossySerpent/StaticText" name="SoundMusic" >
+                    <Property name="Area" value="{{0.05,0},{0.04,0},{0.5,0},{0.11,0}}" />
+                    <Property name="Text" value="Volumen Música" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Slider" name="Slider" >
+                    <Property name="Area" value="{{0.4,0},{0.055,0},{0.82,0},{0.1,0}}" />
+                    <Property name="CurrentValue" value="100" />
+                    <Property name="MaximumValue" value="100" />
+                    <Property name="ClickStepSize" value="10" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window> 
+                <Window type="GlossySerpent/StaticText" name="valorSoundMusic" >
+                    <Property name="Area" value="{{0.84,0},{0.03,0},{1,0},{0.12,0}}" />
+                    <Property name="Text" value="0/100" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="true" />
+                    <Property name="BackgroundEnabled" value="true" />
+                </Window>
+                <!-- Volumen Efectos -->
+                <Window type="GlossySerpent/StaticText" name="SoundEffects" >
+                    <Property name="Area" value="{{0.05,0},{0.25,0},{0.55,0},{0.32,0}}" />
+                    <Property name="Text" value="Volumen Efectos" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="false" />
+                    <Property name="BackgroundEnabled" value="false" />
+                </Window>
+                <Window type="GlossySerpent/Slider" name="Slider2" >
+                    <Property name="Area" value="{{0.4,0},{0.265,0},{0.82,0},{0.31,0}}" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="CurrentValue" value="100" />
+                    <Property name="MaximumValue" value="100" />
+                    <Property name="ClickStepSize" value="10" />
+                    <Property name="AlwaysOnTop" value="true" />
+                </Window>
+                <Window type="GlossySerpent/StaticText" name="valorSundEffects" >
+                    <Property name="Area" value="{{0.84,0},{0.24,0},{1,0},{0.33,0}}" />
+                    <Property name="Text" value="100/100" />
+                    <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                    <Property name="AlwaysOnTop" value="true" />
+                    <Property name="FrameEnabled" value="true" />
+                    <Property name="BackgroundEnabled" value="true" />
+                </Window>
+            </Window>
+        </Window>
+        <Window type="GlossySerpent/Button32_4C" name="Botones" >
+            <Property name="Area" value="{{0.1,0},{0.88,0},{0.4,0},{0.97,0}}" />
+            <Property name="Text" value="Controles" />
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+        <Window type="GlossySerpent/Button32_4C" name="Exit" >
+            <Property name="Area" value="{{0.6,0},{0.88,0},{0.9,0},{0.97,0}}" />
+            <Property name="Text" value="Volver" />
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+    </Window>
+</GUILayout>

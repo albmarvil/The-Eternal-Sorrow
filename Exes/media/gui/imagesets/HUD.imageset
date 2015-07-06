@@ -1,0 +1,24 @@
+<Imageset autoScaled="vertical" imagefile="HUD.png" name="HUD" nativeHorzRes="1024" nativeVertRes="720" version="2">
+    <Image height="16" name="life4" width="194" xPos="58" yPos="3" />
+    <Image height="46" name="Background1" width="273" xPos="2" yPos="72" />
+    <Image height="38" name="imagenObjeto" width="43" xPos="58" yPos="26" />
+    <Image height="46" name="circle" width="49" xPos="0" yPos="0" />
+    <Image height="62" name="arma1" width="61" xPos="6" yPos="122" />
+    <Image height="60" name="arma2" width="61" xPos="73" yPos="122" />
+    <Image height="62" name="arma3" width="70" xPos="138" yPos="122" />
+    <Image height="63" name="arma4" width="66" xPos="210" yPos="122" />
+    <Image height="64" name="arma5" width="66" xPos="5" yPos="187" />
+    <Image height="62" name="arma6" width="65" xPos="74" yPos="188" />
+    <Image height="61" name="arma7" width="64" xPos="142" yPos="187" />
+    <Image height="50" name="armaTransparencia" width="50" xPos="224" yPos="193" />
+    <Image height="38" name="jumpUP" width="43" xPos="109" yPos="26" />
+    <Image height="38" name="lifeUP" width="43" xPos="322" yPos="13" />
+    <Image height="38" name="lifeMaxUP" width="43" xPos="384" yPos="16" />
+    <Image height="38" name="damageEnemyUP" width="43" xPos="325" yPos="62" />
+    <Image height="38" name="soulUP" width="43" xPos="385" yPos="62" />
+    <Image height="38" name="seeLifeEnemyUP" width="43" xPos="323" yPos="114" />
+    <Image height="32" name="money" width="59" xPos="165" yPos="28" />
+    <Image height="85" name="BackgroundCentro" width="273" xPos="14" yPos="259" />
+    <Image height="36" name="Background2" width="41" xPos="12" yPos="76" />
+    <Image height="228" name="Cuerda" width="22" xPos="297" yPos="20" />
+</Imageset>

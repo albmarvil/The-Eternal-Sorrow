@@ -1,0 +1,4 @@
+<Imageset autoScaled="vertical" imagefile="InterfazTutorial.png" name="HUDTutorial" nativeHorzRes="1024" nativeVertRes="720" version="2">
+    <Image height="466" name="ControlsGamepad" width="534" xPos="0" yPos="0" />
+    <Image height="466" name="ControlsKeyboard" width="483" xPos="540" yPos="0" />
+</Imageset>

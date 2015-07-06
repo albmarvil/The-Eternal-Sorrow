@@ -1,0 +1,26 @@
+<Imageset autoScaled="vertical" imagefile="runas.png" name="Runas" nativeHorzRes="1024" nativeVertRes="720" version="2">
+    <Image height="124" name="Potenciador1" width="101" xPos="32" yPos="43" />
+    <Image height="124" name="Potenciador2" width="101" xPos="148" yPos="43" />
+    <Image height="124" name="Potenciador3" width="101" xPos="264" yPos="43" />
+    <Image height="124" name="Potenciador4" width="101" xPos="373" yPos="43" />
+    <Image height="124" name="Potenciador5" width="101" xPos="502" yPos="43" />
+    <Image height="124" name="Potenciador6" width="101" xPos="624" yPos="43" />
+    <Image height="124" name="Potenciador7" width="101" xPos="739" yPos="43" />
+    <Image height="124" name="Potenciador8" width="101" xPos="856" yPos="43" />
+    <Image height="124" name="Potenciador9" width="101" xPos="33" yPos="187" />
+    <Image height="124" name="Potenciador10" width="101" xPos="147" yPos="187" />
+    <Image height="124" name="Potenciador11" width="101" xPos="264" yPos="187" />
+    <Image height="124" name="Potenciador12" width="101" xPos="376" yPos="187" />
+    <Image height="124" name="Potenciador13" width="101" xPos="504" yPos="187" />
+    <Image height="124" name="Potenciador14" width="101" xPos="622" yPos="187" />
+    <Image height="124" name="Potenciador15" width="101" xPos="741" yPos="187" />
+    <Image height="124" name="Potenciador16" width="101" xPos="848" yPos="187" />
+    <Image height="137" name="Potenciador17" width="101" xPos="28" yPos="318" />
+    <Image height="137" name="Potenciador18" width="101" xPos="139" yPos="318" />
+    <Image height="137" name="Potenciador19" width="101" xPos="265" yPos="318" />
+    <Image height="137" name="Potenciador20" width="101" xPos="374" yPos="318" />
+    <Image height="124" name="Potenciador21" width="101" xPos="500" yPos="326" />
+    <Image height="124" name="Potenciador22" width="101" xPos="621" yPos="326" />
+    <Image height="124" name="Potenciador23" width="101" xPos="745" yPos="326" />
+    <Image height="124" name="Potenciador24" width="101" xPos="848" yPos="326" />
+</Imageset>

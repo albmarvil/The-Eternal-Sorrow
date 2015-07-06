@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+	<Window type="DefaultWindow" name="Root" >
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="AlwaysOnTop" value="True" />
+
+
+
+<!-- VENTANA DE DEBUG -->
+
+       <!--  <Window type="DefaultWindow" name="DEBUG" >
+            <Property name="Area" value="{{0.8,0},{0,0},{1,0},{0.25,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+           
+            <Window type="Generic/Label" name="nivelMedio" >
+                <Property name="Area" value="{{0,0},{0,0},{0.5,0},{0.25,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+
+            <Window type="Generic/Label" name="sala" >
+                <Property name="Area" value="{{0.5,0},{0,0},{1,0},{0.25,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+
+            <Window type="Generic/Label" name="actualMochila" >
+                <Property name="Area" value="{{0,0},{0.25,0},{0.25,0},{0.5,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+            <Window type="Generic/Label" name="div" >
+                <Property name="Area" value="{{0.25,0},{0.25,0},{0.75,0},{0.5,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+                <Property name="Text" value=" / " />
+            </Window>
+            <Window type="Generic/Label" name="totalMochila" >
+                <Property name="Area" value="{{0.75,0},{0.25,0},{1,0},{0.5,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+
+            <Window type="Generic/Label" name="tiempoActualSpawner" >
+                <Property name="Area" value="{{0,0},{0.5,0},{0.2,0},{0.75,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF0000FF" />
+            </Window>
+            <Window type="Generic/Label" name="div2" >
+                <Property name="Area" value="{{0.2,0},{0.5,0},{0.3,0},{0.75,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+                <Property name="Text" value=" / " />
+            </Window>
+            <Window type="Generic/Label" name="tiempoTotalSpawner" >
+                <Property name="Area" value="{{0.3,0},{0.5,0},{1,0},{0.75,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FFFF0000" />
+            </Window>
+
+            <Window type="Generic/Label" name="promedio" >
+                <Property name="Area" value="{{0,0},{0.75,0},{0.5,0},{1,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+
+            <Window type="Generic/Label" name="aux" >
+                <Property name="Area" value="{{0.5,0},{0.75,0},{1,0},{1,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="NormalTextColour" value="FF00FF00" />
+            </Window>
+
+        </Window> -->
+
+
+<!-- FIN VENTANA DEBUG -->
+
+
+        <Window type="DefaultWindow" name="Life" >
+            <Property name="Area" value="{{0.01,0},{0.03,0},{0.26,0},{0.20,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+		    <Window type="Generic/Image" name="LifeAlpha" >
+		        <Property name="Area" value="{{0.1,0},{0.173016,0},{0.985,0},{0.537302,0}}" />
+	            <Property name="Image" value="NewHUD/life4" />
+	            <Property name="Alpha" value="0.2" />
+
+		    </Window>
+		    <Window type="Generic/Image" name="LifeRestante" >
+		        <Property name="Area" value="{{0.1,0},{0.173016,0},{0.985,0},{0.537302,0}" />
+	            <Property name="Image" value="NewHUD/life4" />
+		    </Window>
+            <Window type="Generic/Image" name="Life2" >
+                <Property name="Area" value="{{0.02,0},{0.04,0},{1,0},{0.7,0}}" />
+                <Property name="Image" value="NewHUD/calaveraLife" />
+            </Window>
+		    <Window type="Generic/Label" name="textoVida" >
+		        <Property name="Area" value="{{0.60,0},{0.25,0},{0.92,0},{0.47,0}}" />
+		        <Property name="Font" value="Jura-18" />
+		        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+	            <Property name="NormalTextColour" value="FFFF0000" />
+	            <!-- <Property name="Text" value="100/100" /> -->
+		    </Window>
+	    </Window>
+
+        <Window type="DefaultWindow" name="Arrow" >
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property name="MaxSize" value="{{1,0},{1,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+        </Window>
+        
+        <Window type="DefaultWindow" name="Money" >
+            <Property name="Area" value="{{0.02,0},{0.17,0},{0.14,0},{0.24,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Window type="Generic/Image" name="icono" >
+                <Property name="Area" value="{{0,0},{0,0},{0.32,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/money" />
+            </Window>
+            <Window type="Generic/Label" name="cantidad" >
+                <Property name="Area" value="{{0.36,0},{0,0},{1,0},{1,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="Text" value="0" />
+                <Property name="HorizontalAlignment" value="Left" />
+                <Property name="NormalTextColour" value="FFFFF900" />
+            </Window>
+        </Window>
+        <Window type="DefaultWindow" name="Centro" >
+            <Property name="Area" value="{{-0.47,0},{0,0},{-0.01,0},{0.35,0}}" />
+            <!-- <Property name="Visible" value="false" /> -->
+            <Property name="AlwaysOnTop" value="True" />
+            <Window type="Generic/Image" name="Background" >
+                <Property name="Area" value="{{0,0},{0.35,0},{1,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/BackgroundCentro" />
+                <Property name="Alpha" value="0.6"/>
+            </Window>
+            <Window type="Generic/Label" name="Texto" >
+                <Property name="Area" value="{{0.25,0},{0.43,0},{0.966935,0},{0.903973,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="NormalTextColour" value="FFFFFF00" /> 
+            </Window>
+        </Window>
+        <Window type="DefaultWindow" name="CartelArriba3" >
+            <Property name="Area" value="{{0.39,0},{-0.18,0},{0.61,0},{0,0}}" />
+            <Property name="Visible" value="false" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Window type="Generic/Image" name="Background" >
+                <Property name="Area" value="{{0.0,0},{0,0},{1,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/CarterArriba" />
+            </Window>
+            <Window type="DefaultWindow" name="FirstText" >
+                <Property name="Area" value="{{0.0290109,0},{0.076694,0},{0.317504,0},{0.998002,0}}" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{0,0},{0.0296341,0},{1.00798,0},{0.322892,0}}" />
+                    <Property name="Font" value="Jura-13" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="FirstText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0.00767476,0},{0.473034,0},{1.00798,0},{0.766293,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="SecondText" >
+                <Property name="Area" value="{{0.368494,0},{0.075921,0},{0.639631,0},{0.988369,0}}" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{-0.0118136,0},{0.0296341,0},{1.00798,0},{0.322892,0}}" />
+                    <Property name="Font" value="Jura-13" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="SecondText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0.00767476,0},{0.473034,0},{1.00797,0},{0.766293,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="ThirdText" >
+                <Property name="Area" value="{{0.674767,0},{0.175148,0},{0.945903,0},{0.987596,0}}" />
+                <Property name="Alpha" value="1" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{-0.0118136,0},{0.0296341,0},{1.00798,0},{0.322892,0}}" />
+                    <Property name="Font" value="Jura-13" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="ThirdText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0.00767476,0},{0.473034,0},{1.00797,0},{0.766293,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+        </Window>
+        <Window type="DefaultWindow" name="CartelArriba2" >
+        <Property name="Area" value="{{0.38,0},{-0.23,0},{0.62,0},{0,0}}" />
+        <Property name="Visible" value="false" />
+        <Property name="AlwaysOnTop" value="True" />
+            <Window type="Generic/Image" name="Background" >
+                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/CarterArriba" />
+            </Window>
+            <Window type="DefaultWindow" name="FirstText" >
+                <Property name="Area" value="{{0.50,0},{0.15,0},{0.75,0},{1,0}}" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{0,0},{0.03,0},{1,0},{0.32,0}}" />
+                    <Property name="Font" value="Jura-13" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="FirstText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0,0},{0.23,0},{1,0},{0.62,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="SecondText" >
+                <Property name="Area" value="{{0.20,0},{0.15,0},{0.50,0},{1,0}}" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{0,0},{0.03,0},{1,0},{0.32,0}}" />
+                    <Property name="Font" value="Jura-13" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="SecondText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0,0},{0.23,0},{1,0},{0.65,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+        </Window>
+        <Window type="DefaultWindow" name="CartelArriba1" >
+        <Property name="Area" value="{{0.38,0},{-0.23,0},{0.62,0},{0,0}}" />
+        <Property name="Visible" value="false" /> 
+        <Property name="AlwaysOnTop" value="True" />  
+            <Window type="Generic/Image" name="Background" >
+                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/CarterArriba" />
+            </Window>
+            <Window type="DefaultWindow" name="FirstText" >
+                <Property name="Area" value="{{0.12,0},{0.25,0},{0.88,0},{1,0}}" />
+                <Window type="Generic/Label" name="Nombre" >
+                    <Property name="Area" value="{{0,0},{0.0296341,0},{1,0},{0.322892,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFFFF00" />
+                    <Property name="Text" value="FirstText" />
+                </Window>
+                <Window type="Generic/Label" name="Cantidad" >
+                    <Property name="Area" value="{{0,0},{0.33034,0},{1,0},{0.63,0}}" />
+                    <Property name="Font" value="Jura-18" />
+                    <Property name="NormalTextColour" value="FFFF0000" />
+                    <Property name="Text" value="-" />
+                </Window>
+            </Window>
+        </Window>
+	    <Window type="DefaultWindow" name="Carteles" >
+            <Property name="Area" value="{{0.638995,0},{0.0101953,0},{0.9811,0},{1,0}}" />        
+            <Window type="DefaultWindow" name="Cartel1" >
+                <Property name="Area" value="{{0.03,0},{0.02,0},{0.99,0},{0.17,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel2" >
+                <Property name="Area" value="{{0.03,0},{0.17,0},{0.99,0},{0.31,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel3" >
+                <Property name="Area" value="{{0.03,0},{0.31,0},{0.99,0},{0.45,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel4" >
+                <Property name="Area" value="{{0.03,0},{0.45,0},{0.99,0},{0.59,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel5" >
+                <Property name="Area" value="{{0.03,0},{0.59,0},{0.99,0},{0.73,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel6" >
+                <Property name="Area" value="{{0.03,0},{0.73,0},{0.99,0},{0.87,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.08,0},{0.30,0},{0.21,0},{0.70,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.10,0},{0.88,0},{0.37,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.17,0},{0.35,0},{0.98,0},{0.821273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                    </Window>
+                </Window>
+            </Window>
+            <Window type="DefaultWindow" name="Cartel7" >
+                <Property name="Area" value="{{0.03,0},{0.87,0},{0.99,0},{1,0}}" />
+                <Property name="Visible" value="false" />
+                <Window type="Generic/Image" name="Background" >
+                    <Property name="Area" value="{{0.0050839,0},{-0.00413431,0},{1,0},{1.00218,0}}" />
+                    <Property name="Image" value="NewHUD/Background1" />
+                    <Property name="Visible" value="false" />
+                    <Window type="Generic/Image" name="ImagenObjeto" >
+                        <Property name="Area" value="{{0.039315,0},{0.169609,0},{0.201246,0},{0.859679,0}}" />
+                        <Property name="Image" value="HUD/imagenObjeto" />
+                    </Window>
+                    <Window type="Generic/Label" name="Nombre" >
+                        <Property name="Area" value="{{0.286293,0},{0.0890101,0},{0.885821,0},{0.429434,0}}" />
+                        <Property name="Font" value="Jura-18" />
+                        <Property name="NormalTextColour" value="FFFFF900" />
+                    </Window>
+                    <Window type="Generic/Label" name="Explicacion" >
+                        <Property name="Area" value="{{0.214955,0},{0.520566,0},{0.972114,0},{0.921273,0}}" />
+                        <Property name="Font" value="Jura-13" />
+                        <Property name="NormalTextColour" value="FFFFF900" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window type="DefaultWindow" name="Armas" >
+            <Property name="Area" value="{{0.405,0},{0.84,0},{0.595,0},{0.97,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+
+            <Window type="Generic/Image" name="ArmaIzqFondo" >
+                <Property name="Area" value="{{0,0},{0,0},{0.45,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/arma1" />
+                <!-- <Window type="DefaultWindow" name="transparenciaPadre" >
+                <Property name="Area" value="{{0.0550562,0},{0,0},{0.97,0},{0.95,0}}" /> 
+                    <Window type="Generic/Image" name="Transparencia" >
+                        <Property name="Area" value="{{0,0},{0.072,0},{1,0},{1,0}}" />
+                        <Property name="Image" value="NewHUD/armaTransparencia" />
+                        <Property name="Alpha" value="0.5" />
+                        <Property name="Visible" value="true" />
+                    </Window>
+                </Window> -->
+            </Window>
+
+            <Window type="DefaultWindow" name="ArmaIzqFondo2" >
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Area" value="{{0,0},{0,0},{0.45,0},{1,0}}" />
+                <Window type="DefaultWindow" name="transparenciaPadre" >
+                <Property name="Area" value="{{0.0550562,0},{0,0},{0.97,0},{0.95,0}}" /> 
+                    <Window type="Generic/Image" name="Transparencia" >
+                        <Property name="Area" value="{{0,0},{0.072,0},{1,0},{1,0}}" />
+                        <Property name="Image" value="NewHUD/armaTransparencia" />
+                        <Property name="Alpha" value="0.5" />
+                        <Property name="Visible" value="true" />
+                    </Window>
+                </Window>
+            </Window>
+
+            <Window type="Generic/Image" name="ArmaDerFondo" >
+                <Property name="Area" value="{{0.55,0},{0,0},{1,0},{1,0}}" />
+                <Property name="Image" value="NewHUD/arma1" />
+               <!--  <Window type="DefaultWindow" name="transparenciaPadre" >
+                    <Property name="Area" value="{{0.0550562,0},{0,0},{0.97,0},{0.95,0}}" />
+                    <Window type="Generic/Image" name="Transparencia" >
+                        <Property name="Area" value="{{0,0},{0.072,0},{1,0},{1,0}}" />
+                        <Property name="Image" value="NewHUD/armaTransparencia" />
+                        <Property name="Alpha" value="0.5" />
+                        <Property name="Visible" value="true" />
+                    </Window>
+                </Window> -->
+            </Window>    
+
+            <Window type="Generic/Image" name="ArmaDerFondo2" >
+                <Property name="Area" value="{{0.55,0},{0,0},{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Window type="DefaultWindow" name="transparenciaPadre" >
+                    <Property name="Area" value="{{0.0550562,0},{0,0},{0.97,0},{0.95,0}}" />
+                    <Window type="Generic/Image" name="Transparencia" >
+                        <Property name="Area" value="{{0,0},{0.072,0},{1,0},{1,0}}" />
+                        <Property name="Image" value="NewHUD/armaTransparencia" />
+                        <Property name="Alpha" value="0.5" />
+                        <Property name="Visible" value="true" />
+                    </Window>
+                </Window>
+            </Window>  
+            
+
+            <Window type="Generic/Image" name="ArmaIzq" >
+                <Property name="Area" value="{{0,0},{0,0},{0.498752,0},{1,0}}" />
+            </Window>
+            <Window type="Generic/Image" name="ArmaDer" >
+                <Property name="Area" value="{{0.502628,0},{0,0},{1,0},{1,0}}" />
+            </Window>
+        </Window>
+        <Window type="Generic/Image" name="tutorialBillboard" >
+            <Property name="Area" value="{{0.35,0},{0.02,0},{0.65,0},{0.25,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="Visible" value="false"/>
+            <Property name="Image" value="NewHUD/controles" />
+        </Window>
+
+        <Window type="DefaultWindow" name="openChest" >
+            <Property name="Area" value="{{0.48,0},{0.48,0},{0.52,0},{0.57,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="Visible" value="false"/>
+            <Window type="Generic/Label" name="cantidad" >
+                <Property name="Area" value="{{0,0},{0,0},{1,0},{0.5,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="Alpha" value="0.7" />
+            </Window>
+        </Window>
+
+        <Window type="Generic/Image" name="letraEChest" >
+            <Property name="Area" value="{{0.49,0},{0.44,0},{0.51,0},{0.47,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="Image" value="NewHUD/letraE" />
+            <Property name="Visible" value="false"/>
+        </Window>
+
+        <Window type="Generic/Image" name="Logro" >
+            <Property name="Area" value="{{0.638995,0},{0.01,0},{0.98,0},{0.17,0}}" />
+            <Property name="Visible" value="false" />
+            <Window type="Generic/Label" name="Explicacion" >
+                <Property name="Area" value="{{0.1,0},{0.1,0},{0.9,0},{0.9,0}}" />
+                <Property name="Font" value="Jura-18" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+        </Window>
+	</Window>
+</GUILayout>

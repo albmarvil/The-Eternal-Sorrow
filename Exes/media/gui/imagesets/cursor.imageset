@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset version="2" name="cursorImages" imagefile="cursor.png" nativeHorzRes="28" nativeVertRes="28" autoScaled="vertical" >
+    <Image name="mirilla" xPos="0" yPos="0" width="28" height="28" xOffset="-14" yOffset="-14" />
+</Imageset>

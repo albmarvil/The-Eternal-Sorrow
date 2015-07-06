@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<GUIScheme version="5" name="Propio">
+    <Font filename="DejaVuSans-12.font" />
+    <Font filename="DejaVuSans-14.font" />
+    <Font filename="DejaVuSans-30.font" />
+    <Font filename="TESFont-12.font" />
+    <Font filename="TESFont-14.font" />
+    <Font filename="TESFont-16.font" />
+    <Font filename="TESFont.font" />
+    <Imageset filename="OgreTray.imageset" />
+    <Imageset filename="HUD.imageset" />
+    <Imageset filename="InterfazTES.imageset" />
+    <Imageset filename="InterfazTutorial.imageset" />
+    <Imageset filename="Runas.imageset" />
+    <Imageset filename="Titulos.imageset" />
+</GUIScheme>
+

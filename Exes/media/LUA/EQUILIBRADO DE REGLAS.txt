@@ -1,0 +1,377 @@
+EQUILIBRADO DE REGLAS
+
+Este documento esta destinado para resumir DONDE se encuentran las reglas dentro de código LUA y COMO introducir nuevo contenido
+
+================================== MOCHILA =========================================
+
+El tamaño de la mochila es un parámetro que se guarda de sala en sala, la mayoría de los parámetros de configuración de la mochila se encuentran
+definidos en la tabla de RETO cargada.
+
+***La primera habitación define el tamaño incial de la mochila con el primero reto cargado en la variable "Reto.tam_inicial_mochila"
+
+-Velocidad de refesco de la mochila: La mochila no incrementa en cada tick lo hace cada x milisegundos
+									Variable definida en "Reto.refreshTime"
+
+-Parámetros de la función de crecimiento de la mochila
+			Cada vez que se cumple el tiempo de refresco la mochila crece. El crecimiento viene determinada por una fórmula tipo:
+
+									a *x^2 + b*x + c  ---> X Velocidad de muertes de enemigos (Variable del GameMgr)
+			Los parámetros a, b y c se definen dependiendo el numero de sala en la que se encuentre. Esta defincición se lleva a cabo en:
+
+			"Reto.parameters" --> es una función que siempre devuelve a, b y c
+
+-Regla techo o suelo del incremento: Una vez se calcula el incremento de la mochila a partir de la formula anterior, se le aplica el suelo o el techo. El suelo define un crecimiento más "mantenido" y el techo un crecimiento MUCHO más rápido. Este parámetro esta definido en "Reto.regla_mochila"
+
+Con estos parámetros el GameMgr se encarga de actualizar poco a poco el tamaño de la mochila. Dicho tamaño es usado por el SpawnerMgr.
+
+
+=================================== TIERS =========================================
+
+
+Los tiers de los enemigos tienen una probabilidad variable dependiendo de la profundidad en la que nos encontremos.
+De forma análoga al crecimiento de la mochila, estas probabilidades o pesos se definen dependiendo del Reto. De forma que
+dichas reglas las encontramos en una función que devuelve 5 pesos T1, T2, T3, T4 y T5. Dicha función es:
+
+ ----> "Reto.SpawnParams"
+
+
+ ================================== SPAWN POINTS y TIEMPO SPAWN======================================
+
+  - Tiempo de Spawn:
+
+En el juego los enemigos se irán invocando cada X tiempo teniendo en cuenta cuántas salas has avanzado así como el tiempo que permanezcas en la sala actual. 
+Para ello en el SpawnMgr tenemos dos variables que miden el tiempo necesario para invocar enemigos (y por tanto rellenar la mochila):
+
+	· SpawnerMgr.tiempoInvocacionGlobal: determina el tiempo necesario para invocar enemigos, teniendo en cuenta la cantidad de salas que has avanzado.
+	· SpawnerMgr.tiempoInvocacionEnSala: es el que se usará para invocar los enemigos, utilizando SpawnerMgr.tiempoInvocacionGlobal como base y decrementándose
+										 cada cierto intervalo de tiempo.
+
+
+1º. Cada vez que avanzamos una sala (en GameMgr.FinSala) a tiempoInvocacionGlobal se le resta una determinada cantidad, haciendo que cuanta más profundidad lleves, más rápido salen los enemigos.
+2º. tiempoInvocacionEnSala se iguala a tiempoInvocacionGlobal, de modo que al avanzar de sala siempre vale lo mismo que él en cada momento.
+3º. Durante cada sala, tiempoInvocacionEnSala se irá reduciendo cada cierto tiempo, de forma que cuanto más tiempo pases en la sala más rápido aparecerán (sin afectar a tiempoInvocacionGlobal).
+
+NOTA: es importante tener en cuenta que la 1ª sala es de inicio, al pasar a la 2ª no se reduce el tiempo, pero sí de la 2ª a la 3ª (como se ve en el ejemplo de abajo)
+
+Ejemplo:
+
+Sala              Tiempo en la sala         Variables 
+-----             -----------------        -----------
+  1                     ---              tIG = 10 s, tIES =  10 s  ( = )
+  - cambio sala -                                                  ( no se reduce por ser la inicial )
+  2                     0 s              tIG = 10 s, tIES =  10 s  ( = )
+  2                     5 s              tIG = 10 s, tIES = 9.5 s  ( tIES - 0.5)
+  2                    10 s              tIG = 10 s, tIES =   9 s  ( tIES - 0.5)
+  2                    15 s              tIG = 10 s, tIES = 8.5 s  ( tIES - 0.5)
+  - cambio sala -                                                  ( tIG - 1)
+  3                     0 s              tIG =  9 s, tIES =   9 s  ( = )
+  3                     5 s              tIG =  9 s, tIES = 8.5 s  ( tIES - 0.5)
+  3                    10 s              tIG =  9 s, tIES =   8 s  ( tIES - 0.5)
+  3                    15 s              tIG =  9 s, tIES = 7.5 s  ( tIES - 0.5)
+  3                    20 s              tIG =  9 s, tIES =   7 s  ( tIES - 0.5)
+  - cambio sala-                                                   ( tIG - 1)
+  4                     0 s              tIG =  8 s, tIES =   8 s  ( = )
+  ....
+
+(tIG  = tiempoInvocacionGlobal, tIES = tiempoInvocacionEnSala)
+
+
+  - Spawn Points:
+
+Actualmente cada vez que se cumple dicho tiempo se intenta rellenar la mochila y se hace spawn de tantos enemigos como hagan falta, de forma que hacen spawn varios enemigos a la vez.
+
+Los enemigos hacen spawn en los 3 puntos de spawn más cercanos. Solo se elegirán aquellos que estén más cerca del player
+
+ ================================= NIVEL DE ENEMIGOS ============================
+
+ En el GamMgr tenemos una variable que se corresponde con el nivel medio de enemigos que hemos asesinado, con dicha variable
+ calculamos los niveles de enemigos que puede aparecer. La idea es sencilla:
+
+ nivel medio actual  = 1.56
+
+ Enemigos a sacar:
+ -bajo = 1
+ -medio = 2
+ -alto = 3
+
+ nivel medio actual  = 1.9
+
+ Enemigos a sacar:
+ -bajo = 1
+ -medio = 2
+ -alto = 3
+
+
+  nivel medio actual  = 2.1
+
+ Enemigos a sacar:
+ -bajo = 2
+ -medio = 3
+ -alto = 4
+
+
+Tras decidir los valores de los niveles bajo, medio y alto se lanza un dado para ver que nivel es el resultante. Dicho dado funciona asignando unas probabilidades FIJAS a cada nivel de la siguiente forma:
+
+bajo -> [0, 20] --> 20%
+medio -> [21, 80] --> 60%
+alto -> [81, 100] --> 20%
+
+ Esta regla se define en la función: "SpawnerMgr.CalcularLevel"
+
+
+
+ =========================================== AÑADIR NUEVOS ENEMIGOS ============================================
+
+ Para añadir un enemigo hay que realizar tres sencillos pasos:
+
+ 1 - Crear el arquetipo de dicho enemigo
+ 2 - crear script de lua de la forma "tipoEnemigo.lua"  en el directorio /LUA/Managers/Enemigos (La magia de este script viene luego)
+ 3 - Cargar el script creado al final de SpawnerManager.lua. Ejemplo: 
+ 	scriptMgr:loadScript(Paths.luaEnemyPath.."tipoEnemigo.lua")
+
+
+============================================= EQUILIBRADO DE ENEMIGOS =========================================
+
+Cada fichero "tipoEnemigo.lua" tiene las definiciones y reglas de ese tipo de enemigo. El fichero esta dividido en dos secciones:
+
+
+*Hay que tener en cuenta que en este script la clave "tipoEnemigo" es de vital importancia. ES ALTAMENTE RECOMENDABLE que "tipoEnemigo" se corresponda con el arquetipo del enemigo.
+
+
+--------SECCION1: STATS
+
+La tabla principal de este fichero tiene dos secciones internas. La primera contiene los valores numéricos de las estadísticas.
+
+***Restricciones
+
+	-En esta primera sección son obligatorios los siguientes campos:
+		-Archetype = "tipoEnemigo" -->Arquetipo
+		-id = 1   -->Id autogenerado de los enemigos
+		-tier = X ---> tier del enemigo ****IMPORTANTE -> la aplicación no soporta que el tier exceda de 5
+
+	-Esta tabla principal solo puede contener funciones O valores (cadenas o numéricos)
+
+
+Después en esta tabla tenemos funciones, estas funciones definen las estadisticas. las funciones dependen de x ( f(x) ), donde x es el NIVEL con el cual se
+spawnea el enemigo. Lo más común es tener:
+
+	-vida = function(x)
+	{
+		return ****alguna funcion***
+	}
+
+
+--------------SECCION1: AÑADIR NUEVOS STATS
+
+Si se quiere añadir un nuevo stat que varie según el nivel del enemigo hay que hacer una simple cosa:
+
+
+-Añadir una nueva funcion con el nombre de la estadística. Hay que tener en cuenta que si un stat se llama "vel_mov" en esta tabla
+más tarde será añadida al entityInfo que leen los componentes como "vel_mov", de forma que si tienes componentes que leen un stat
+como "attackMegaPowa" y quieres que dicho stat sea variable con el nivel te basta con crear una entrada en esta tabla de la siguiente forma:
+
+attackMegaPowa = function(x)
+{
+	return x + 100 ---> Función del stat que depende del nivel
+}
+
+
+
+--------SECCION2: DROP
+
+En esta sección definimos los datos del drop en una segunda tabla llamada "tipoEnemigoContenedor"
+
+En el contenedor se ve claramente las probabilidades de dropeo de los diferentes tipos de objetos definidos. Cada objeto tiene un peso que más tarde se acumula.
+
+También se define el rango de potenciadores que puede dropear un enemigo, el rango de almas en % y el rango de dinero que dropea.
+
+Este rango de dinero apuntado es un dinero BASE, dicho dinero base también crece con el nivel del enemigo, dicho crecimiento se define con
+la función "tipoEnemigoContenedor.CrecimientoDinero". Esta función devuelve el min y el max de dinero que podrá dropear el enemigo a partir del dinero BASE definido.
+
+El drop de un enemigo se cambia básicamente modificando los parámetros de esta tabla.
+
+
+
+
+
+======================================================= EQUILIBRADO DE DROP ===============================================
+
+El drop Manager tiene definidos el resto de contenedores, como por ejemplos los cofres, los cuales están divididos por Tiers.
+La definción de los contenedores es exactamente igual que la definición de Drop de los enemigos
+
+Al igual que los enemigos el dinero que pueden aportar estos contenedores va incrementando, pero en este caso es a partir del 
+numero de salas superadas. El rango de dinero que tienen los contenedores tiene una regla de crecimiento que se puede modificar
+en la función "rangoDinero_function" que tiene cada contenedor definido.
+
+Estas funciones son usadas por la funcion "Drop.ActualizaDineroContenedores" para actualizar correctamente el dinero de los contenedores dependiendo del numero de
+salas.
+
+Los cofres se ha intentado que la probabilidad de que salga dinero sea bastante baja, pero en el caso de que salga dinero, si el precio del cofre era X, que salga un rango de dinero entre
+X y 2X, para que sea más un premio extraño y tenga sentido.
+
+
+
+
+============================================= COFRES =======================================================================
+
+-> numero de cofres por sala
+Al principio de todo colocamos los cofres en la sala, esto se hace en varios pasos:
+	1 -> Elección del numero maximo posible de cofres en la sala
+		Esta elección depende del numero de puntos de interés que hay en la sala. Dependiendo del numero definimos unos límites:
+
+		l1 -> 1 cofre max
+		l2 -> 2 cofre max
+		l3 -> 3 cofre max
+		....
+
+		Estos límites estan definidos en: "Cofres.chestLimits"
+
+	2 -> Eleccion del numero definitivo de cofres en la sala
+		Una vez tenemos este numero maximo estimamos unos pesos simulando una distribucion normal. Por ejemplo:
+
+		num Max = 4 cofres
+
+		prob 0 cofres -> +
+		prob 1 cofre ->  ++
+		prob 2 cofres -> +++
+		prob 3 cofres -> ++
+		prob 4 cofres -> +
+
+		Lanzamos un dado sobre esta probabilidad y obtenemos el numero final. Esta regla se encuentra en: "Cofres.GetNumChestFinal"
+
+	Al final por cada cofre vamos eligiendo un pto de interes y lo colocamos en su sitio
+
+-> regla de tier de cofres
+
+	Al igual que los enemigos la probabilidad de los Tiers de los cofres va variando con el numero de salas. Existen 3 tiers y las funciones
+	que especifican la probabilidad de los confres se definen en "Cofres.ChestParameters"
+
+	Ahora mismo son reglas lineales que dependen del nº de sala, donde cada tier tiene la siguiente formula:
+		m*x + n --> X nº de salas superadas
+
+-> regla del coste de dinero de cofres
+	
+	Los cofres tienen un coste para ser abiertos, dicho coste aumenta conforme vamos bajando y superamos salas.
+	Dicho crecimiento se define en la funcion "price_function" que tiene cada cofre en su definición. Actualmente cada cofre tiene una funcion 
+	de precio cuadrática que define su precio.
+
+	Por ejemplo la función del cofre de Tier 1 es bastante sencilla, durante las 10 primeras salas su coste es 1000 y a partir de ese momento su coste es:
+
+	math.floor(0.5 * sala * sala + sala + 1000)
+
+	Donde en la sala 11 acaba costando 1060 (1000 y un poquito más)
+
+	
+
+	La función que hace uso de las funciones "price_function" de cada cofre es "Cofres.ActualizaPrecios", que actualiza correctamente el atributo de precio que finalmente acaba en el cofre 
+
+-> Añadir cofres
+	Como añadir un cofre?? Bastante sencillo, sigue los siguientes pasos:
+
+	1 - Crea el arquetipo del cofre que desees, añadele un script que defina su forma de abrirse
+	2 - En la tabla "Cofres.Tipos", añade una tabla del siguiente tipo dentro del Tier que desees agrupar el cofre
+
+			{
+				name = "CofreNormal2",
+				peso = 30, 
+				type = "Chest",
+				model = "barril.mesh",
+				material = "debug_draw",
+				price = 110,  --precio base
+
+			},
+
+			La tabla va sin nombre y todos los atributos que coloques en ella pasarán a formar parte del entityInfo del cofre. De estos
+			atributos los obligatorios son:
+
+			-name  -->Nombre identificativo
+			-peso  --> Peso que tiene este cofre dentro del arquetipo
+			-price -->Precio base que evoluciona
+			-type  --> Arquetipo del cofre
+
+====================================================== POTENCIADORES ========================================================
+
+-> Añadir potenciadores
+La tabla gigante dentro de Potenciadores.lua es bastante descriptiva por si sola.
+Los potenciadores se dividen en tres categorías:
+
+	-Positivos
+	-Negativos
+	-Neutros
+
+Cada categoría tiene una probabilidad
+
+Dentro de cada categría se definen con una tabla los potenciadores: 
+
+						VidaPos3 = {
+							probabilidad = 19, 
+							estadisticas =  { 
+								vida = 3,
+								ataque = 0,
+								velocidad_ataque = 0,
+								velocidad_movimiento = 0,
+							},		
+						},
+Cada potenciador tiene un peso que es válido DENTRO de la categría en la que esta(positivo, negativo o neutro)
+
+====================================================== ARMAS ================================================================
+
+-> Añadir nuevas armas
+
+Para crear un nuevo arma basta con seguir los siguientes pasos
+
+1 - Definir y construir el objeto recogible de dicho arma
+2 - Dar de alta dicho objeto recogible en Armas.lua. Para ello hace falta añadir una entrada en la tabla "Armas".
+
+	Dicha tabla esta a su vez subdividida en los tres tiers de armas, ubicamos en que Tier queremos el arma y añadimos una entrada 
+	de este estilo:
+
+		{
+			name = "Katana",  ----Nombre identificativo
+			peso = 20,        ----Peso dentro del tier para tiradas probabilísticas
+			type = "UsableObjectKatana",  -----Arquetipo del objeto recogible
+
+		},
+
+		Donde los tres campos son los unicos y obligatorios.
+
+
+
+======================================================= HABILIDADES ========================================================
+
+->Añadir nuevas habildiades
+
+Te acuerdas de lo de las Armas???? pues es lo mismo, mas que nada porque es un copypaste de los buenos xD
+
+sigue los mismos pasos para introducir nuevos objetos recogibles de habilidades, la tabla esta en Habilidades.lua
+y también se divide en Tiers y basta con añadir lo siguiente en el tier deseado:
+
+		{
+			name = "AumentaSalto",
+			peso = 20, 
+			type = "UsableObjectSalto",
+
+		},
+
+
+=======================================================DINERO======================================================
+
+-> Añadir nuevas monedas
+
+DINERO!!!!! 
+
+Añadir nuevas monedas es bastante fácil. En Dinero.lua tenemos una tabla -> "Dinero.Monedas"
+
+Esta tabla esta compuesta por tablas más pequeñas de este estilo:
+
+		{
+			name = "Moneda10",
+			value = 10,
+			model = "coin.mesh",
+			material ="coin",
+		},
+
+De esta tabla salen valores que van al entityInfo a l ahora de hacer spawn de una moneda. Todas tiran del mismo arquetipo
+ "Coin", de forma que podemos definir su apariencia con simples atributos definidos aquí. 
+
+ OJO Es de vital importancia que siempre exista una moneda UNITARIA, es decir la moneda de 1 debe existir

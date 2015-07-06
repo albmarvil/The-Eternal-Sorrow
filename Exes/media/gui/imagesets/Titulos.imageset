@@ -1,0 +1,6 @@
+<Imageset autoScaled="vertical" imagefile="titulos.png" name="Titulos" nativeHorzRes="1286" nativeVertRes="1286" version="2">
+    <Image name="TituloCompleto" width="1132" height="310" xPos="102" yPos="66" />
+    <Image name="Titulo" width="908" height="146" xPos="209" yPos="475" />
+    <Image name="Logo" width="662" height="169" xPos="325" yPos="703" />
+    <Image name="Sai" width="212" height="248" xPos="546" yPos="943" />
+</Imageset>

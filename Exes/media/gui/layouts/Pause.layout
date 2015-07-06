@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Pause" >
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+    <!-- Area del menú de pause -->
+        <Window name="Root" type="GlossySerpent/SerpentPanel" >
+            <Property name="Area" value="{{0.2,0},{0.08,0},{0.8,0},{0.92,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+            <!-- Texto de Pausa -->
+            <Window name="titulo" type="OgreTray/Label" >
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Area" value="{{0.8,0},{0.02,0},{1,0},{0.05,0}}" />
+                <Property name="Text" value="PAUSE"/>
+                <Property name="Font" value="Jura-18"/>
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+                <Property name="HorizontalAlignment" value="Center" />
+            </Window>
+            <!-- Area del panel de pestañas-->
+            <Window name="TabControl" type="GlossySerpent/TabControl" >
+                <Property name="TabHeight" value="{0,-1}" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="TabPanePosition" value="Top" />
+                <Property name="Area" value="{{0.03,0},{0.01,0},{0.97,0},{0.85,0}}" />
+                <!-- Area de la Pestaña 1 -->
+                <Window name="TabEstad" type="GlossySerpent/TabButtonPane">
+                    <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                    <Property name="Text" value="Stats" />
+                    <!-- Area del modelo 3D -->
+
+                    <Window name="Root/" type="OgreTray/Label" >
+                        <Property name="AlwaysOnTop" value="True" />
+                        <Property name="Area" value="{{0.0,0},{0,0},{0.5,0},{0.04,0}}" />
+                        <Property name="Text" value="GAME STATISTICS"/>
+                        <Property name="Font" value="Jura-18"/>
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                        <Property name="HorizontalAlignment" value="Center" />
+                    </Window>
+
+                    <Window type="GlossySerpent/SerpentPanel" name="statPartida" >
+                        <Property name="Area" value="{{0,0},{0.06,0},{0.5,0},{1,0}}" />
+                        <Window name="DineroActual" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.02,0},{0.95,0},{0.09,0}}" />
+                            <Property name="Text" value="  COINS:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="DineroTotal" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.11,0},{0.95,0},{0.18,0}}" />
+                            <Property name="Text" value="  TOTAL COINS:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="DineroGastado" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.20,0},{0.95,0},{0.27,0}}" />
+                            <Property name="Text" value="  SPENT COINS:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="Salas" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.29,0},{0.95,0},{0.36,0}}" />
+                            <Property name="Text" value="  DUNGEONS COMPLETED:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="Enemigos" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.38,0},{0.95,0},{0.45,0}}" />
+                            <Property name="Text" value="  ENEMIES KILLED:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="EnemigosSala" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.47,0},{0.95,0},{0.54,0}}" />
+                            <Property name="Text" value="  ENEMIES KILLED/DUNGEON:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="Cofres" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.56,0},{0.95,0},{0.63,0}}" />
+                            <Property name="Text" value="  CHESTS OPENED:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="Potenciadores" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.65,0},{0.95,0},{0.72,0}}" />
+                            <Property name="Text" value="  TOTAL POWER UPS:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="habilidades" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.74,0},{0.95,0},{0.81,0}}" />
+                            <Property name="Text" value="  TOTAL SKILLS:   "/>
+                            <Property name="Font" value="Jura-13"/>
+                            <Property name="NormalTextColour" value="FFFFFFFF" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="puntuacion" type="GlossySerpent/StaticText" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Area" value="{{0.035,0},{0.83,0},{0.95,0},{0.93,0}}" />
+                            <Property name="Text" value="  TOTAL SCORE:   "/>
+                            <Property name="Font" value="Jura-18"/>
+                            <Property name="NormalTextColour" value="FF00FF00" />
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                    </Window>
+                    <!-- Area de estadísticas -->
+                    <Window name="Root/" type="OgreTray/Label" >
+                        <Property name="AlwaysOnTop" value="True" />
+                        <Property name="Area" value="{{0.55,0},{0,0},{1,0},{0.04,0}}" />
+                        <Property name="Text" value="SAI'S STATISTICS"/>
+                        <Property name="Font" value="Jura-18"/>
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                        <Property name="HorizontalAlignment" value="Center" />
+                    </Window>
+                    <Window name="Estadisticas" type="GlossySerpent/SerpentPanel" >
+                        <Property name="Area" value="{{0.55,0},{0.06,0},{1,0},{0.30,0}}" />
+                        <Window name="vida" type="GlossySerpent/StaticText" >
+                            <Property name="Area" value="{{0.06,0},{0.150317,0},{0.45,0},{0.400316,0}}" />
+                            <Property name="Font" value="Jura-10"/>
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="ataque" type="GlossySerpent/StaticText" >
+                            <Property name="Area" value="{{0.06,0},{0.552073,0},{0.45,0},{0.802072,0}}" />
+                            <Property name="Font" value="Jura-10"/>
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="velocidad_movimiento" type="GlossySerpent/StaticText" >
+                            <Property name="Area" value="{{0.506167,0},{0.150317,0},{0.90,0},{0.400316,0}}" />
+                            <Property name="Font" value="Jura-10"/>
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                        <Window name="velocidad_ataque" type="GlossySerpent/StaticText" >
+                            <Property name="Area" value="{{0.506167,0},{0.552073,0},{0.90,0},{0.802072,0}}" />
+                            <Property name="Font" value="Jura-10"/>
+                            <Property name="HorizontalAlignment" value="Left" />
+                        </Window>
+                    </Window>
+                    <!-- Area de las habilidades -->
+
+                    <Window name="Root/" type="OgreTray/Label" >
+                        <Property name="AlwaysOnTop" value="True" />
+                        <Property name="Area" value="{{0.55,0},{0.34,0},{1,0},{0.38,0}}" />
+                        <Property name="Text" value="POWER UPS"/>
+                        <Property name="Font" value="Jura-18"/>
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                        <Property name="HorizontalAlignment" value="Center" />
+                    </Window>
+                    <Window name="ScrollablePane" type="GlossySerpent/ScrollablePane" >
+                        <Property name="ContentArea" value="l:0 t:0 r:500 b:500" />
+                        <Property name="VertStepSize" value="0.5" />
+                        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                        <Property name="Area" value="{{0.55,0},{0.40,0},{1,0},{1,0}" />
+                        <Property name="VertOverlapSize" value="0.01" />
+                        <Property name="VertScrollPosition" value="0" />
+                        <Window type="GlossySerpent/StaticImage" name="background" >
+                            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador1" >
+                            <Property name="Area" value="{{0.045,0},{0.10,0},{0.265,0},{0.40,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador2" >
+                            <Property name="Area" value="{{0.275,0},{0.10,0},{0.495,0},{0.40,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador3" >
+                            <Property name="Area" value="{{0.505,0},{0.10,0},{0.725,0},{0.40,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador4" >
+                            <Property name="Area" value="{{0.735,0},{0.10,0},{0.955,0},{0.40,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador5" >
+                            <Property name="Area" value="{{0.045,0},{0.45,0},{0.265,0},{0.75,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador6" >
+                            <Property name="Area" value="{{0.275,0},{0.45,0},{0.495,0},{0.75,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador7" >
+                            <Property name="Area" value="{{0.505,0},{0.45,0},{0.725,0},{0.75,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador8" >
+                            <Property name="Area" value="{{0.735,0},{0.45,0},{0.955,0},{0.75,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador9" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador10" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador11" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador12" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador13" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador14" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador15" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador16" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador17" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador18" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador19" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador20" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador21" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador22" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador23" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Potenciador24" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="false"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.702073,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                    </Window>
+                   
+                </Window>
+                 <!-- Area de la Pestaña 2 -->
+                <Window name="PageItems" type="GlossySerpent/TabButtonPane">
+                    <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                    <Property name="Text" value="Gear" />
+                    <Window type="GlossySerpent/SerpentPanel" name="Modelo" >
+                        <Property name="Area" value="{{0,0},{0,0},{0.5,0},{1,0}}" />
+                        <Window name="RTTWindow" type="GlossySerpent/StaticImage" >
+                            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                        </Window>
+                        <Window name="a" type="Generic/Image" >
+                            <Property name="Area" value="{{0.02,0},{0.91,0},{0.1,0},{0.98,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Image" value="NewHUD/LetraA" />
+                            <Property name="AlwaysOnTop" value="True" />
+                        </Window>
+                        <Window name="s" type="Generic/Image" >
+                            <Property name="Area" value="{{0.12,0},{0.91,0},{0.2,0},{0.98,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Image" value="NewHUD/LetraS" />
+                            <Property name="AlwaysOnTop" value="True" />
+                        </Window>
+                        <Window name="w" type="Generic/Image" >
+                            <Property name="Area" value="{{0.8,0},{0.02,0},{0.88,0},{0.09,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Image" value="NewHUD/LetraW" />
+                            <Property name="AlwaysOnTop" value="True" />
+                        </Window>
+                        <Window name="d" type="Generic/Image" >
+                            <Property name="Area" value="{{0.9,0},{0.02,0},{0.98,0},{0.09,0}}" />
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Image" value="NewHUD/LetraD" />
+                            <Property name="AlwaysOnTop" value="True" />
+                        </Window>
+                    </Window>
+
+                    <Window name="Root/" type="OgreTray/Label" >
+                        <Property name="AlwaysOnTop" value="True" />
+                        <Property name="Area" value="{{0.55,0},{0,0},{1,0},{0.04,0}}" />
+                        <Property name="Text" value="WEAPONS"/>
+                        <Property name="Font" value="Jura-18"/>
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                        <Property name="HorizontalAlignment" value="Center" />
+                    </Window>
+
+                    <Window name="ArmaIzq" type="GlossySerpent/StaticImage" >
+                        <Property name="Area" value="{{0.55,0},{0.06,0},{0.77,0},{0.31,0}}" />
+                        <Property name="AlwaysOnTop" value="True" />
+                    </Window>
+
+                    <Window name="ArmaDer" type="GlossySerpent/StaticImage" >
+                        <Property name="Area" value="{{0.78,0},{0.06,0},{1,0},{0.31,0}}" />
+                        <Property name="AlwaysOnTop" value="True" />
+                    </Window>
+
+                    <Window name="Root/" type="OgreTray/Label" >
+                        <Property name="AlwaysOnTop" value="True" />
+                        <Property name="Area" value="{{0.55,0},{0.34,0},{1,0},{0.38,0}}" />
+                        <Property name="Text" value="SKILLS"/>
+                        <Property name="Font" value="Jura-18"/>
+                        <Property name="NormalTextColour" value="FFFFFFFF" />
+                        <Property name="HorizontalAlignment" value="Center" />
+                    </Window>
+
+                    <Window name="ScrollablePane" type="GlossySerpent/ScrollablePane" >
+                        <Property name="ContentArea" value="l:0 t:0 r:1000 b:1000" />
+                        <Property name="VertStepSize" value="0.5" />
+                        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                        <Property name="Area" value="{{0.55,0},{0.40,0},{1,0},{1,0}" />
+                        <Property name="VertOverlapSize" value="0.01" />
+                        <Property name="VertScrollPosition" value="0" />
+                        <Window type="GlossySerpent/StaticImage" name="background" >
+                            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab1" >
+                            <Property name="Area" value="{{0.0673701,0},{0.116708,0},{0.312136,0},{0.414976,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad1"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab2" >
+                            <Property name="Area" value="{{0.370936,0},{0.116708,0},{0.615701,0},{0.414976,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad2"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab3" >
+                            <Property name="Area" value="{{0.672162,0},{0.11844,0},{0.916928,0},{0.416708,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad3"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab4" >
+                            <Property name="Area" value="{{0.0673701,0},{0.494802,0},{0.312136,0},{0.793069,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad4"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab5" >
+                            <Property name="Area" value="{{0.371214,0},{0.508602,0},{0.61598,0},{0.80687,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad5"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab6" >
+                            <Property name="Area" value="{{0.677674,0},{0.498268,0},{0.92244,0},{0.796536,0}}" />
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad6"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab7" >
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad7"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab8" >
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad8"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="hab9" >
+                            <Property name="Visible" value="false"/>
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="TooltipText" value="Habilidad9"/>
+                            <Window type="OgreTray/Label" name="cantidad" >
+                                <Property name="Area" value="{{0.60,0},{0.65,0},{0.950784,0},{0.952072,0}}" />
+                                <Property name="Font" value="Jura-13"/>
+                                <Property name="NormalTextColour" value="FFFFFFFF" />
+                            </Window>
+                        </Window>
+                    </Window>
+                   
+                </Window>
+            </Window>
+
+            <Window type="GlossySerpent/Button32_4C" name="logros" >
+                <Property name="Area" value="{{0.38,0},{0.88,0},{0.53,0},{0.95,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Text" value="Achievements" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+
+            <Window type="GlossySerpent/Button32_4C" name="Option" >
+                <Property name="Area" value="{{0.55,0},{0.88,0},{0.72,0},{0.95,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Text" value="Settings" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+
+            <Window type="GlossySerpent/Button32_4C" name="Reintentar" >
+                <Property name="Area" value="{{0.55,0},{0.88,0},{0.72,0},{0.95,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Text" value="Play Again" />
+                <Property name="Visible" value="False" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+
+            <Window type="GlossySerpent/Button32_4C" name="menu" >
+                <Property name="Area" value="{{0.74,0},{0.88,0},{0.93,0},{0.95,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Text" value="Main Menu" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+
+        </Window>
+    </Window>
+</GUILayout>

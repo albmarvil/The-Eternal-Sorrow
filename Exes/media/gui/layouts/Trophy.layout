@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="Trophy" >
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+
+        <Window name="Root" type="GlossySerpent/SerpentPanel" >
+            <Property name="Area" value="{{0.3,0},{0.05,0},{0.7,0},{0.95,0}}" />
+            <Property name="AlwaysOnTop" value="True" />
+        
+
+            <Window name="Titulo" type="OgreTray/Label" >
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Area" value="{{0.5,0},{0.02,0},{1,0},{0.05,0}}" />
+                <Property name="Text" value="Achievements"/>
+                <Property name="Font" value="Jura-18"/>
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+                <Property name="HorizontalAlignment" value="Center" />
+            </Window>
+
+            <Window name="TabControl" type="GlossySerpent/TabControl" >
+                <Property name="TabHeight" value="{0,-1}" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="TabPanePosition" value="Top" />
+                <Property name="Area" value="{{0.03,0},{0.01,0},{0.97,0},{0.85,0}}" />
+                <!-- Area de la Pestaña 1 -->
+                <Window name="TabGaleria" type="GlossySerpent/TabButtonPane">
+                    <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                    <Property name="Text" value="Gallery" />
+
+                    <Window name="ScrollablePane" type="GlossySerpent/ScrollablePane" >
+                        <Property name="ContentArea" value="l:0 t:0 r:500 b:500" />
+                        <Property name="VertStepSize" value="0.5" />
+                        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                        <Property name="VertOverlapSize" value="0.01" />
+                        <Property name="VertScrollPosition" value="0" />
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo1" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo2" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo3" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo4" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                       
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo5" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo6" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo7" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo8" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo9" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo10" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo11" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo12" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo13" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo14" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo15" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo16" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo17" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo18" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo19" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo20" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo21" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo22" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo23" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo24" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo25" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo26" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo27" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo28" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo29" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo30" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo31" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo32" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo33" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo34" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo35" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo36" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo37" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo38" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo39" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo40" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo41" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo42" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo43" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo44" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo45" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo46" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo47" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo48" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo49" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo50" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo51" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo52" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo53" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo54" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo55" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo56" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo57" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo58" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo59" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo60" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo61" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo62" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo63" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo64" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo65" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo66" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo67" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="False"/>
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+                        <Window type="GlossySerpent/StaticImage" name="Trofeo68" >
+                            <Property name="AlwaysOnTop" value="True" />
+                            <Property name="Visible" value="False"/>
+                            <Window type="Generic/Image" name="imageTrofeo" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                            </Window>   
+                            <Window name="Titulo" type="Generic/Label" >
+                                <Property name="AlwaysOnTop" value="True" />
+                                <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+                                <Property name="Text" value="0"/>
+                                <Property name="Font" value="Jura-18"/>
+                                <Property name="NormalTextColour" value="FF000000" />
+                                <Property name="HorizontalAlignment" value="Center" />
+                            </Window>
+                        </Window>
+
+                    </Window>
+                </Window>
+            </Window>
+
+            <Window type="GlossySerpent/Button32_4C" name="menu" >
+                <Property name="Area" value="{{0.7,0},{0.88,0},{0.95,0},{0.95,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Text" value="Back" />
+                <Property name="NormalTextColour" value="FFFFFFFF" />
+            </Window>
+
+        </Window>
+
+    </Window>
+
+</GUILayout>

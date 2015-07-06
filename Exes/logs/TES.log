@@ -1,0 +1,48 @@
+Tick: 0 DEBUG: initGUI cargado
+Tick: 0 DEBUG: Cargando arquetipo: archetypesGeneral.lua
+Tick: 0 DEBUG: Descargando arquetipos
+Tick: 0 DEBUG: Cargando arquetipo: archetypesGeneral.lua
+Tick: 0 DEBUG: Nombre del fichero a parsear ./media/maps/mapMenu.tmx
+Tick: 0 ERROR: Error en script LUA: ./media/LUA/Managers/DropManager.lua:189: attempt to index field 'rangoDinero' (a nil value)
+Pila de LUA: 
+0:: Native
+1:: ./media/LUA/Managers/DropManager.lua:189 (field ActualizaDineroContenedores)
+2:: ./media/LUA/Managers/DropManager.lua:210
+
+Tick: 0 ERROR: Error ejecutando lualua runtime errorEn la funcion: CreateObjects
+Tick: 48 DEBUG: Descargando arquetipos
+Tick: 48 DEBUG: RANDOMSEED: 1436097161
+Tick: 48 DEBUG: POTENCIADORES DE PARTIDA ACTUAL
+Tick: 48 DEBUG: Nombre: MaestriaTotal Material: Runa10
+Tick: 48 DEBUG: Nombre: AtaquePos3 Material: Runa8
+Tick: 48 DEBUG: Nombre: VelMovimientoPos3 Material: Runa3
+Tick: 48 DEBUG: Nombre: VelAtaquePos5 Material: Runa11
+Tick: 48 DEBUG: Nombre: AtaquePos1 Material: Runa23
+Tick: 48 DEBUG: Nombre: VidaPos3 Material: Runa2
+Tick: 48 DEBUG: Nombre: VelAtaquePos3 Material: Runa6
+Tick: 48 DEBUG: Nombre: VelAtaquePos1 Material: Runa14
+Tick: 48 DEBUG: Nombre: VidaPos1 Material: Runa19
+Tick: 48 DEBUG: Nombre: VidaPos5 Material: Runa5
+Tick: 48 DEBUG: Nombre: AtaqueNeg5 Material: Runa18
+Tick: 48 DEBUG: Nombre: VelAtaqueNeg3 Material: Runa9
+Tick: 48 DEBUG: Nombre: VelMovimientoNeg1 Material: Runa21
+Tick: 48 DEBUG: Nombre: VidaNeg3 Material: Runa20
+Tick: 48 DEBUG: Nombre: VelMovimientoNeg3 Material: Runa24
+Tick: 48 DEBUG: Nombre: SaltoHaciaAtras Material: Runa7
+Tick: 48 DEBUG: Nombre: VelAtaqueNeg5 Material: Runa1
+Tick: 48 DEBUG: Nombre: VelMovimientoNeg5 Material: Runa17
+Tick: 48 DEBUG: Nombre: AtaqueNeg3 Material: Runa15
+Tick: 48 DEBUG: Nombre: Berseker Material: Runa12
+Tick: 48 DEBUG: Nombre: Tortuga Material: Runa22
+Tick: 48 DEBUG: Nombre: Caballero Material: Runa4
+Tick: 48 DEBUG: Nombre: Picaro Material: Runa13
+Tick: 48 DEBUG: Nombre: PiesLigeros Material: Runa16
+Tick: 48 DEBUG: Cargando arquetipo: archetypesGeneral.lua
+Tick: 48 DEBUG: Nombre del fichero a parsear ./media/maps/mapTutoNuevo.tmx
+Tick: 48 DEBUG: InitValues del mgr de musica
+Tick: 48 DEBUG: Activate VIDA
+Tick: 206 DEBUG: Cargando arquetipo: archetypesDungeon.lua
+Tick: 237 DEBUG: Nombre del fichero a parsear ./media/maps/mapTutoNuevo.tmx
+Tick: 237 DEBUG: InitValues del mgr de musica
+Tick: 766 DEBUG: Descargando arquetipos
+Tick: 766 DEBUG: Descargando arquetipos

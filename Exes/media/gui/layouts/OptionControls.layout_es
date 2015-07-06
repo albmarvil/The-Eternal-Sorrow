@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="OptionControl" >
+        <Property name="Area" value="{{0.3,0},{0.05,0},{0.7,0},{0.95,0}}" />
+        <Property name="MaxSize" value="{{1,0},{1,0}}" />
+        <Property name="AlwaysOnTop" value="true" />
+        <Window type="GlossySerpent/StaticImage" name="keyboardMouse" >
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window type="GlossySerpent/StaticText" name="Keyboard" >
+                <Property name="AlwaysOnTop" value="true" />
+                <Property name="Area" value="{{0.5,0},{0.03,0},{0.9,0},{0.1,0}}" />
+                <Property name="Text" value="CONTROLES"/>
+                <Property name="Font" value="TESFont"/>
+                <Property name="HorizontalAlignment" value="Center" />
+            </Window>
+            <!-- Area de Control de Pestañas -->
+            <Window name="TabControl" type="GlossySerpent/TabControl" >
+                <Property name="TabHeight" value="{0,-1}" />
+                <Property name="MaxSize" value="{{1,0},{1,0}}" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="TabPanePosition" value="Top" />
+                <Property name="Area" value="{{0.03,0},{0.1,0},{0.97,0},{0.85,0}}" />
+                <!-- Area de la Pestaña 1 -->
+                <Window name="TabTeclado" type="GlossySerpent/TabButtonPane">
+                    <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                    <Property name="Text" value="Teclado" />
+                    <Window type="GlossySerpent/StaticImage" name="ImageKeyboard" > 
+                        <Property name="Area" value="{{0.02,0},{0.02,0},{0.98,0},{0.98,0}}" />
+                        <Property name="Image" value="HUDTutorial/ControlsKeyboard" />  
+                        <Property name="AlwaysOnTop" value="true" />
+                        <Property name="FrameEnabled" value="false" />
+                        <Property name="BackgroundEnabled" value="false" />
+                    </Window>
+                </Window>
+                <!-- Area de la Pestaña 2 -->
+                <Window name="TabMando" type="GlossySerpent/TabButtonPane">
+                   <Property name="Area" value="{{0.05,0},{0.05,0},{0.95,0},{0.95,0}}" />
+                    <Property name="Text" value="Mando" />
+                    <Window type="GlossySerpent/StaticImage" name="ImageGamepad" > 
+                        <Property name="Area" value="{{0.02,0},{0.02,0},{0.98,0},{0.98,0}}" />
+                        <Property name="Image" value="HUDTutorial/ControlsGamepad" />  
+                        <Property name="AlwaysOnTop" value="true" />
+                        <Property name="FrameEnabled" value="false" />
+                        <Property name="BackgroundEnabled" value="false" />
+                     </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window type="GlossySerpent/Button32_4C" name="Volver" >
+            <Property name="Area" value="{{0.35,0},{0.9,0},{0.65,0},{0.97,0}}" />
+            <Property name="Text" value="Volver" />
+            <Property name="AlwaysOnTop" value="true" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4" >
+    <Window type="DefaultWindow" name="GameOver" >
+        <Property name="UnifiedAreaRect" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property name="AlwaysOnTop" value="True" />
+        <Window type="GlossySerpent/StaticImage" name="GameOver/BackGround" >
+            <Property   name="Font" value="FairChar-30" />
+            <Property name="Text" value="GALEON" />
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window Type="OgreTray/Title" name="GameOver/BackGround/" >
+                <Property name="Font" value="FairChar-30" />
+                <Property name="Text" value="GAME OVER" />
+                <Property name="AlwaysOnTop" value="True" />
+                <Property name="Area" value="{{0.2,0},{0.2,0},{0.8,0},{0.4,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/Button" name="GameOver/Exit" >
+            <Property name="Font" value="DejaVuSans-10" />
+            <Property name="Text" value="volver a Menú" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="Area" value="{{0.25,0},{0.6,0},{0.45,0},{0.7,0}}" />
+        </Window>
+
+        <Window Type="GlossySerpent/Button" name="GameOver/Reiniciar" >
+            <Property name="Font" value="DejaVuSans-10" />
+            <Property name="Text" value="Volver a jugar" />
+            <Property name="AlwaysOnTop" value="True" />
+            <Property name="Area" value="{{0.55,0},{0.6,0},{0.75,0},{0.7,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,97 @@
+
+
+trofeos = 
+{
+	"Matar a 50 enemigos\nen el mismo nivel", 
+	"Matar a 80 enemigos\nen el mismo nivel",
+	"Matar a 120 eemigos\nen el mismo nivel",
+
+	"Mata 1000 enemigos\nen total", 
+	"Mata 5000 enemigos\nen total",
+	"Mata 10000 enemigos\nen total",
+
+	"Supera 200 salas",
+	"Supera 1000 salas",
+	"Supera 2000 salas",
+
+	"Mata a 1000 enemigos\ncon el Laser",
+	"Mata a 2500 enemigos\ncon el Laser",
+	"Mata a 5000 enemigos\ncon el Laser",
+
+	"Mata a 1000 enemigos\ncon el Lanzadardos",
+	"Mata a 2500 enemigos\ncon el Lanzadardos",
+	"Mata a 5000 enemigos\ncon el Lanzadardos",
+
+	"Mata a 1000 enemigos\ncon la Espada Verde",
+	"Mata a 2500 enemigos\ncon el Espada Verde",
+	"Mata a 5000 enemigos\ncon el Espada Verde",
+
+	"Mata a 1000 enemigos\ncon el Escudo de Espinas",
+	"Mata a 2500 enemigos\ncon el Escudo de Espinas",
+	"Mata a 5000 enemigos\ncon el Escudo de Espinas",
+
+	"Mata a 1000 enemigos\ncon el Látigo",
+	"Mata a 2500 enemigos\ncon el Látigo",
+	"Mata a 5000 enemigos\ncon el Látigo",
+
+	"Mata a 500 enemigos\nmientras están envenenados",
+	"Mata a 1250 enemigos\nmientras están envenenados",
+	"Mata a 2500 enemigos\nmientras están envenenados",
+
+	"Mata a 500 enemigos\nmientras están confusos",
+	"Mata a 1250 enemigos\nmientras están confusos",
+	"Mata a 2500 enemigos\nmientras están confusos",
+
+	"Mata a 500 enemigos\nmientras están ralentizados",
+	"Mata a 1250 enemigos\nmientras están ralentizados",
+	"Mata a 2500 enemigos\nmientras están ralentizados",
+
+	"Mata a 500 enemigos\nmientras están congelados",
+	"Mata a 1250 enemigos\nmientras están congelados",
+	"Mata a 2500 enemigos\nmientras están congelados",
+	
+	"Mata a 250 enemigos\nen la misma partida",
+	"Mata a 750 enemigos\nen la misma partida",
+	"Mata a 1500 enemigos\nen la misma partida",
+
+	"Mata a 200 enemigos en el evento\navalancha en una misma partida",
+	"Mata a 500 enemigos en el evento\navalancha en una misma partida",
+	"Mata a 800 enemigos en el evento\navalancha en una misma partida",
+
+	"Supera 20 salas\nen una partida",
+	"Supera 50 salas\nen una partida",
+	"Supera 100 salas\nen una partida",
+
+	"Abre 100 cofres pequeños",
+	"Abre 100 cofres medianos",
+	"Abre 100 cofres grandes",
+
+	"Abre 250 cofres pequeños",
+	"Abre 250 cofres medianos",
+	"Abre 250 cofres grandes",
+
+	"Abre 500 cofres pequeños",
+	"Abre 500 cofres medianos",
+	"Abre 500 cofres grandes",
+
+	"Mata a 1000 enemigos en\nel evento avalancha",
+	"Mata a 2500 enemigos en\nel evento avalancha",
+	"Mata a 4000 enemigos en\nel evento avalancha",
+
+	"Destruye 500 tiles",
+	"Destruye 1300 tiles",
+	"Destruye 3000 tiles",
+
+	"Consigue 50000 puntos\nen una partida",
+	"Consigue 150000 puntos\nen una partida",
+	"Consigue 300000 puntos\nen una partida",
+
+	"Destruye 50 objetos destruibles",
+	"Destruye 150 objetos destruibles",
+	"Destruye 300 objetos destruibles",
+}
+
+Creditos = 
+{
+	"[font='Jura-18'][colour='FFFFF5A6']EQUIPO DE DESARROLLO\n\n[font='Jura-13'][colour='FFFFFFFF']Alberto Martínez Villarán\nCésar Manuel Paz Guzmán\nEduardo García Reillo\nBárbara Domínguez de la Torre González\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']DISEÑO\n\n[font='Jura-13'][colour='FFFFFFFF']Roman Belikov\nCarlos Blázquez García\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']ARTE\n\n[font='Jura-13'][colour='FFFFFFFF']Alejandro García Torres\nLorenzo Marín Solanes\nLuis Alonso\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']MÚSICA Y EFECTOS\n\n[font='Jura-13'][colour='FFFFFFFF']Luis López Pinto\nRafael Rodríguez López\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']EQUIPO DE LOCALIZACIÓN\n\n[font='Jura-13'][colour='FFFFFFFF']Natalia Martínez Villarán\nMarina Temprano\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']AGRADECIMIENTOS\n\n[font='Jura-13'][colour='FFFFFFFF']\"Dedicado a\nLeonardo Fernández Sánchez, quien ha sido\nsiempre como un hermano.\" - Eduardo\n\n\n\"Por el principio de un sueño\n(Gracias papá, mamá)\" - César\n\n\n\"El primero de muchos\" - Alberto\n\n\n\"Gracias a Javier, Pilar, Alvaro\ny Antonio Javier por todo el apoyo\n que me han dado\" - Bárbara\n\n\nGracias a nuestro tutor:\nDavid Llansó\n\n\nGracias a todos los que\nnos han apoyado en el desarrollo.\n\n\n\n[font='Jura-18'][colour='FFFFF5A6']PÁGINA WEB\n\n[font='Jura-13'][colour='FFFFFFFF']http://theeternalsorrowgame.tumblr.com\n\n\n\n[colour='FFFFF5A6']Para cualquier propuesta, sugerencia, bugs\n\n[colour='FFFFFFFF']theeternalsorrowmail@gmail.com",
+}
