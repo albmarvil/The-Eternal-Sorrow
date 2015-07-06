@@ -1,0 +1,40 @@
+﻿Compilación iniciada a las 14/04/2015 10:46:12.
+     1>Proyecto "C:\Master\TES\TES\dependencies\VisualLeakDetector\vld.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Isetup /Z7 /nologo /W1 /WX- /Ox /Ot /Oy- /GT /GL /D NDEBUG /D _USRDLL /D WIN32 /D _WIN32_WINNT=0x0502 /D _WINDLL /D _UNICODE /D UNICODE /GF /Gm- /EHsc /MT /GS- /Gy- /fp:fast /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld_x86.pch" /Fo"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\\" /Fd"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Isetup /Z7 /nologo /W1 /WX- /Ox /Ot /Oy- /GT /GL /D NDEBUG /D _USRDLL /D WIN32 /D _WIN32_WINNT=0x0502 /D _WINDLL /D _UNICODE /D UNICODE /GF /Gm- /EHsc /MT /GS- /Gy- /fp:fast /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld_x86.pch" /Fo"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\\" /Fd"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt callstack.cpp dllspatches.cpp ntapi.cpp utility.cpp vld.cpp vldapi.cpp vldheap.cpp vld_hooks.cpp
+         callstack.cpp
+         dllspatches.cpp
+         ntapi.cpp
+         utility.cpp
+         vld.cpp
+         vldapi.cpp
+         vldheap.cpp
+         vld_hooks.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /Isetup /nologo /fo"C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld.res" vld.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:vld.dll.dependency.x86.manifest /DEBUG /PDB:"C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /BASE:"0x03200000" /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.lib" /MACHINE:X86 /SAFESEH /DLL C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld.res
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\callstack.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\dllspatches.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\ntapi.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\stdafx.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\utility.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vldapi.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vldheap.obj
+         C:\Master\TES\TES\dependencies\VisualLeakDetector\obj\Win32\Release\vld_hooks.obj
+            Creando biblioteca C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.lib y objeto C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.exp
+         Generando código
+         Generación de código finalizada
+         vld.vcxproj -> C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.dll
+       PostBuildEvent:
+         copy "C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld_x86.lib" "C:\Master\TES\TES\dependencies\VisualLeakDetector\bin\Win32\Release\vld.lib" /y
+         :VCEnd
+                 1 archivo(s) copiado(s).
+     1>Compilación del proyecto terminada "C:\Master\TES\TES\dependencies\VisualLeakDetector\vld.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:05.61
