@@ -1,0 +1,7 @@
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/zziplib/CMakeFiles/ALL_BUILD.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/FreeImage/CMakeFiles/FreeImage.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/ois/CMakeFiles/OIS.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/ZERO_CHECK.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/CMakeFiles/freetype.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/zlib/CMakeFiles/zlib.dir
+C:/Master/TES/TES/dependencies/OgreDependencies/build/src/zziplib/CMakeFiles/zziplib.dir

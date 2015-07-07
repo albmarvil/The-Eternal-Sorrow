@@ -1,0 +1,1469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{58498B91-4DA1-4619-9972-5C18E1FAB94D}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>FreeImage</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FreeImage.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FreeImage_d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FreeImage.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FreeImage</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">FreeImage.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">FreeImage</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">FreeImage.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">FreeImage</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/FreeImage/Debug/FreeImage_d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/FreeImage/Release/FreeImage.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/FreeImage/MinSizeRel/FreeImage.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/FreeImage/RelWithDebInfo/FreeImage.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;OPJ_STATIC;LIBRAW_NODLL;LIBRAW_LIBRARY_BUILD;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/FreeImageToolkit;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibMNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibOpenJPEG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibPNG;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibRawLite;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/LibTIFF;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Half;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Iex;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmImf;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/IlmThread;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/OpenEXR/Imath;C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/Source/ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\FreeImage\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/FreeImage/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\FreeImage\Source\CacheFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\DeprecationManager\DeprecationMgr.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\FreeImage.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\FreeImage\PSDParser.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\FreeImageIO.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Filters.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Resize.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jconfig.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jdct.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jerror.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jinclude.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jmemsys.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jmorecfg.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jpegint.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jpeglib.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\jversion.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibJPEG\transupp.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\bio.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\cidx_manager.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\cio.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\dwt.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\event.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\fix.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\image.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\indexbox_manager.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\int.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\j2k.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\j2k_lib.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\jp2.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\jpt.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\mct.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\mqc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\openjpeg.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\opj_config.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\opj_includes.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\opj_malloc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\pi.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\raw.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\t1.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\t1_luts.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\t2.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\tcd.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\tgt.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\png.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pngconf.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pngdebug.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pnginfo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pnglibconf.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pngpriv.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibPNG\pngstruct.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\defines.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\libraw_bytebuffer.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\libraw_internal_funcs.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\var_defines.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_alloc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_const.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_datastream.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_internal.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_types.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibRawLite\libraw\libraw_version.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\t4.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_config.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dir.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_fax3.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_predict.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tiff.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tiffio.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tiffiop.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\tiffvers.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\LibTIFF4\uvcode.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\Metadata\FIRational.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\Metadata\FreeImageTag.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\eLut.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\half.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\halfFunction.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\halfLimits.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\toFloat.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\Iex.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexBaseExc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexErrnoExc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexMacros.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexMathExc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexThrowErrnoExc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmBaseConfig.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\b44ExpLogTable.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfAcesFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfArray.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfAutoArray.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfB44Compressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfBoxAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCRgbaFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChannelList.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChannelListAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChromaticities.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChromaticitiesAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCompression.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCompressionAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCompressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfConvert.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfDoubleAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfEnvmap.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfEnvmapAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFloatAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFrameBuffer.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFramesPerSecond.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfHeader.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfHuf.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfIO.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfInputFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfInt64.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfIntAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfKeyCode.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfKeyCodeAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfLineOrder.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfLineOrderAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfLut.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMatrixAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMisc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMultiView.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfName.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfOpaqueAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfOutputFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPixelType.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPizCompressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPreviewImage.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPreviewImageAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPxr24Compressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRational.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRationalAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRgba.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRgbaFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRgbaYca.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRleCompressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfScanLineInputFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStandardAttributes.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStdIO.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStringAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStringVectorAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTestFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfThreading.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTileDescription.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTileDescriptionAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTileOffsets.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledInputFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledMisc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledOutputFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledRgbaFile.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTimeCode.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTimeCodeAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfVecAttribute.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfVersion.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfWav.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfXdr.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfZipCompressor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThread.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadMutex.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadPool.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadSemaphore.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathBox.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathBoxAlgo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathColor.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathColorAlgo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathEuler.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathExc.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathFrame.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathFrustum.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathFun.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathGL.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathGLU.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathHalfLimits.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathInt64.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathInterval.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathLimits.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathLine.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathLineAlgo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathMath.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathMatrix.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathMatrixAlgo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathPlane.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathPlatform.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathQuat.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathRandom.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathRoots.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathShear.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathSphere.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathVec.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathVecAlgo.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\OpenEXR\OpenEXRConfig.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\Plugin.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\Quantizers.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ToneMapping.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\Utilities.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\crc32.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\deflate.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\gzguts.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\inffast.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\inffixed.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\inflate.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\inftrees.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\trees.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\zconf.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\zlib.h" />
+    <ClInclude Include="..\..\..\src\FreeImage\Source\ZLib\zutil.h" />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\DeprecationManager\Deprecated.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\BitmapAccess.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\CacheFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ColorLookup.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion16_555.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion16_565.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion24.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion32.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ConversionFloat.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ConversionRGB16.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion4.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Conversion8.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ConversionRGBF.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ConversionType.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ConversionUINT16.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\FreeImage.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\FreeImageIO.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\GetType.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Halftoning.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\J2KHelper.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\MemoryIO.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\MNGHelper.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\MultiPage.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\NNQuantizer.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PSDParser.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PixelAccess.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\Plugin.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginBMP.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginCUT.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginDDS.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginEXR.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginG3.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginGIF.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginHDR.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginICO.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginIFF.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginJ2K.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginJNG.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginJP2.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginJPEG.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginKOALA.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginMNG.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPCD.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPCX.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPFM.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPICT.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPNG.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPNM.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginPSD.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginRAS.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginRAW.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginSGI.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginTARGA.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginTIFF.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginWBMP.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginXBM.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\PluginXPM.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\TIFFLogLuv.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ToneMapping.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\WuQuantizer.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\ZLibInterface.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\tmoColorConvert.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\tmoDrago03.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\tmoFattal02.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImage\tmoReinhard05.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\BSplineRotate.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Background.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Channels.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\ClassicRotate.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Colors.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\CopyPaste.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Display.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Flip.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\JPEGTransform.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\MultigridPoissonSolver.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Rescale.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\FreeImageToolkit\Resize.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jaricom.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcapimin.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcapistd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcarith.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jccoefct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jccolor.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcdctmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jchuff.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcinit.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcmainct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcmarker.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcmaster.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcomapi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcparam.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcprepct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jcsample.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jctrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdapimin.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdapistd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdarith.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdatadst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdatasrc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdcoefct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdcolor.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jddctmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdhuff.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdinput.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdmainct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdmarker.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdmaster.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdmerge.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdpostct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdsample.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jdtrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jerror.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jfdctflt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jfdctfst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jfdctint.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jidctflt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jidctfst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jidctint.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jmemmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jmemnobs.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jquant1.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jquant2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\jutils.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibJPEG\transupp.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\bio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\cidx_manager.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\cio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\dwt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\event.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\image.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\j2k.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\j2k_lib.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\jp2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\jpt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\mct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\mqc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\openjpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\phix_manager.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\pi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\ppix_manager.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\raw.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\t1.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\t2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\tcd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\tgt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\thix_manager.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibOpenJPEG\tpix_manager.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\png.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngerror.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pnggccrd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngget.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngmem.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngpread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngrio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngrtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngrutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngset.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngtrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngvcrd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngwio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngwtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibPNG\pngwutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\dcraw_common.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\dcraw_fileio.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\internal\demosaic_packs.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\src\libraw_c_api.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\src\libraw_cxx.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibRawLite\src\libraw_datastream.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_aux.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_close.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_codec.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_color.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dir.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dirinfo.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dirread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dirwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_dumpmode.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_error.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_extension.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_fax3.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_fax3sm.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_flush.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_getimage.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_jpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_jpeg_12.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_luv.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_lzma.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_lzw.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_next.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_ojpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_open.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_packbits.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_pixarlog.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_predict.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_print.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_read.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_strip.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_swab.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_thunder.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_tile.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_version.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_warning.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_write.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\LibTIFF4\tif_zip.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\Exif.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\FIRational.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\FreeImageTag.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\IPTC.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\TagConversion.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\TagLib.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\Metadata\XTIFF.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Half\half.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexBaseExc.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Iex\IexThrowErrnoExc.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfAcesFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfB44Compressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfBoxAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCRgbaFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChannelList.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChannelListAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChromaticities.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfChromaticitiesAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCompressionAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfCompressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfConvert.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfDoubleAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfEnvmap.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfEnvmapAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFloatAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFrameBuffer.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfFramesPerSecond.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfHeader.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfHuf.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfIO.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfInputFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfIntAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfKeyCode.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfKeyCodeAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfLineOrderAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfLut.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMatrixAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMisc.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfMultiView.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfOpaqueAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfOutputFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPizCompressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPreviewImage.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPreviewImageAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfPxr24Compressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRational.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRationalAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRgbaFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRgbaYca.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfRleCompressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfScanLineInputFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStandardAttributes.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStdIO.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStringAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfStringVectorAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTestFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfThreading.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTileDescriptionAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTileOffsets.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledInputFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledMisc.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledOutputFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTiledRgbaFile.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTimeCode.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfTimeCodeAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfVecAttribute.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfVersion.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfWav.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmImf\ImfZipCompressor.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThread.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadMutex.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadPool.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\IlmThread\IlmThreadSemaphore.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathBox.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathColorAlgo.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathFun.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathMatrixAlgo.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathRandom.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathShear.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\OpenEXR\Imath\ImathVec.cpp"  />
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\adler32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\crc32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\deflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\gzclose.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\gzlib.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\gzread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\gzwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\infback.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\inffast.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\inflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\inftrees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\trees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\uncompr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\FreeImage\Source\ZLib\zutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Master/TES/TES/dependencies/OgreDependencies/build/ZERO_CHECK.vcxproj">
+      <Project>153A413D-E135-4C09-BF9F-DAFDD5C6685D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

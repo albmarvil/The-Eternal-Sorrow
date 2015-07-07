@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:/Master/TES/TES/dependencies/OgreDependencies/src/CMakeLists.txt
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CheckTypeSize.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CheckIncludeFile.cmake

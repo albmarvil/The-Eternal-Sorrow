@@ -1,0 +1,56 @@
+﻿Compilación iniciada a las 14/04/2015 10:07:31.
+     1>Proyecto "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\ois\OIS.vcxproj" en el nodo 3 (Build destinos).
+     1>CustomBuild:
+         Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/ois/CMakeLists.txt
+         CMake does not need to re-run because C:\Master\TES\TES\dependencies\OgreDependencies\build\src\ois\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:/Program Files (x86)/Windows Kits/8.0/Include/shared" /IC:/Master/TES/TES/dependencies/OgreDependencies/src/ois/includes /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D WINVER=0x0500 /D OIS_NONCLIENT_BUILD /D OIS_DYNAMIC_LIB /D "CMAKE_INTDIR=\"Debug\"" /D OIS_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"OIS.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/bin/Debug/OIS_d.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\ois\src\OISEffect.cpp ..\..\..\src\ois\src\OISException.cpp ..\..\..\src\ois\src\OISForceFeedback.cpp ..\..\..\src\ois\src\OISInputManager.cpp ..\..\..\src\ois\src\OISJoyStick.cpp ..\..\..\src\ois\src\OISKeyboard.cpp ..\..\..\src\ois\src\OISObject.cpp ..\..\..\src\ois\src\extras\Lirc\OISLIRC.cpp ..\..\..\src\ois\src\extras\Lirc\OISLIRCFactoryCreator.cpp ..\..\..\src\ois\src\win32\Win32ForceFeedback.cpp ..\..\..\src\ois\src\win32\Win32InputManager.cpp ..\..\..\src\ois\src\win32\Win32JoyStick.cpp ..\..\..\src\ois\src\win32\Win32KeyBoard.cpp ..\..\..\src\ois\src\win32\Win32Mouse.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\hiddevice.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\OISWiiMote.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\OISWiiMoteFactoryCreator.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\OISWiiMoteForceFeedback.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\OISWiiMoteRingBuffer.cpp ..\..\..\src\ois\src\win32\extras\WiiMote\wiimote.cpp
+         OISEffect.cpp
+         OISException.cpp
+         OISForceFeedback.cpp
+         OISInputManager.cpp
+         OISJoyStick.cpp
+         OISKeyboard.cpp
+         OISObject.cpp
+         OISLIRC.cpp
+         OISLIRCFactoryCreator.cpp
+         Win32ForceFeedback.cpp
+         Win32InputManager.cpp
+         Win32JoyStick.cpp
+         Win32KeyBoard.cpp
+         Win32Mouse.cpp
+         hiddevice.cpp
+         OISWiiMote.cpp
+         OISWiiMoteFactoryCreator.cpp
+         OISWiiMoteForceFeedback.cpp
+         OISWiiMoteRingBuffer.cpp
+         wiimote.cpp
+         Generando código...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Master\TES\TES\dependencies\OgreDependencies\build\bin\Debug\OIS_d.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86\dinput8.lib" "C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86\dxguid.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Master/TES/TES/dependencies/OgreDependencies/build/bin/Debug/OIS_d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Master/TES/TES/dependencies/OgreDependencies/build/src/ois/Debug/OIS_d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug /DLL OIS.dir\Debug\OISEffect.obj
+         OIS.dir\Debug\OISException.obj
+         OIS.dir\Debug\OISForceFeedback.obj
+         OIS.dir\Debug\OISInputManager.obj
+         OIS.dir\Debug\OISJoyStick.obj
+         OIS.dir\Debug\OISKeyboard.obj
+         OIS.dir\Debug\OISObject.obj
+         OIS.dir\Debug\OISLIRC.obj
+         OIS.dir\Debug\OISLIRCFactoryCreator.obj
+         OIS.dir\Debug\Win32ForceFeedback.obj
+         OIS.dir\Debug\Win32InputManager.obj
+         OIS.dir\Debug\Win32JoyStick.obj
+         OIS.dir\Debug\Win32KeyBoard.obj
+         OIS.dir\Debug\Win32Mouse.obj
+         OIS.dir\Debug\hiddevice.obj
+         OIS.dir\Debug\OISWiiMote.obj
+         OIS.dir\Debug\OISWiiMoteFactoryCreator.obj
+         OIS.dir\Debug\OISWiiMoteForceFeedback.obj
+         OIS.dir\Debug\OISWiiMoteRingBuffer.obj
+         OIS.dir\Debug\wiimote.obj
+            Creando biblioteca C:/Master/TES/TES/dependencies/OgreDependencies/build/src/ois/Debug/OIS_d.lib y objeto C:/Master/TES/TES/dependencies/OgreDependencies/build/src/ois/Debug/OIS_d.exp
+         OIS.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\bin\Debug\OIS_d.dll
+     1>Compilación del proyecto terminada "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\ois\OIS.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:15.30

@@ -1,0 +1,99 @@
+﻿Compilación iniciada a las 14/04/2015 10:56:14.
+     1>Proyecto "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\freetype.vcxproj" en el nodo 4 (Build destinos).
+     1>CustomBuild:
+         Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt
+         CMake does not need to re-run because C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D WINVER=0x0500 /D FT2_BUILD_LIBRARY /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"freetype.dir\Release\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/Release/freetype.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\src\freetype\src\autofit\autofit.c ..\..\..\src\freetype\src\base\ftbase.c ..\..\..\src\freetype\src\base\ftbbox.c ..\..\..\src\freetype\src\base\ftbitmap.c ..\..\..\src\freetype\src\base\ftfstype.c ..\..\..\src\freetype\src\base\ftgasp.c ..\..\..\src\freetype\src\base\ftglyph.c ..\..\..\src\freetype\src\base\ftinit.c ..\..\..\src\freetype\src\base\ftmm.c ..\..\..\src\freetype\src\base\ftpfr.c ..\..\..\src\freetype\src\base\ftstroke.c ..\..\..\src\freetype\src\base\ftsynth.c ..\..\..\src\freetype\src\base\ftsystem.c ..\..\..\src\freetype\src\base\fttype1.c ..\..\..\src\freetype\src\base\ftwinfnt.c ..\..\..\src\freetype\src\bdf\bdf.c ..\..\..\src\freetype\src\bzip2\ftbzip2.c ..\..\..\src\freetype\src\cache\ftcache.c ..\..\..\src\freetype\src\cff\cff.c ..\..\..\src\freetype\src\cid\type1cid.c ..\..\..\src\freetype\src\gzip\ftgzip.c ..\..\..\src\freetype\src\lzw\ftlzw.c ..\..\..\src\freetype\src\pcf\pcf.c ..\..\..\src\freetype\src\pfr\pfr.c ..\..\..\src\freetype\src\psaux\psaux.c ..\..\..\src\freetype\src\pshinter\pshinter.c ..\..\..\src\freetype\src\psnames\psmodule.c ..\..\..\src\freetype\src\raster\raster.c ..\..\..\src\freetype\src\sfnt\sfnt.c ..\..\..\src\freetype\src\smooth\smooth.c ..\..\..\src\freetype\src\truetype\truetype.c ..\..\..\src\freetype\src\type1\type1.c ..\..\..\src\freetype\src\type42\type42.c ..\..\..\src\freetype\src\winfonts\winfnt.c
+         autofit.c
+         ftbase.c
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\base\ftrfork.c(798): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : vea la declaración de 'strncpy'
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\base\ftrfork.c(808): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\base\ftrfork.c(809): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         ftbbox.c
+         ftbitmap.c
+         ftfstype.c
+         ftgasp.c
+         ftglyph.c
+         ftinit.c
+         ftmm.c
+         ftpfr.c
+         ftstroke.c
+         ftsynth.c
+         ftsystem.c
+     1>..\..\..\src\freetype\src\base\ftsystem.c(240): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : vea la declaración de 'fopen'
+         fttype1.c
+         ftwinfnt.c
+         bdf.c
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\bdf\bdflib.c(1984): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : vea la declaración de 'sprintf'
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\bdf\bdflib.c(1997): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : vea la declaración de 'sprintf'
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\bdf\bdflib.c(2319): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : vea la declaración de 'sprintf'
+     1>c:\master\tes\tes\dependencies\ogredependencies\src\freetype\src\bdf\bdflib.c(2327): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : vea la declaración de 'sprintf'
+         ftbzip2.c
+         ftcache.c
+         cff.c
+         type1cid.c
+         Generando código...
+         Compilando...
+         ftgzip.c
+         ftlzw.c
+         pcf.c
+         pfr.c
+         psaux.c
+         pshinter.c
+         psmodule.c
+         raster.c
+         sfnt.c
+         smooth.c
+         truetype.c
+         type1.c
+         type42.c
+         winfnt.c
+         Generando código...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\Release\freetype.lib" /NOLOGO freetype.dir\Release\autofit.obj
+         freetype.dir\Release\ftbase.obj
+         freetype.dir\Release\ftbbox.obj
+         freetype.dir\Release\ftbitmap.obj
+         freetype.dir\Release\ftfstype.obj
+         freetype.dir\Release\ftgasp.obj
+         freetype.dir\Release\ftglyph.obj
+         freetype.dir\Release\ftinit.obj
+         freetype.dir\Release\ftmm.obj
+         freetype.dir\Release\ftpfr.obj
+         freetype.dir\Release\ftstroke.obj
+         freetype.dir\Release\ftsynth.obj
+         freetype.dir\Release\ftsystem.obj
+         freetype.dir\Release\fttype1.obj
+         freetype.dir\Release\ftwinfnt.obj
+         freetype.dir\Release\bdf.obj
+         freetype.dir\Release\ftbzip2.obj
+         freetype.dir\Release\ftcache.obj
+         freetype.dir\Release\cff.obj
+         freetype.dir\Release\type1cid.obj
+         freetype.dir\Release\ftgzip.obj
+         freetype.dir\Release\ftlzw.obj
+         freetype.dir\Release\pcf.obj
+         freetype.dir\Release\pfr.obj
+         freetype.dir\Release\psaux.obj
+         freetype.dir\Release\pshinter.obj
+         freetype.dir\Release\psmodule.obj
+         freetype.dir\Release\raster.obj
+         freetype.dir\Release\sfnt.obj
+         freetype.dir\Release\smooth.obj
+         freetype.dir\Release\truetype.obj
+         freetype.dir\Release\type1.obj
+         freetype.dir\Release\type42.obj
+         freetype.dir\Release\winfnt.obj
+         freetype.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\Release\freetype.lib
+     1>Compilación del proyecto terminada "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\freetype.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:15.28

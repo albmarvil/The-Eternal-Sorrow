@@ -1,0 +1,155 @@
+The system is: Windows - 6.2 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: CompilerIdC, configuraci¢n: Debug Win32 ------
+1>  CMakeCCompilerId.c
+1>  CompilerIdC.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\2.8.11.2\CompilerIdC\.\CompilerIdC.exe
+1>  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\cl.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: CompilerIdCXX, configuraci¢n: Debug Win32 ------
+1>  CMakeCXXCompilerId.cpp
+1>  CompilerIdCXX.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\2.8.11.2\CompilerIdCXX\.\CompilerIdCXX.exe
+1>  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\cl.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec554741341
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec554741341, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec554741341.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec554741341.pdb" /Gd /TC /analyze- /errorReport:prompt testCCompiler.c
+1>  
+1>  testCCompiler.c
+1>  cmTryCompileExec554741341.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec554741341.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec726712491
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec726712491, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec726712491.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec726712491.pdb" /Gd /TC /analyze- /errorReport:prompt "C:\Master\TES\TES\dependencies\cmake\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+1>  
+1>  CMakeCCompilerABI.c
+1>  cmTryCompileExec726712491.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec726712491.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec46811731
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec46811731, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec46811731.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec46811731.pdb" /Gd /TP /analyze- /errorReport:prompt testCXXCompiler.cxx
+1>  
+1>  testCXXCompiler.cxx
+1>  cmTryCompileExec46811731.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec46811731.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec3336651094
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec3336651094, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3336651094.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3336651094.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Master\TES\TES\dependencies\cmake\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+1>  
+1>  CMakeCXXCompilerABI.cpp
+1>  cmTryCompileExec3336651094.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3336651094.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Determining size of void* passed with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec4114527797
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec4114527797, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4114527797.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4114527797.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CheckTypeSize\_PTR_SIZE.c
+1>  
+1>  _PTR_SIZE.c
+1>  cmTryCompileExec4114527797.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4114527797.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+
+Determining size of void* passed with the following output:
+Change Dir: C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec780808066
+
+Microsoft (R) Microsoft Visual Studio 2012, versi¢n 11.0.60315.1.
+(C) Microsoft Corp. Reservados todos los derechos.
+1>------ Operaci¢n Compilar iniciada: proyecto: cmTryCompileExec780808066, configuraci¢n: Debug Win32 ------
+1>  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 17.00.60315.1 para x86
+1>  (C) Microsoft Corporation. Reservados todos los derechos.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec780808066.dir\Debug\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec780808066.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CheckTypeSize\OGREDEPS_PTR_SIZE.c
+1>  
+1>  OGREDEPS_PTR_SIZE.c
+1>  cmTryCompileExec780808066.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec780808066.exe
+========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
+
+

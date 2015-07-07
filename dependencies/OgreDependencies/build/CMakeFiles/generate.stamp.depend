@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+C:/Master/TES/TES/dependencies/OgreDependencies/CMakeLists.txt
+C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CMakeSystem.cmake
+C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CMakeCCompiler.cmake
+C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CMakeCXXCompiler.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/Windows.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeCInformation.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/Windows-MSVC-C.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+C:/Master/TES/TES/dependencies/OgreDependencies/build/CMakeFiles/2.8.11.2/CMakeRCCompiler.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+C:/Master/TES/TES/dependencies/OgreDependencies/cmake/FindDirectX.cmake
+C:/Master/TES/TES/dependencies/OgreDependencies/cmake/FindPkgMacros.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CheckTypeSize.cmake
+C:/Master/TES/TES/dependencies/cmake/share/cmake-2.8/Modules/CheckIncludeFile.cmake

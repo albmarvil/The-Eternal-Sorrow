@@ -1,0 +1,77 @@
+﻿Compilación iniciada a las 14/04/2015 10:56:14.
+     1>Proyecto "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\zlib\zlib.vcxproj" en el nodo 5 (Build destinos).
+     1>CustomBuild:
+         Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/zlib/CMakeLists.txt
+         CMake does not need to re-run because C:\Master\TES\TES\dependencies\OgreDependencies\build\src\zlib\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D WINVER=0x0500 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"zlib.dir\Release\\" /Fd"C:/Master/TES/TES/dependencies/OgreDependencies/build/src/zlib/Release/zlib.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\src\zlib\adler32.c ..\..\..\src\zlib\compress.c ..\..\..\src\zlib\crc32.c ..\..\..\src\zlib\deflate.c ..\..\..\src\zlib\gzclose.c ..\..\..\src\zlib\gzlib.c ..\..\..\src\zlib\gzread.c ..\..\..\src\zlib\gzwrite.c ..\..\..\src\zlib\infback.c ..\..\..\src\zlib\inffast.c ..\..\..\src\zlib\inflate.c ..\..\..\src\zlib\inftrees.c ..\..\..\src\zlib\trees.c ..\..\..\src\zlib\uncompr.c ..\..\..\src\zlib\zutil.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         gzlib.c
+     1>..\..\..\src\zlib\gzlib.c(193): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(554) : vea la declaración de 'wcstombs'
+     1>..\..\..\src\zlib\gzlib.c(208): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(554) : vea la declaración de 'wcstombs'
+     1>..\..\..\src\zlib\gzlib.c(214): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(349) : vea la declaración de '_snprintf'
+     1>..\..\..\src\zlib\gzlib.c(245): warning C4996: '_wopen': This function or variable may be unsafe. Consider using _wsopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(275) : vea la declaración de '_wopen'
+     1>..\..\..\src\zlib\gzlib.c(245): warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(315) : vea la declaración de 'open'
+     1>..\..\..\src\zlib\gzlib.c(294): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(349) : vea la declaración de '_snprintf'
+     1>..\..\..\src\zlib\gzlib.c(608): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(349) : vea la declaración de '_snprintf'
+         gzread.c
+     1>..\..\..\src\zlib\gzread.c(30): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(316) : vea la declaración de 'read'
+     1>..\..\..\src\zlib\gzread.c(36): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(164) : vea la declaración de 'strerror'
+     1>..\..\..\src\zlib\gzread.c(591): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(305) : vea la declaración de 'close'
+         gzwrite.c
+     1>..\..\..\src\zlib\gzwrite.c(84): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(321) : vea la declaración de 'write'
+     1>..\..\..\src\zlib\gzwrite.c(86): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(164) : vea la declaración de 'strerror'
+     1>..\..\..\src\zlib\gzwrite.c(102): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _write. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(321) : vea la declaración de 'write'
+     1>..\..\..\src\zlib\gzwrite.c(103): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(164) : vea la declaración de 'strerror'
+     1>..\..\..\src\zlib\gzwrite.c(357): warning C4996: 'vsnprintf': This function or variable may be unsafe. Consider using vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(340) : vea la declaración de 'vsnprintf'
+     1>..\..\..\src\zlib\gzwrite.c(573): warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(305) : vea la declaración de 'close'
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Generando código...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Master\TES\TES\dependencies\OgreDependencies\build\src\zlib\Release\zlib.lib" /NOLOGO zlib.dir\Release\adler32.obj
+         zlib.dir\Release\compress.obj
+         zlib.dir\Release\crc32.obj
+         zlib.dir\Release\deflate.obj
+         zlib.dir\Release\gzclose.obj
+         zlib.dir\Release\gzlib.obj
+         zlib.dir\Release\gzread.obj
+         zlib.dir\Release\gzwrite.obj
+         zlib.dir\Release\infback.obj
+         zlib.dir\Release\inffast.obj
+         zlib.dir\Release\inflate.obj
+         zlib.dir\Release\inftrees.obj
+         zlib.dir\Release\trees.obj
+         zlib.dir\Release\uncompr.obj
+         zlib.dir\Release\zutil.obj
+         zlib.vcxproj -> C:\Master\TES\TES\dependencies\OgreDependencies\build\src\zlib\Release\zlib.lib
+     1>Compilación del proyecto terminada "C:\Master\TES\TES\dependencies\OgreDependencies\build\src\zlib\zlib.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:03.00

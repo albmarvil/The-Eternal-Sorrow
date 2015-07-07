@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{821B9C59-2925-4FA6-B10F-A4F9D75585C9}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>freetype</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">freetype.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">freetype_d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">freetype.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">freetype</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">freetype.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">freetype</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">freetype.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">freetype</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/Debug/freetype_d.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/Release/freetype.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/MinSizeRel/freetype.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Master/TES/TES/dependencies/OgreDependencies/build/src/freetype/RelWithDebInfo/freetype.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WINVER=0x0500;FT2_BUILD_LIBRARY;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\freetype\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Master\TES\TES\dependencies\CMake\bin\cmake.exe -HC:/Master/TES/TES/dependencies/OgreDependencies -BC:/Master/TES/TES/dependencies/OgreDependencies/build --check-stamp-file C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Master/TES/TES/dependencies/OgreDependencies/src/freetype/CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;C:\Master\TES\TES\dependencies\OgreDependencies\src\freetype\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Master\TES\TES\dependencies\OgreDependencies\build\src\freetype\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\config\ftheader.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\freetype.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftcache.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftcid.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\fterrors.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftimage.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftlist.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftmac.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftmm.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftotval.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftrender.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\fttypes.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ftxf86.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\t1tables.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\tttables.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\tttags.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\freetype\ttunpat.h" />
+    <ClInclude Include="..\..\..\src\freetype\include\ft2build.h" />
+    <ClCompile Include="..\..\..\src\freetype\src\autofit\autofit.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftbase.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftbbox.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftbitmap.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftfstype.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftgasp.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftglyph.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftinit.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftmm.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftpfr.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftstroke.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftsynth.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftsystem.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\fttype1.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\base\ftwinfnt.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\bdf\bdf.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\bzip2\ftbzip2.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\cache\ftcache.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\cff\cff.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\cid\type1cid.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\gzip\ftgzip.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\lzw\ftlzw.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\pcf\pcf.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\pfr\pfr.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\psaux\psaux.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\pshinter\pshinter.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\psnames\psmodule.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\raster\raster.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\sfnt\sfnt.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\smooth\smooth.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\truetype\truetype.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\type1\type1.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\type42\type42.c"  />
+    <ClCompile Include="..\..\..\src\freetype\src\winfonts\winfnt.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Master/TES/TES/dependencies/OgreDependencies/build/ZERO_CHECK.vcxproj">
+      <Project>153A413D-E135-4C09-BF9F-DAFDD5C6685D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
